@@ -29,7 +29,6 @@
             <referenceBlock name="report.bugs" remove="true" />
             <referenceBlock name="minicart" remove="true"/>
             <referenceContainer name="logo" remove="true" />
-            
         </referenceContainer>
     </body>
 </page>

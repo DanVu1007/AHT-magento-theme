@@ -8,6 +8,36 @@
     width: 451px;
 }
 
+.title-common{
+    font-size: 30px;
+    color: #ccc;
+    margin-bottom: 30px;
+    margin-top: 67px;
+}
+.row {
+    display: flex;
+    margin: 0 -40px;
+    padding-top: 15px;
+}
+
+.col{
+    padding: 0 40px;
+    width: 50%;    
+}
+.style-guide-text{
+    font-size: 30px;
+    color: #ccc;
+    margin-bottom: 30px;
+    margin-top: 67px;
+}
+
+.social{
+    display: flex;
+    width: 100px;
+}
+.social>div{
+    margin: 0 10px;
+}
 
 /* footer */
 

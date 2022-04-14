@@ -6,12 +6,20 @@
 @color-superlighter-green: #22b725;
 @color-superlight-green: #11ab15;
 @color-superdark: #3b3b3e;
+@color-superdark_border: #3b3b3d;
 @highlight-color: #dd2f31;
 
 // Button primary
 @button-primary__background: @color-superlighter-green;
 @button-primary__hover__background: @color-superlight-green;
 @button__font-family: @font-family__Roboto-base;
+@button-primary__active__background: @color-superlight-green;
+@button-primary__border: @color-superlighter-green;
+@button-primary__hover__border: @color-superlight-green;
+@button-primary__font-size: 13px;
+@button-primary__font-weight: 700;
+@button-primary__line-height: 20px;
+
 // Button secondary
 
 // Fonts
@@ -28,12 +36,12 @@
     @_button-padding: @button-primary__padding,
     @_button-color: @color-superdark,
     @_button-background: @color-white,
-    @_button-border: @button-primary__border,
+    @_button-border: @color-superdark_border,
     @_button-gradient-color-start: @button-primary__gradient-color-start,
     @_button-gradient-color-end: @button-primary__gradient-color-end,
     @_button-color-hover: @button-primary__hover__color,
     @_button-background-hover: @color-superdark,
-    @_button-border-hover: @button-primary__hover__border,
+    @_button-border-hover: @color-superdark,
     @_button-gradient-color-start-hover: @button-primary__hover__gradient-color-start,
     @_button-gradient-color-end-hover: @button-primary__hover__gradient-color-end,
     @_button-color-active: @button-primary__active__color,
