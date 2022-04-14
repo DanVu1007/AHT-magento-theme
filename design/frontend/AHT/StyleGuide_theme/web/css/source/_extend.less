@@ -10,10 +10,20 @@
 @color-radio-disable: #ccc;
 @color-radio-border: #dedede;
 @color-radio-background: #f4f4f4;
+@color-placeholder-black: #353535;
 
 //Alert color
 @color-alert-green: #68c524;
 @color-alert-border: #67c523;
+
+//Font
+@font-size__base: 13px;
+
+
+//====================================================font family=====================================================//
+
+@font-family__roboto: "Roboto";
+@font-family__base: @font-family__roboto;
 
 //====================================================button=====================================================//
 
@@ -37,20 +47,51 @@
 
 //secondary button
 @button__color: @primary__color;
-@button__background: @color-gray95;
-@button__border: 1px solid @color-gray-darken2;
-@button__gradient-color-start: false;
-@button__gradient-color-end: false;
+@button__background: @color-white;
+@button__border: 1px solid @color-dark-button;
+@button__padding: 15px 50px;
 
-@button__hover__color: @color-gray-darken3;
-@button__hover__background: @color-gray-darken1;
-@button__hover__border: @button__border;
-@button__hover__gradient-color-start: false;
-@button__hover__gradient-color-end: false;
+@button__hover__color: @color-white;
+@button__hover__background: @color-dark-button;
+@button__hover__border: 1px solid @color-dark-button;
 
 @button__active__color: @button__color;
 @button__active__background: @button__hover__background;
 @button__active__border: @button__border;
-@button__active__gradient-color-start: false;
-@button__active__gradient-color-end: false;
-//====================================================checkbox=====================================================//
+
+//====================================================form=====================================================//
+//  Form elements inputs default variables
+//  ---------------------------------------------
+
+@form-element-input__background: @color-white;
+@form-element-input__border-color: @color-radio-border;
+@form-element-input__border: 1px solid @form-element-input__border-color;
+@form-element-input__border-radius: 0;
+@form-element-input__height: none;
+@form-element-input__padding: 12px 0 12px 13px;
+
+//  Placeholder
+@form-element-input-placeholder__color: @color-placeholder-black;
+
+//  Disabled state
+@form-element-input__disabled__background: @color-radio-background;
+@form-element-input__disabled__border: @color-radio-border;
+@form-element-input__disabled__opacity: 1;
+@form-element-input__disabled__color: @color-radio-disable;
+
+//  Focus state
+// not fill..........
+
+//  Form elements choice default variables
+@form-element-choice__vertical-align: false;
+@form-element-choice__margin: 2px @indent__xs 0 0;
+@form-element-choice__disabled__opacity: @form-element-input__disabled__opacity;
+
+
+//====================================================navigation=====================================================//
+
+
+//====================================================alert=====================================================//
+
+
+//====================================================typography=====================================================//

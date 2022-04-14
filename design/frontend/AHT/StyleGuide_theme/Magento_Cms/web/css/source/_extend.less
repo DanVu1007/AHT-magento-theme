@@ -1,24 +1,50 @@
-.title-common{
+.title-common {
     font-size: 30px;
     color: #ccc;
     margin-bottom: 30px;
     margin-top: 67px;
 }
-
-.style-guide{
-    .style-guide-header{
-        display:none;
+.style-guide-text {
+    .title-common;
+}
+.style-guide {
+    .style-guide-header {
+        display: none;
     }
     .row {
         display: flex;
         margin: 0 -40px;
         padding-top: 15px;
-    
+
         .col {
             padding: 0 40px;
             width: 50%;
-            .style-guide-text{
-                .title-common;
+            .custom-buttons {
+                button {
+                    text-transform: uppercase;
+                }
+            }
+            .custom-radios-checkboxs {
+                .style-guide-inputs {
+                    display: flex;
+                    .style-guide-checkbox {
+                        width: 50%;
+                        .checkbox {
+                            margin-bottom: 10px;
+                        }
+                    }
+                    .style-guide-radio {
+                        width: 50%;
+                        .radio {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+            .custom-inputs{
+                .sg-input-field{
+                    margin-bottom: 10px;
+                }
             }
         }
     }
