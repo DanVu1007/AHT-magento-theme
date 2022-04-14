@@ -8,20 +8,6 @@
             <referenceContainer name="header.container">
                 <referenceContainer name="header-wrapper">
                     <container name="logo-wrapper" htmlTag="div" htmlClass="style-guide-logo-wrapper" >
-                        <container htmlTag="div" htmlClass="burning-log-white-logo" >
-                            <block class="Magento\Cms\Block\Block" name="burning-log-white-logo">
-                                <arguments>
-                                    <argument name="block_id" xsi:type="string">burning-log-white-logo</argument>
-                                </arguments>
-                            </block>
-                        </container>
-                        <container htmlTag="div" htmlClass="divider" >
-                            <block class="Magento\Cms\Block\Block" name="divider">
-                                <arguments>
-                                    <argument name="block_id" xsi:type="string">divider</argument>
-                                </arguments>
-                            </block>
-                        </container>
                         <container name="logo-content" htmlTag="div" htmlClass="style-guide-logo" >
                             <block class="Magento\Cms\Block\Block" name="style-guide-logo">
                                 <arguments>
