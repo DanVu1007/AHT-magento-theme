@@ -6,4 +6,4 @@
 
 use \Magento\Framework\Component\ComponentRegistrar;
 
-ComponentRegistrar::register(ComponentRegistrar::THEME, 'frontend/AHT/StyleGuide-theme', __DIR__);
+ComponentRegistrar::register(ComponentRegistrar::THEME, 'frontend/AHT/StyleGuide_theme', __DIR__);
