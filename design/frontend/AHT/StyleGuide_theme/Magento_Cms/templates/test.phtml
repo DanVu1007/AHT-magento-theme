@@ -1,0 +1,270 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+
+
+
+<!-- **************************************************************************************** -->
+
+
+<!-- slick/fontawesome -->
+<div class="slider-list">
+    <div class="slider">
+        <div class="slider-content">
+            "Good services. 
+            <i class="fa-brands fa-cc-paypal"></i>
+            <br>
+            I bought a bicycle with a wrong 
+            but they accepted free return for me 
+            and exchange a new product for me."
+        </div>
+    </div>
+    <div class="slider">
+            <div class="slider-content">
+            "Good services. 
+            <i class="fa-brands fa-cc-paypal"></i>
+            <br>
+            I bought a bicycle with a wrong 
+            but they accepted free return for me 
+            and exchange a new product for me."
+        </div>
+    </div>
+    <div class="slider">
+        <div class="slider-content">
+            "Good services. 
+            <i class="fa-brands fa-cc-paypal"></i>
+            <br>
+            I bought a bicycle with a wrong 
+            but they accepted free return for me 
+            and exchange a new product for me."
+        </div>
+    </div>
+</div>
+<script>
+    require([
+        'jquery',
+        'slick',
+        'domReady!'
+    ], function ($) {
+        $(".slider-list").slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+    });
+</script>
+
+
+<!-- **************************************************************************************** -->
+
+
+<!-- alert -->
+<!-- <script>
+    require(['Magento_Ui/js/modal/alert', 'jquery'], function(alert, $) {
+        alert({
+            title: $.mage.__('Chú ý'),
+            content: $.mage.__('Hello world'),
+            actions: {
+                always: function(){}
+            }
+        });
+        
+    });
+</script> -->
+
+
+<!-- **************************************************************************************** -->
+
+
+<!-- accordion -->
+
+<!-- <div class="element">
+
+    <div data-role="collapsible">
+        <div class="trigger">
+            <span>Title 1</span>
+        </div>
+        
+    </div>
+    <div class="content">Content 1.....</div>
+
+    <div data-role="collapsible">
+        <div class="trigger">
+            <span>Title 2</span>
+        </div>
+        
+    </div>
+    <div class="content">Content 2...........</div>
+
+    <div data-role="collapsible">
+        <div class="trigger">
+            <span>Title 3</span>
+        </div>
+        
+    </div>
+    <div class="content">Content 3..............</div>
+
+</div>
+
+<script>
+    require(['jquery','accordion'], function ($) {
+        $(".element").accordion({
+            content : ".content",
+            trigger : ".trigger"
+        });
+    });
+</script> -->
+
+
+<!-- **************************************************************************************** -->
+
+
+<!-- collapsible -->
+
+<!-- <div class="some-title">
+    <div class="some-header">
+        <span>Title 1</span>
+    </div>
+    <div class="content">Content 1.....</div>
+</div>
+<script>
+    require(['jquery','collapsible'], function ($) {
+        $(".some-title").collapsible({
+            header : ".some-header",
+            trigger : ".some-header",     //If the trigger is not found, the header becomes a trigger
+            active: false,
+            animate: {
+                duration:1000,easing:"easeOutCubic"
+            },
+            content: ".content"
+        });
+    });
+</script> -->
+ 
+
+<!-- **************************************************************************************** -->
+
+
+<!-- breadscrumbs -->
+
+<!-- <div class="breadcrumbs"></div>
+<script>
+    require([
+        'jquery', 'Magento_Theme/js/model/breadcrumb-list', 'breadcrumbs'
+    ], function ($, breadcrumbList) {
+        'use strict';
+
+        var breadcrumbs = [
+            {
+                'name': 'some-page-1',
+                'link': '/some/path/1',
+                'title': 'Link title for page 1',
+                'label': 'Some page 1'
+            },
+            {
+                'name': 'some-page-1',
+                'link': '/some/path/2',
+                'title': 'Link title for page 1',
+                'label': 'Some page 2'
+            }
+        ];
+
+        // adding breadcrumbs to the Breadcrumb List
+        breadcrumbs.forEach(function (breadcrumb) {
+            breadcrumbList.push(breadcrumb);
+        });
+
+        // Breadcrumbs widget initialization
+        $('.breadcrumbs').breadcrumbs();
+    });
+</script> -->
+
+
+<!-- **************************************************************************************** -->
+
+
+<!-- calendar -->
+
+<!-- <div class="field date">
+    <label>Date : </label>
+    <input type="text" class="input-text" id="example-date" style="width: auto" name="example-date" />
+</div>
+
+<script>
+  require([
+    'jquery',
+    'mage/translate',
+    'mage/calendar'
+    ], function ($, $t) {
+      $('#example-date').calendar({
+        changeMonth: true,
+        changeYear: true,
+        showButtonPanel: true,
+        currentText: $t('Go Today'),
+        closeText: $t('Close'),
+        showWeek: true,
+        showOn: "both"
+      });
+    })
+</script> -->
+
+<!-- **************************************************************************************** -->
+
+
+<!-- confimation widget -->
+
+<!-- <script>
+require([
+    'jquery',
+    'Magento_Ui/js/modal/confirm'
+], function($, confirmation) { // Variable that represents the `confirm` widget
+
+    confirmation({
+        title: $.mage.__('Chú ý'),
+        content: $.mage.__('Hello word'),
+        actions: {
+            confirm: function(){},
+            cancel: function(){},
+            always: function(){}
+        }
+    });
+
+});
+</script> -->
+
+<!-- **************************************************************************************** -->
+
+
+<!-- dropdown -->
+<!-- <div class="example-dropdown-2">
+    <span class="action toggle" data-mage-init='{"dropdown":{}}' data-toggle="dropdown" aria-haspopup="true">
+        <span>span + dropdown</span>
+    </span>
+    <ul class="dropdown">
+        <li>
+            <span class="item">One</span>
+        </li>
+        <li>
+            <span class="item">Two</span>
+        </li>
+        <li>
+            <span class="item">Three</span>
+        </li>
+    </ul>
+</div> -->
+<!-- **************************************************************************************** -->
+
+
+<!-- **************************************************************************************** -->
+
+<!-- **************************************************************************************** -->
+
+<!-- **************************************************************************************** -->
+
+
