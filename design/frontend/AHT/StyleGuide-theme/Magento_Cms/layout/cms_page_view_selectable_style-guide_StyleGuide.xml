@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Magento_Cms::css/style-guide.css" />
+    </head>
+    <body>
+        <referenceContainer name="page.wrapper">
+            <referenceContainer name="header.container">
+                <referenceContainer name="header-wrapper">
+                    <container name="logo-wrapper" htmlTag="div" htmlClass="style-guide-logo-wrapper" >
+                        <container htmlTag="div" htmlClass="burning-log-white-logo" >
+                            <block class="Magento\Cms\Block\Block" name="burning-log-white-logo">
+                                <arguments>
+                                    <argument name="block_id" xsi:type="string">burning-log-white-logo</argument>
+                                </arguments>
+                            </block>
+                        </container>
+                        <container htmlTag="div" htmlClass="divider" >
+                            <block class="Magento\Cms\Block\Block" name="divider">
+                                <arguments>
+                                    <argument name="block_id" xsi:type="string">divider</argument>
+                                </arguments>
+                            </block>
+                        </container>
+                        <container name="logo-content" htmlTag="div" htmlClass="style-guide-logo" >
+                            <block class="Magento\Cms\Block\Block" name="style-guide-logo">
+                                <arguments>
+                                    <argument name="block_id" xsi:type="string">style-guide-logo</argument>
+                                </arguments>
+                            </block>
+                        </container>
+                    </container>
+                </referenceContainer>
+
+            </referenceContainer>
+            <referenceBlock name="breadcrumbs" remove="true"/>
+            <referenceBlock name="navigation.sections" remove="true" />
+            <referenceBlock name="top.search" remove="true"/>
+            <referenceBlock name="header.panel.wrapper" remove="true"/>
+            <referenceBlock name="form.subscribe" remove="true"/>
+            <referenceBlock name="footer_links" remove="true"/>
+            <referenceBlock name="copyright" remove="true"/>
+            <referenceBlock name="report.bugs" remove="true" />
+            <referenceBlock name="minicart" remove="true"/>
+            <referenceContainer name="logo" remove="true" />
+
+        </referenceContainer>
+    </body>
+</page>
