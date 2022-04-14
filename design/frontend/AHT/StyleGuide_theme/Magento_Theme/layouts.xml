@@ -18,7 +18,4 @@
     <layout id="3columns">
         <label translate="true">3 columns</label>
     </layout>
-    <layout id="2columns">
-        <label translate="true">2 columns bang nhau</label>
-    </layout>
 </page_layouts>
