@@ -17,7 +17,6 @@
                         </container>
                     </container>
                 </referenceContainer>
-
             </referenceContainer>
             <referenceBlock name="breadcrumbs" remove="true"/>
             <referenceBlock name="navigation.sections" remove="true" />
