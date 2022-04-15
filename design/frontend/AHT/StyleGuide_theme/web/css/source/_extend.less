@@ -7,12 +7,13 @@
 @color-superlight-green: #11ab15;
 @color-superdark: #3b3b3e;
 @color-superdark_border: #3b3b3d;
+@color-superdarker: #262628;
 @highlight-color: #dd2f31;
+@color-icon-dark: #424242;
 
 // Button primary
 @button-primary__background: @color-superlighter-green;
 @button-primary__hover__background: @color-superlight-green;
-@button__font-family: @font-family__Roboto-base;
 @button-primary__active__background: @color-superlight-green;
 @button-primary__border: @color-superlighter-green;
 @button-primary__hover__border: @color-superlight-green;
@@ -20,12 +21,18 @@
 @button-primary__font-weight: 700;
 @button-primary__line-height: 20px;
 
-// Button secondary
+
 
 // Fonts
 @font-family__Roboto-base: 'Roboto';
 @font-family__Roboto: @font-family__Roboto-base, @font-family__sans-serif;
 
+@font-family__base: @font-family__Roboto;
+
+
+
+
+// Button secondary
 .lib-button-secondary(
     @_button-font-family: @button-primary__font-family,
     @_button-font-size: @button-primary__font-size,
@@ -80,30 +87,61 @@
      );
 }
 
+
+
 .action.secondary {
     .lib-button-secondary();
 }
 
-.slick-dots {
-    li {
-        margin: 3px;
+// fonts
 
-        &.slick-active {
-            button {
-                &:before {
-                    opacity: 1;
-                    color: @highlight-color;
-                }
-            }
-        }
-        button {
-            width: 20px;
-            height: 20px;
-            &:before {
-                font-size: 12px;
-                color: @highlight-color;
-            }
+
+
+// block
+
+.style-guide-block{
+    height:auto;
+    width: 100%;
+    img{
+        z-index: 0;
+        width: 100%;
+        min-height: 372px;
+        object-fit: cover;
+        object-position: center;
+    }
+    .shop-btn{
+        background-color: @color-superdark;
+        border: 2px solid @color-white;
+        margin: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: max-content;
+        height: 50px;
+        color: @color-white;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 12px 25px;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 1;
+        overflow: hidden;
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 700;
+        &:hover{
+            background-color: @color-superdarker;
         }
     }
-    
+}
+
+.fab,.fas{
+    color: @color-icon-dark;
+    font-size: 18px;
+    line-height: 30px;
+    &:hover{
+        color: @color-black;
+    }
 }

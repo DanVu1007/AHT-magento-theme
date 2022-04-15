@@ -33,7 +33,7 @@
 
             </referenceContainer>
             <!-- test phtml  -->
-            <referenceContainer name="main.content">
+            <referenceContainer name="main">
                 <block class="Magento\Framework\View\Element\Template" template="Magento_Cms::styleguide.phtml"></block>
             </referenceContainer>
             <!-- *********** -->
