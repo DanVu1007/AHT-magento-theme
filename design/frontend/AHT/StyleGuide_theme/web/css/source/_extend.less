@@ -1,4 +1,11 @@
 //====================================================color=====================================================//
+// MISC color
+// color
+@color-superdark_border: #3b3b3d;
+@color-superdarker: #262628;
+@highlight-color: #dd2f31;
+@color-icon-dark: #424242;
+
 //button color
 @color-main-green: #22b725;
 @color-main-hover-green: #11ab15;
@@ -18,27 +25,41 @@
 
 //Font
 @font-size__base: 13px;
+@color-h: #222;
+//Form
+@padding-input: 12px 0 12px 13px;
 
+
+//Link
+@color-link: #111;
+@color-link-hover: #777;
 
 //====================================================font family=====================================================//
 
-@font-family__roboto: "Roboto";
-@font-family__base: @font-family__roboto;
+// @font-family__roboto: "Roboto";
+// @font-family__base: @font-family__roboto;
+
+//  Font families
+@font-family__lora: 'Lora';
+@font-family__roboto: 'Roboto';
+@font-family-name__base: @font-family__roboto;
+@font-family__base: @font-family-name__base, @font-family__sans-serif;
 
 //====================================================button=====================================================//
-
+@button__border-radius: 0;
+@button__padding: 8px 50px;
+@button__line-height: 20px;
 //primary button
 @button-primary__font-family: @button__font-family;
 @button-primary__font-size: @button__font-size;
 @button-primary__font-weight: @button__font-weight;
-@button-primary__padding: 15px 50px;
 
 @button-primary__background: @color-main-green;
-@button-primary__border: 1px solid @color-main-green;
+@button-primary__border: 2px solid @color-main-green;
 @button-primary__color: @color-white;
 
 @button-primary__hover__background: @color-main-hover-green;
-@button-primary__hover__border: 1px solid @color-main-hover-green;
+@button-primary__hover__border: 2px solid @color-main-hover-green;
 @button-primary__hover__color: @button-primary__color;
 
 @button-primary__active__background: @button-primary__hover__background;
@@ -48,12 +69,11 @@
 //secondary button
 @button__color: @primary__color;
 @button__background: @color-white;
-@button__border: 1px solid @color-dark-button;
-@button__padding: 15px 50px;
+@button__border: 2px solid @color-dark-button;
 
 @button__hover__color: @color-white;
 @button__hover__background: @color-dark-button;
-@button__hover__border: 1px solid @color-dark-button;
+@button__hover__border: 2px solid @color-dark-button;
 
 @button__active__color: @button__color;
 @button__active__background: @button__hover__background;
@@ -61,6 +81,9 @@
 
 //====================================================form=====================================================//
 //  Form elements inputs default variables
+@form-element-input__width: 320px;
+@focus__box-shadow: none;
+
 //  ---------------------------------------------
 
 @form-element-input__background: @color-white;
@@ -68,7 +91,9 @@
 @form-element-input__border: 1px solid @form-element-input__border-color;
 @form-element-input__border-radius: 0;
 @form-element-input__height: none;
-@form-element-input__padding: 12px 0 12px 13px;
+@form-element-input__line-height: none;
+
+@form-element-input__padding: @padding-input;
 
 //  Placeholder
 @form-element-input-placeholder__color: @color-placeholder-black;
@@ -79,19 +104,128 @@
 @form-element-input__disabled__opacity: 1;
 @form-element-input__disabled__color: @color-radio-disable;
 
-//  Focus state
-// not fill..........
+//  Select
+//  ---------------------------------------------
 
-//  Form elements choice default variables
-@form-element-choice__vertical-align: false;
-@form-element-choice__margin: 2px @indent__xs 0 0;
-@form-element-choice__disabled__opacity: @form-element-input__disabled__opacity;
+// @select__background: @form-element-input__background;
+@select__border: @form-element-input__border;
+@select__border-radius: @form-element-input__border-radius;
+@select__height: none;
+@select__width: @form-element-input__width;
+@select__margin: @form-element-input__margin;
+@select__padding: @padding-input;
+@select__vertical-align: @form-element-input__vertical-align;
+@select__background-clip: @form-element-input__background-clip; // [border//  Links
+//  ---------------------------------------------
+@form-element-validation__color-error: @color-placeholder-black;
+
+//border input validate
+@form-element-validation__border-error: @color-main-red;
+@form-validation-note__color-error: @color-main-red;
 
 
 //====================================================navigation=====================================================//
 
 
 //====================================================alert=====================================================//
+@message__border-width: 1px;
+@message__border-style: solid;
+//  Success message
+@message-success__color: @color-main-green;
+@message-success__background: @color-white;
+@message-success__border-color: @color-main-green;
+//  Error message
+@message-error__color: @color-main-red;
+@message-error__background: @color-white;
+@message-error__border-color:@color-main-red;
 
-
+._lib-message() {
+    display: flex;
+    justify-content: center;
+}
 //====================================================typography=====================================================//
+//  Links
+//  ---------------------------------------------
+
+@link__color: @color-link;
+@link__text-decoration: underline;
+
+// @link__visited__color: @color-link-hover;
+// @link__visited__text-decoration: none;
+
+@link__hover__color: @color-link-hover;
+@link__hover__text-decoration: underline;
+
+// @link__active__color: @color-link-hover;
+// @link__active__text-decoration: underline;
+
+@h1__font-size: ceil((@font-size__base * 2.28)); // 32px font-size__base = 14.
+@h1__font-color: @color-h;
+@h1__font-family: @font-family__lora;
+@h1__font-weight: 400;
+
+@h2__font-size: ceil((@font-size__base * 1.7)); // 24px
+@h2__font-color: @color-h;
+@h2__font-family: @font-family__lora;
+@h2__font-weight: @heading__font-weight__base;
+
+@h3__font-size: ceil((@font-size__base * 1.28)); // 18px
+@h3__font-color: @color-h;
+@h3__font-family: @font-family__lora;
+@h3__font-weight: @heading__font-weight__base;
+
+@h4__font-size: ceil((@font-size__base * 1.1)); // 15px
+@h4__font-color: @color-h;
+@h4__font-family: @heading__font-family__base;
+@h4__font-weight: @font-weight__bold;
+
+
+//====================================================MISC=====================================================//
+// block
+
+.style-guide-block{
+    height:auto;
+    width: 100%;
+    img{
+        z-index: 0;
+        width: 100%;
+        min-height: 372px;
+        object-fit: cover;
+        object-position: center;
+    }
+    .shop-btn{
+        background-color: @color-dark-button;
+        border: 2px solid @color-white;
+        margin: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: max-content;
+        height: 50px;
+        color: @color-white;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 12px 25px;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 1;
+        overflow: hidden;
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 700;
+        &:hover{
+            background-color: @color-superdarker;
+        }
+    }
+}
+
+.fab,.fas{
+    color: @color-icon-dark;
+    font-size: 18px;
+    line-height: 30px;
+    &:hover{
+        color: @color-black;
+    }
+}

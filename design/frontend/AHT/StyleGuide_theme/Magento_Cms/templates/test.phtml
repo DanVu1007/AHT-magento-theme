@@ -47,15 +47,18 @@
             <div class="custom-inputs">
                 <p class="style-guide-text">Input Fields</p>
                 <!-- Inputs -->
-                <div class="input-select-dropdown sg-input-field"><select id="" class="select" name="">
+                <div class="input-select-dropdown sg-input-field">
+                    <select id="" class="select" name="">
                         <option value="0">Dropdown field</option>
                         <option value="1">Option 1</option>
                         <option value="2">Option 2</option>
-                    </select></div>
+                    </select>
+                </div>
                 <div class="sg-input-field"><input class="input-text" type="text" value="Text field"></div>
                 <div class="sg-input-field"><input class="input-text input-selected" type="text" value="Text field selected"></div>
                 <div class="sg-input-field"><input id="error-input" class="input-text mage-error" type="text" value="Email@liv,com">
-                    <div class="mage-error">Please enter a valid email address</div>
+                    <!-- <div class="mage-error">Please enter a valid email address</div> -->
+                    <div for="lastname" generated="true" class="mage-error" id="lastname-error">Please enter a valid email address</div>
                 </div>
             </div>
             <!-- End Input Fields -->
@@ -135,7 +138,7 @@
                 <p class="style-guide-text">Misc</p>
                 <!-- Misc inner-->
                 <div class="style-guide-icons">
-                    <div class="minicart-wrapper"><a href="#"><i class="fas fa-times"></i></a></div>
+                    <div class="action close"><a href="#"><i class="fas fa-times"></i></a></div>
                     <div class="social">
                         <div class="social-icon-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
                         <div class="social-icon-instagram"><a href="#"><i class="fab fa-instagram"></i></a></div>
@@ -147,16 +150,7 @@
             <!-- End Misc -->
             <!-- CMS block -->
             <div class="style-guide-promo">
-                <div class="row">
-                    <div class="col">
-                        <div class="block-promo">{{widget type="Magento\Cms\Block\Widget\Block"
-                            template="widget/static_block/default.phtml" block_id="19"}}</div>
-                    </div>
-                    <div class="col">
-                        <div class="block-promo">{{widget type="Magento\Cms\Block\Widget\Block"
-                            template="widget/static_block/default.phtml" block_id="19"}}</div>
-                    </div>
-                </div>
+                <div class="block-promo">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="23"}}</div>
             </div>
             <!-- End CMS block -->
         </div>
