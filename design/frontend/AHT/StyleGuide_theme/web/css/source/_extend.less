@@ -49,6 +49,7 @@
 @button__border-radius: 0;
 @button__padding: 8px 50px;
 @button__line-height: 20px;
+@button__shadow: none;
 //primary button
 @button-primary__font-family: @button__font-family;
 @button-primary__font-size: @button__font-size;
@@ -75,9 +76,10 @@
 @button__hover__background: @color-dark-button;
 @button__hover__border: 2px solid @color-dark-button;
 
-@button__active__color: @button__color;
+@button__active__color: @color-white;
 @button__active__background: @button__hover__background;
 @button__active__border: @button__border;
+
 
 //====================================================form=====================================================//
 //  Form elements inputs default variables
@@ -182,7 +184,6 @@
 
 //====================================================MISC=====================================================//
 // block
-
 .style-guide-block{
     height:auto;
     width: 100%;
@@ -196,8 +197,8 @@
     .shop-btn{
         background-color: @color-dark-button;
         border: 2px solid @color-white;
-        margin: auto;
         position: absolute;
+        margin: auto;
         bottom: 0;
         left: 0;
         right: 0;
