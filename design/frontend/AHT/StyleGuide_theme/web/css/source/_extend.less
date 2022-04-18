@@ -14,12 +14,15 @@
 // Button primary
 @button-primary__background: @color-superlighter-green;
 @button-primary__hover__background: @color-superlight-green;
-@button-primary__active__background: @color-superlight-green;
-@button-primary__border: @color-superlighter-green;
-@button-primary__hover__border: @color-superlight-green;
+@button-primary__active__background: @color-superlight-green; 
+@button-primary__border: 2px solid @color-superlighter-green;
+@button-primary__hover__border: 2px solid @color-superlight-green;
 @button-primary__font-size: 13px;
 @button-primary__font-weight: 700;
 @button-primary__line-height: 20px;
+@button-primary__active__border: 2px solid @color-superlight-green;
+@button-primary__padding: 8px 43.35px;
+
 
 
 
@@ -29,7 +32,11 @@
 
 @font-family__base: @font-family__Roboto;
 
-
+// input
+@form-element-input__height: 40px;
+@form-element-input__font-weight: 400;
+@form-element-input__font-size: 13px;
+@form-element-input__line-height: 30px;
 
 
 // Button secondary
@@ -41,19 +48,12 @@
     @_button-width: @button-primary__width,
     @_button-margin: @button-primary__margin,
     @_button-padding: @button-primary__padding,
-    @_button-color: @color-superdark,
-    @_button-background: @color-white,
-    @_button-border: @color-superdark_border,
     @_button-gradient-color-start: @button-primary__gradient-color-start,
     @_button-gradient-color-end: @button-primary__gradient-color-end,
     @_button-color-hover: @button-primary__hover__color,
-    @_button-background-hover: @color-superdark,
-    @_button-border-hover: @color-superdark,
     @_button-gradient-color-start-hover: @button-primary__hover__gradient-color-start,
     @_button-gradient-color-end-hover: @button-primary__hover__gradient-color-end,
     @_button-color-active: @button-primary__active__color,
-    @_button-background-active: @button-primary__active__background,
-    @_button-border-active: @button-primary__active__border,
     @_button-gradient-color-start-active: @button-primary__active__gradient-color-start,
     @_button-gradient-color-end-active: @button-primary__active__gradient-color-end,
     @_button-gradient: @button-primary__gradient,
@@ -67,15 +67,15 @@
         @_button-width: @_button-width,
         @_button-margin: @_button-margin,
         @_button-padding: @_button-padding,
-        @_button-color: @_button-color,
-        @_button-background: @_button-background,
-        @_button-border: @_button-border,
+        @_button-color: @color-superdark,
+        @_button-background: @color-white,
+        @_button-border: 2px solid @color-superdark,
         @_button-color-hover: @_button-color-hover,
-        @_button-background-hover: @_button-background-hover,
-        @_button-border-hover: @_button-border-hover,
+        @_button-background-hover: @color-superdark,
+        @_button-border-hover: 2px solid @color-superdark,
         @_button-color-active: @_button-color-active,
-        @_button-background-active: @_button-background-active,
-        @_button-border-active: @_button-border-active,
+        @_button-background-active: @color-superdark,
+        @_button-border-active: 2px solid @color-superdark,
         @_button-gradient: @_button-gradient,
         @_button-gradient-direction: @_button-gradient-direction,
         @_button-gradient-color-start: @_button-gradient-color-start,
@@ -93,7 +93,6 @@
     .lib-button-secondary();
 }
 
-// fonts
 
 
 
@@ -137,6 +136,8 @@
     }
 }
 
+
+// fontawesome
 .fab,.fas{
     color: @color-icon-dark;
     font-size: 18px;
@@ -145,3 +146,5 @@
         color: @color-black;
     }
 }
+
+

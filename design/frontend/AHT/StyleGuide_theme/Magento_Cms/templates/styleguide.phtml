@@ -5,8 +5,11 @@
             <!-- Buttons -->
             <div class="custom-buttons">
                 <p class="style-guide-text">Buttons</p>
-                <div class="btn-button"><button class="action secondary">add to card</button> <button
-                        class="action primary">standard</button></div>
+                <div class="btn-button">
+                    <button type="submit" class="action primary box-tocart" id="product-addtocart-button">ADD TO CART</button>
+                    <button type="submit" class="action secondary box-tocart" id="product-addtocart-button">STANDARD</button> 
+                    
+                </div>
             </div>
             <!-- End Buttons -->
             <!-- Checkboxes & Radion Buttons -->
@@ -44,7 +47,7 @@
             <div class="custom-inputs">
                 <p class="style-guide-text">Input Fields</p>
                 <!-- Inputs -->
-                <div class="input-select-dropdown sg-input-field"><select id="" class="select" name="">
+                <div class="input-select-dropdown"><select id="" class="select" name="">
                         <option value="0">Dropdown field</option>
                         <option value="1">Option 1</option>
                         <option value="2">Option 2</option>
@@ -52,9 +55,8 @@
                 <div class="sg-input-field"><input class="input-text" type="text" value="Text field"></div>
                 <div class="sg-input-field"><input class="input-text input-selected" type="text"
                         value="Text field selected"></div>
-                <div class="sg-input-field"><input id="error-input" class="input-text mage-error" type="text"
-                        value="Email@liv,com">
-                    <div class="mage-error">Please enter a valid email address</div>
+                <div class="sg-input-field"><input id="error-input" class="input-text mage-error" type="text" value="Email@liv,com">
+                    <div for="email_address" generated="true" class="mage-error" id="email_address-error">Please enter a valid email address</div>
                 </div>
             </div>
             <!-- End Input Fields -->
