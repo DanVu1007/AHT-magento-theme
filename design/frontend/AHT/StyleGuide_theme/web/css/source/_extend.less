@@ -29,7 +29,6 @@
 //Form
 @padding-input: 12px 0 12px 13px;
 
-
 //Link
 @color-link: #111;
 @color-link-hover: #777;
@@ -40,8 +39,8 @@
 // @font-family__base: @font-family__roboto;
 
 //  Font families
-@font-family__lora: 'Lora';
-@font-family__roboto: 'Roboto';
+@font-family__lora: "Lora";
+@font-family__roboto: "Roboto";
 @font-family-name__base: @font-family__roboto;
 @font-family__base: @font-family-name__base, @font-family__sans-serif;
 
@@ -80,56 +79,18 @@
 @button__active__background: @button__hover__background;
 @button__active__border: @button__border;
 
-
-//====================================================form=====================================================//
-//  Form elements inputs default variables
-@form-element-input__width: 320px;
-@focus__box-shadow: none;
-
-//  ---------------------------------------------
-
-@form-element-input__background: @color-white;
-@form-element-input__border-color: @color-radio-border;
-@form-element-input__border: 1px solid @form-element-input__border-color;
-@form-element-input__border-radius: 0;
-@form-element-input__height: none;
-@form-element-input__line-height: none;
-
-@form-element-input__padding: @padding-input;
-
-//  Placeholder
-@form-element-input-placeholder__color: @color-placeholder-black;
-
-//  Disabled state
-@form-element-input__disabled__background: @color-radio-background;
-@form-element-input__disabled__border: @color-radio-border;
-@form-element-input__disabled__opacity: 1;
-@form-element-input__disabled__color: @color-radio-disable;
-
-//  Select
-//  ---------------------------------------------
-
-// @select__background: @form-element-input__background;
-@select__border: @form-element-input__border;
-@select__border-radius: @form-element-input__border-radius;
-@select__height: none;
-@select__width: @form-element-input__width;
-@select__margin: @form-element-input__margin;
-@select__padding: @padding-input;
-@select__vertical-align: @form-element-input__vertical-align;
-@select__background-clip: @form-element-input__background-clip; // [border//  Links
-//  ---------------------------------------------
-@form-element-validation__color-error: @color-placeholder-black;
-
-//border input validate
-@form-element-validation__border-error: @color-main-red;
-@form-validation-note__color-error: @color-main-red;
-
-
 //====================================================navigation=====================================================//
-
+@tab-control__color: #a9a9a9;
+@tab-control__font-weight: 700;
+@tab-control__active__color: #2d2d2d;
+@tab-control__hover__color: #2d2d2d;
+@tab-control__background-color: #f9f9f9;
+@accordion-control__font-family: @font-family__roboto;
 
 //====================================================alert=====================================================//
+@message__font-size: 15px;
+@message__font-weight: 500;
+
 @message__border-width: 1px;
 @message__border-style: solid;
 //  Success message
@@ -139,7 +100,7 @@
 //  Error message
 @message-error__color: @color-main-red;
 @message-error__background: @color-white;
-@message-error__border-color:@color-main-red;
+@message-error__border-color: @color-main-red;
 
 ._lib-message() {
     display: flex;
@@ -181,20 +142,19 @@
 @h4__font-family: @heading__font-family__base;
 @h4__font-weight: @font-weight__bold;
 
-
 //====================================================MISC=====================================================//
 // block
-.style-guide-block{
-    height:auto;
+.style-guide-block {
+    height: auto;
     width: 100%;
-    img{
+    img {
         z-index: 0;
         width: 100%;
         min-height: 372px;
         object-fit: cover;
         object-position: center;
     }
-    .shop-btn{
+    .shop-btn {
         background-color: @color-dark-button;
         border: 2px solid @color-white;
         position: absolute;
@@ -216,17 +176,157 @@
         font-size: 15px;
         line-height: 20px;
         font-weight: 700;
-        &:hover{
+        &:hover {
             background-color: @color-superdarker;
         }
     }
 }
 
-.fab,.fas{
+.fab,
+.fas {
     color: @color-icon-dark;
     font-size: 18px;
     line-height: 30px;
-    &:hover{
+    &:hover {
         color: @color-black;
+    }
+}
+
+//====================================================form=====================================================//
+//  Form elements inputs default variables
+// @form-element-input__width: 320px;
+@focus__box-shadow: none;
+
+//  ---------------------------------------------
+
+@form-element-input__background: @color-white;
+@form-element-input__border-color: @color-radio-border;
+@form-element-input__border: 1px solid @form-element-input__border-color;
+@form-element-input__border-radius: 0;
+@form-element-input__height: none;
+@form-element-input__line-height: none;
+
+@form-element-input__padding: @padding-input;
+
+//  Placeholder
+@form-element-input-placeholder__color: @color-placeholder-black;
+
+//  Disabled state
+@form-element-input__disabled__background: @color-radio-background;
+@form-element-input__disabled__border: @color-radio-border;
+@form-element-input__disabled__opacity: 1;
+@form-element-input__disabled__color: @color-radio-disable;
+
+//  Select
+//  ---------------------------------------------
+
+// @select__background: @form-element-input__background;
+@select__border: @form-element-input__border;
+@select__border-radius: @form-element-input__border-radius;
+@select__height: none;
+@select__width: @form-element-input__width;
+@select__margin: @form-element-input__margin;
+@select__padding: @padding-input;
+@select__vertical-align: @form-element-input__vertical-align;
+@select__background-clip: @form-element-input__background-clip; // [border//  Links
+//  ---------------------------------------------
+@form-element-validation__color-error: @color-placeholder-black;
+
+//border input validate
+@form-element-validation__border-error: @color-main-red;
+@form-validation-note__color-error: @color-main-red;
+
+// input[type='checkbox'],
+// input[type='radio'] {
+//     visibility: hidden;
+// }
+// label {
+//     cursor: pointer;
+//     position: relative;
+// }
+// input[type='checkbox']::before
+// input[type='radio']::before {
+//     content: '';
+//     display: block;
+//     width: 20px;
+//     height: 20px;
+//     background-color: red;
+// }
+// //checkbox xxxxxxxxxxxxxxx
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+
+    &::after {
+        font-family: "Font Awesome 6 Free";
+        content: "\f00c";
+        font-weight: 900;
+        font-size: 10px;
+        color: #2e2e30;
+        display: none;
+    }
+
+    &:hover {
+        background-color: #f4f4f4;
+    }
+
+    &:disabled {
+        background-color: #f4f4f4;
+        &::after {
+            color: #cdcdcd;
+        }
+    }
+    &:checked {
+        &::after {
+            display: block;
+        }
+    }
+}
+
+// //checkbox xxxxxxxxxxxxxxx
+input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+
+    &::after {
+        font-family: "Font Awesome 6 Free";
+        content: "\f111";
+        font-weight: 900;
+        font-size: 8px;
+        color: #2e2e30;
+        display: none;
+    }
+
+    &:hover {
+        background-color: #f4f4f4;
+    }
+
+    &:disabled {
+        background-color: #f4f4f4;
+        &::after {
+            color: #cdcdcd;
+        }
+    }
+    &:checked {
+        &::after {
+            display: block;
+        }
     }
 }

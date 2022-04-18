@@ -11,6 +11,9 @@
         <css src="mage/calendar.css"/>
         <script src="requirejs/require.js"/>
         <script src="mage/polyfill.js"/>
+        <!-- <link src="css/"> -->
+        <link src="css/fontawesome/css/all.min.css"/>
+
     </head>
     <body>
         <referenceBlock name="head.additional">
