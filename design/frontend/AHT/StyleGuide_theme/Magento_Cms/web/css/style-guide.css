@@ -1,13 +1,14 @@
 /* header */
-.page-header{
+
+.page-header {
     background-color: #9c0513;
 }
 
-.style-guide-logo{
+.style-guide-logo {
     margin: 0 auto;
     width: 451px;
 }
 
-
-/* footer */
-
+.style-guide-icons {
+    margin: 0 15px;
+}

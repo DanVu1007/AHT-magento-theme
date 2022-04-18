@@ -2,20 +2,9 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
         <css src="Magento_Cms::css/style-guide.css" />
-
     </head>
     <body>
         <referenceContainer name="page.wrapper">
-            <referenceBlock name="breadcrumbs" remove="true"/>
-            <referenceBlock name="navigation.sections" remove="true" />
-            <referenceBlock name="top.search" remove="true"/>
-            <referenceBlock name="header.panel.wrapper" remove="true"/>
-            <referenceBlock name="form.subscribe" remove="true"/>
-            <referenceBlock name="footer_links" remove="true"/>
-            <referenceBlock name="copyright" remove="true"/>
-            <referenceBlock name="report.bugs" remove="true" />
-            <referenceBlock name="minicart" remove="true"/>
-            <referenceContainer name="logo" remove="true" />
             <referenceContainer name="header.container">
                 <referenceContainer name="header-wrapper">
                     <!-- ***logo*** -->
@@ -28,15 +17,27 @@
                             </block>
                         </container>
                     </container>
-                    <!-- ********* -->
+                    <!-- ***end logo*** -->
                 </referenceContainer>
-
             </referenceContainer>
             <!-- test phtml  -->
             <referenceContainer name="main.content">
                 <block class="Magento\Framework\View\Element\Template" template="Magento_Cms::test.phtml"></block>
             </referenceContainer>
-            <!-- *********** -->
+            <!-- ***end test phtml*** -->
+            <!-- ***remove block*** -->
+            <referenceBlock name="breadcrumbs" remove="true"/>
+            <referenceBlock name="columns" remove="true"/>
+            <referenceBlock name="navigation.sections" remove="true" />
+            <referenceBlock name="top.search" remove="true"/>
+            <referenceBlock name="header.panel.wrapper" remove="true"/>
+            <referenceBlock name="form.subscribe" remove="true"/>
+            <referenceBlock name="footer_links" remove="true"/>
+            <referenceBlock name="copyright" remove="true"/>
+            <referenceBlock name="report.bugs" remove="true" />
+            <referenceBlock name="minicart" remove="true"/>
+            <referenceContainer name="logo" remove="true" />
+            <!-- ***end remove block*** -->
         </referenceContainer>
     </body>
 </page>

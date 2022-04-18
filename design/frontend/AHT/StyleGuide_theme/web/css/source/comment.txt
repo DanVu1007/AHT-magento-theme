@@ -1,0 +1,111 @@
+//  Style checkbox
+// @checkbox__background-color: @color-white;
+// @form-checkbox__display-block: block;
+// @form-checkbox__display-none: none;
+// @form-checkbox__position-relative: relative;
+// @form-checkbox__position-absolute: absolute;
+// @form-checkbox__padding-left: 35px;
+// @form-checkbox__padding-bottom: 12px;
+// @form-checkbox__cursor-pointer: pointer;
+// @form-checkbox__font-size: 15px;
+// @form-checkbox__opacity0: 0;
+// @form-checkbox__height0: 0;
+// @form-checkbox__height8: 8px;
+// @form-checkbox__width0: 0;
+// @form-checkbox__width10: 10px;
+// @form-checkbox__left0: 0;
+// @form-checkbox__left4: 4px;
+// @form-checkbox__top0: 0;
+// @form-checkbox__top2: 2px;
+// @form-checkbox__boder: 1px solid @color-checkbox-border;
+
+// //  Hide the browser's default checkbox
+// .style-guide-checkbox (
+//     @_form-checkbox__display: @form-checkbox__display-block,
+//     @_form-checkbox__position: @form-checkbox__position-relative,
+//     @_form-checkbox__padding-left: @form-checkbox__padding-left,
+//     @_form-checkbox__padding-bottom: @form-checkbox__padding-bottom,
+//     @_form-checkbox__cursor: @form-checkbox__cursor-pointer,
+//     @_form-checkbox__font-size: @form-checkbox__font-size
+// ) { //  The style guide checkbox
+//     display: @_form-checkbox__display;
+//     position: @_form-checkbox__position;
+//     padding-left: @_form-checkbox__padding-left;
+//     margin-bottom: @_form-checkbox__padding-bottom;
+//     cursor: @_form-checkbox__cursor;
+//     font-size: @_form-checkbox__font-size;
+//     .input-checkbox (
+//         @_form-checkbox__position: @form-checkbox__position-absolute,
+//         @_form-checkbox__cursor: @form-checkbox__cursor-pointer,
+//         @_form-checkbox__opacity: @form-checkbox__opacity0,
+//         @_form-checkbox__height: @form-checkbox__height0,
+//         @_form-checkbox__width: @form-checkbox__width0,
+//         @_form-checkbox__backgroud-color: @checkbox__background-color
+//     ) {
+//         position: @_form-checkbox__position;
+//         opacity: @_form-checkbox__opacity;
+//         cursor: @_form-checkbox__cursor;
+//         height: @_form-checkbox__height;
+//         width: @_form-checkbox__width;
+//         &:checked ~ .checkmark { //  When the checkbox is checked, add a blue background
+//             background-color: @_form-checkbox__backgroud-color;
+//         }
+//         &:checked ~ .checkmark { //  Show the checkmark when checked
+//             .fa-check (
+//                 @_form-checkbox__display: @form-checkbox__display-block,
+//             ) {
+//                 display: @_form-checkbox__display;
+//             }
+//         }
+//     }
+
+//     .checkmark (
+//         @_form-checkbox__position: @form-checkbox__position-absolute,
+//         @_form-checkbox__left: @form-checkbox__left0,
+//         @_form-checkbox__top: @form-checkbox__top0,
+//         @_form-checkbox__height: @form-checkbox__height20,
+//         @_form-checkbox__width: @form-checkbox__width20,
+//         @_form-checkbox__boder: @form-checkbox__boder,
+//         @_form-checkbox__background-color: @form-checkbox__background-color,
+//     ){  //  Create a custom checkbox
+//         position: @_form-checkbox__position;
+//         top: @_form-checkbox__top;
+//         left: @_form-checkbox__left;
+//         width: @_form-checkbox__width;
+//         height: @_form-checkbox__height;
+//         background-color: @_form-checkbox__background-color;
+//         border: @_form-checkbox__boder;
+//         i { //  Create the checkmark/indicator (hidden when not checked)
+//             left: 4px;  //  Style the checkmark/indicator
+//             top: 2px;
+//             width: 10px;
+//             height: 8px;
+//         }
+//         .fa-check (
+//             @_form-checkbox__position: @form-checkbox__position-absolute,
+//             @_form-checkbox__display: @form-checkbox__display-block,
+//             @_form-checkbox__left: @form-checkbox__left4,
+//             @_form-checkbox__top: @form-checkbox__top2,
+//             @_form-checkbox__height: @form-checkbox__height8,
+//             @_form-checkbox__width: @form-checkbox__width10,
+//             @_form-checkbox__boder: @form-checkbox__boder
+//         ) {
+//             position: @_form-checkbox__position;
+//             display: @_form-checkbox__display;
+//             top: @_form-checkbox__top;
+//             left: @_form-checkbox__left;
+//             width: @_form-checkbox__width;
+//             height: @_form-checkbox__height;
+//             border: @_form-checkbox__boder;
+
+//         }
+//     }
+
+//     &:hover { //  On mouse-over, add a grey background color
+//         .input-checkbox () {
+//             .checkmark (
+//                 @_form-checkbox__background-color: @checkbox__background-color
+//             );
+//         }
+//     }
+// }

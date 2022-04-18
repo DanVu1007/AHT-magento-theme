@@ -1,101 +1,388 @@
+// /**
+//  * Copyright © Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+// Extend styles and import
+//  ---------------------------------------------
+
+//
+//  import and add fonts
+//  ---------------------------------------------
+
+//  import slick
 @import "slick/slick.less";
 @import "slick/slick-theme.less";
 
+//  import fontawesome
+// @import 'fontawesome/fontawesome.css';
 
-// color
-@color-superlighter-green: #22b725;
-@color-superlight-green: #11ab15;
-@color-superdark: #3b3b3e;
-@highlight-color: #dd2f31;
+//  add fonts lora regular
+.lib-font-face(
+    @family-name: 'Lora',
+    @font-path: '@{baseDir}fonts/Lora/Lora-Regular',
+    @font-weight: @font-weight__light,
+    @font-style: normal,
+    @font-display: auto
+);
 
-// Button primary
-@button-primary__background: @color-superlighter-green;
-@button-primary__hover__background: @color-superlight-green;
-@button__font-family: @font-family__Roboto-base;
-// Button secondary
+//  add fonts Roboto all weight
+.lib-font-face(  //  font weight 100
+    @family-name: 'Roboto',
+    @font-path: '@{baseDir}fonts/Regular/Roboto-Thin',
+    @font-format: 'ttf',
+    @font-weight: @font-weight__thin,
+    @font-style: normal,
+    @font-display: auto
+);
 
-// Fonts
-@font-family__Roboto-base: 'Roboto';
-@font-family__Roboto: @font-family__Roboto-base, @font-family__sans-serif;
+.lib-font-face(  //  font weight 300
+    @family-name: 'Roboto',
+    @font-path: '@{baseDir}fonts/Regular/Roboto-Light',
+    @font-format: 'ttf',
+    @font-weight: @font-weight__light,
+    @font-style: normal,
+    @font-display: auto
+);
 
-.lib-button-secondary(
-    @_button-font-family: @button-primary__font-family,
-    @_button-font-size: @button-primary__font-size,
-    @_button-font-weight: @button-primary__font-weight,
-    @_button-line-height: @button-primary__line-height,
-    @_button-width: @button-primary__width,
-    @_button-margin: @button-primary__margin,
-    @_button-padding: @button-primary__padding,
-    @_button-color: @color-superdark,
-    @_button-background: @color-white,
-    @_button-border: @button-primary__border,
-    @_button-gradient-color-start: @button-primary__gradient-color-start,
-    @_button-gradient-color-end: @button-primary__gradient-color-end,
-    @_button-color-hover: @button-primary__hover__color,
-    @_button-background-hover: @color-superdark,
-    @_button-border-hover: @button-primary__hover__border,
-    @_button-gradient-color-start-hover: @button-primary__hover__gradient-color-start,
-    @_button-gradient-color-end-hover: @button-primary__hover__gradient-color-end,
-    @_button-color-active: @button-primary__active__color,
-    @_button-background-active: @button-primary__active__background,
-    @_button-border-active: @button-primary__active__border,
-    @_button-gradient-color-start-active: @button-primary__active__gradient-color-start,
-    @_button-gradient-color-end-active: @button-primary__active__gradient-color-end,
-    @_button-gradient: @button-primary__gradient,
-    @_button-gradient-direction: @button-primary__gradient-direction
-) {
-    .lib-button(
-        @_button-font-family: @_button-font-family,
-        @_button-font-size: @_button-font-size,
-        @_button-font-weight: @_button-font-weight,
-        @_button-line-height: @_button-line-height,
-        @_button-width: @_button-width,
-        @_button-margin: @_button-margin,
-        @_button-padding: @_button-padding,
-        @_button-color: @_button-color,
-        @_button-background: @_button-background,
-        @_button-border: @_button-border,
-        @_button-color-hover: @_button-color-hover,
-        @_button-background-hover: @_button-background-hover,
-        @_button-border-hover: @_button-border-hover,
-        @_button-color-active: @_button-color-active,
-        @_button-background-active: @_button-background-active,
-        @_button-border-active: @_button-border-active,
-        @_button-gradient: @_button-gradient,
-        @_button-gradient-direction: @_button-gradient-direction,
-        @_button-gradient-color-start: @_button-gradient-color-start,
-        @_button-gradient-color-end: @_button-gradient-color-end,
-        @_button-gradient-color-start-hover: @_button-gradient-color-start-hover,
-        @_button-gradient-color-end-hover: @_button-gradient-color-end-hover,
-        @_button-gradient-color-start-active: @_button-gradient-color-start-active,
-        @_button-gradient-color-end-active: @_button-gradient-color-end-active
-     );
+.lib-font-face(  //  font weight 400
+    @family-name: 'Roboto',
+    @font-path: '@{baseDir}fonts/Regular/Roboto-Regular',
+    @font-format: 'ttf',
+    @font-weight: @font-weight__regular,
+    @font-style: normal,
+    @font-display: auto
+);
+
+.lib-font-face(  //  font weight 500
+    @family-name: 'Roboto',
+    @font-path: '@{baseDir}fonts/Regular/Roboto-Medium',
+    @font-format: 'ttf',
+    @font-weight: @font-weight__heavier,
+    @font-style: normal,
+    @font-display: auto
+);
+
+.lib-font-face(  //  font weight 700
+    @family-name: 'Roboto',
+    @font-path: '@{baseDir}fonts/Regular/Roboto-Bold',
+    @font-format: 'ttf',
+    @font-weight: @font-weight__bold,
+    @font-style: normal,
+    @font-display: auto
+);
+
+.lib-font-face(  //  font weight 900
+    @family-name: 'Roboto',
+    @font-path: '@{baseDir}fonts/Regular/Roboto-Black',
+    @font-format: 'ttf',
+    @font-weight: @font-weight__black,
+    @font-style: normal,
+    @font-display: auto
+);
+
+//  add fonts Roboto Italic all weight
+.lib-font-face(  //  font weight 100 italic
+    @family-name: 'Roboto',
+    @font-path: '@{baseDir}fonts/Regular/Roboto-ThinItalic',
+    @font-format: 'ttf',
+    @font-weight: @font-weight__thin,
+    @font-style: italic,
+    @font-display: auto
+);
+
+.lib-font-face(  //  font weight 300 italic
+    @family-name: 'Roboto',
+    @font-path: '@{baseDir}fonts/Regular/Roboto-LightItalic',
+    @font-format: 'ttf',
+    @font-weight: @font-weight__light,
+    @font-style: italic,
+    @font-display: auto
+);
+
+.lib-font-face(  //  font weight 400 italic
+    @family-name: 'Roboto',
+    @font-path: '@{baseDir}fonts/Regular/Roboto-Italic',
+    @font-format: 'ttf',
+    @font-weight: @font-weight__regular,
+    @font-style: italic,
+    @font-display: auto
+);
+
+.lib-font-face(  //  font weight 500 italic
+    @family-name: 'Roboto',
+    @font-path: '@{baseDir}fonts/Regular/Roboto-MediumItalic',
+    @font-format: 'ttf',
+    @font-weight: @font-weight__heavier,
+    @font-style: italic,
+    @font-display: auto
+);
+
+.lib-font-face(  //  font weight 700 italic
+    @family-name: 'Roboto',
+    @font-path: '@{baseDir}fonts/Regular/Roboto-BoldItalic',
+    @font-format: 'ttf',
+    @font-weight: @font-weight__bold,
+    @font-style: italic,
+    @font-display: auto
+);
+
+.lib-font-face(  //  font weight 900 italic
+    @family-name: 'Roboto',
+    @font-path: '@{baseDir}fonts/Regular/Roboto-BlackItalic',
+    @font-format: 'ttf',
+    @font-weight: @font-weight__black,
+    @font-style: italic,
+    @font-display: auto
+);
+
+//
+// Extend styles base
+//  ---------------------------------------------
+
+// icon color
+@color-icon: #2d2d2f;
+@color-border-icon: #dddddd;
+@color-icon-disable: #cccccc;
+@color-backgroud-icon-disable: #f4f4f4;
+
+//  checkbox and radio input forms
+@checkbox__background-color: @color-white;
+
+//  Style button
+button:not(.primary) {
+    box-shadow: none;
 }
 
-.action.secondary {
-    .lib-button-secondary();
-}
-
-.slick-dots {
-    li {
-        margin: 3px;
-
-        &.slick-active {
-            button {
-                &:before {
-                    opacity: 1;
-                    color: @highlight-color;
-                }
-            }
-        }
-        button {
-            width: 20px;
-            height: 20px;
-            &:before {
-                font-size: 12px;
-                color: @highlight-color;
-            }
+//  Style radio
+.style-guide-radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 30px;
+    font-weight: @font-weight__regular;
+    font-family: @font-family__Roboto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 4px;
+        height: 20px;
+        width: 20px;
+        background-color: @checkbox__background-color;
+        border-radius: 50%;
+        border: 1px solid @color-border-icon;
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            top: 6px;
+            left: 6px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: @color-icon;
         }
     }
-    
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        &:checked ~ .checkmark:after {
+            display: block;
+        }
+    }
+}
+
+//  Style radio disable
+.style-guide-radio-disable {
+    .style-guide-radio;
+
+    &:hover input ~ .checkmark {
+        background-color: @color-backgroud-icon-disable;
+    }
+
+    input {
+        &:checked ~ .checkmark {
+            background-color: @color-backgroud-icon-disable;
+        }
+    }    
+
+    .checkmark {
+        background-color: @color-backgroud-icon-disable;
+        &:after {
+           background: @color-icon-disable;
+        }
+    }
+}
+
+// style checkbox
+.style-guide-checkbox {
+    .style-guide-radio;
+
+    input {
+        height: 0;
+        width: 0;
+    }
+
+    .checkmark {
+        border-radius: 0;
+        &:after {
+            left: 6px;
+            top: 2px;
+            width: 5px;
+            height: 10px;
+            background: @checkbox__background-color;
+            border: solid @color-icon;
+            border-width: 0 3px 3px 0;
+            border-radius: 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+}
+
+//  Style checkbox disable
+.style-guide-checkbox-disable {
+    .style-guide-checkbox;
+
+    &:hover input ~ .checkmark {
+        background-color: @color-backgroud-icon-disable;
+    }
+
+    input {
+        &:checked ~ .checkmark {
+            background-color: @color-backgroud-icon-disable;
+        }
+    }    
+
+    .checkmark {
+        background-color: @color-backgroud-icon-disable;
+        &:after {
+           border: solid @color-icon-disable;
+           border-width: 0 3px 3px 0;
+        }
+    }
+}
+
+//  Stytle message
+.message.success {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: @font-weight__heavier;
+    font-family: @font-family__Roboto;
+    border: 1px solid;
+    text-align: center;
+}
+
+.message.error {
+    .message.success;
+}
+
+//  Style paragraph
+.style-guide-paragraph {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: @font-weight__regular;
+    font-family: @font-family__Roboto;
+}
+
+//  Style href link
+.web-link {
+    .style-guide-paragraph;
+    font-family: @font-family-name__base;
+    cursor: pointer;
+
+    &:hover {
+        .style-guide-paragraph;
+    }
+
+    &:focus {
+        .style-guide-paragraph;
+    }
+
+    &:active {
+        .style-guide-paragraph;
+    }
+}
+
+.sg-link-hover.web-link {
+    .style-guide-paragraph;
+    font-family: @font-family-name__base;
+    color: @color-link-hover;
+}
+
+//  Stytle heanding
+.style-guide-h {
+    margin-top: 47px;
+}
+
+//  Style margin sesion icon
+.style-guide-icons {
+    margin-bottom: 38px;
+}
+
+//  Style icon
+.fab,.fas{
+    color: @color-icon-dark;
+    font-size: 18px;
+    line-height: 30px;
+
+    &:hover{ 
+        color: @color-black;
+    }
+}
+
+
+//  Style block
+.style-guide-block{
+    height:auto;
+    width: 100%;
+
+    img{
+        z-index: 0;
+        width: 100%;
+        min-height: 372px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .shop-btn{
+        background-color: @color-dark-button;
+        border: 2px solid @color-white;
+        margin: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: max-content;
+        height: 50px;
+        color: @color-white;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 12px 25px;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 1;
+        overflow: hidden;
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 700;
+
+        &:hover{
+            background-color: @color-dark-button;
+        }
+    }
 }
