@@ -21,78 +21,80 @@
 //
 // Extend styles base
 //  ---------------------------------------------
+& when (@media-common = true) {
+    //  icon
+    .fab,.fas{
+        color: @color-icon-dark;
+        font-size: 18px;
+        line-height: 30px;
 
-
-//  icon
-.fab,.fas{
-    color: @color-icon-dark;
-    font-size: 18px;
-    line-height: 30px;
-
-    &:hover{ 
-        color: @color-black;
-    }
-}
-
-// message alert
-
-._lib-message() {
-    text-align: center;
-}
-
-
-//  block
-.style-guide-block{
-    height:auto;
-    width: 100%;
-
-    img{
-        z-index: 0;
-        width: 100%;
-        min-height: 372px;
-        object-fit: cover;
-        object-position: center;
-    }
-
-    .shop-btn{
-        background-color: @color-dark-button;
-        border: 2px solid @color-white;
-        margin: auto;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        top: 0;
-        width: max-content;
-        height: 50px;
-        color: @color-white;
-        box-sizing: border-box;
-        text-align: center;
-        padding: 12px 25px;
-        display: inline-block;
-        cursor: pointer;
-        z-index: 1;
-        overflow: hidden;
-        font-size: 15px;
-        line-height: 20px;
-        font-weight: 700;
-
-        &:hover{
-            background-color: @color-superdarker;
+        &:hover{ 
+            color: @color-black;
         }
     }
+
+    // message alert
+
+    ._lib-message() {
+        text-align: center;
+    }
+
+
+    //  block
+    .style-guide-block{
+        height:auto;
+        width: 100%;
+
+        img{
+            z-index: 0;
+            width: 100%;
+            min-height: 372px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .shop-btn{
+            background-color: @color-dark-button;
+            border: 2px solid @color-white;
+            margin: auto;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            width: max-content;
+            height: 50px;
+            color: @color-white;
+            box-sizing: border-box;
+            text-align: center;
+            padding: 12px 25px;
+            display: inline-block;
+            cursor: pointer;
+            z-index: 1;
+            overflow: hidden;
+            font-size: 15px;
+            line-height: 20px;
+            font-weight: 700;
+
+            &:hover{
+                background-color: @color-superdarker;
+            }
+        }
+    }
+
+
+    // Button secondary
+    .lib-button-secondary(
+    ) {
+        .lib-button(
+        );
+    }
+
+    .action.secondary {
+        .lib-button-secondary();
+    }
+
+
+
 }
-
-
-// Button secondary
-.lib-button-secondary(
-) {
-    .lib-button(
-     );
-}
-
-.action.secondary {
-    .lib-button-secondary();
-}
-
 
