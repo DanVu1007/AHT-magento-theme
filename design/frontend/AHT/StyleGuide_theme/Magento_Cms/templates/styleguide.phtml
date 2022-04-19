@@ -16,29 +16,6 @@
                         <span class="qty-button add-qty-button" type="button">
                                 <button type="button" title="<?= __('Increase the quantity'); ?>" />+</button>
                         </span>
-                        <script type="text/javascript">
-                            // This is the javascript codes help us to increase and decrease qty
-                            require(['jquery'], function($) {
-                                $('.minus-qty-button').on('click', function() {
-                                    var qty = parseInt($('.qty').val());
-                                    qty = qty - 1;
-                                    $('.qty').val(qty).trigger('change');
-                                });
-                                $('.add-qty-button').on('click', function() {
-                                    var qty = parseInt($('.qty').val());
-                                    qty = qty + 1;
-                                    $('.qty').val(qty).trigger('change');
-                                });
-                                $('.qty').on('change', function() {
-                                    var qty = parseInt($(this).val());
-                                    if (qty > 100) {
-                                        $(this).val('100');
-                                    } else if (qty < 1) {
-                                        $(this).val('1');
-                                    }
-                                });
-                            });
-                        </script>
                     </div>
                 </div>
             </div>
