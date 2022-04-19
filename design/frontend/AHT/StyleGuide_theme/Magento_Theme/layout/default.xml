@@ -8,5 +8,16 @@
 <page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="default_head_blocks"/>
     <body>
+        <referenceContainer name="page.wrapper">
+            <!-- <referenceBlock name="breadcrumbs" remove="true"/> -->
+            <!-- <referenceBlock name="navigation.sections" remove="true" /> -->
+            <!-- <referenceBlock name="top.search" remove="true"/> -->
+            <!-- <referenceBlock name="header.panel.wrapper" remove="true"/> -->
+            <!-- <referenceBlock name="form.subscribe" remove="true"/> -->
+            <!-- <referenceBlock name="footer_links" remove="true"/> -->
+            <!-- <referenceBlock name="copyright" remove="true"/> -->
+            <!-- <referenceBlock name="report.bugs" remove="true" /> -->
+            <!-- <referenceBlock name="minicart" remove="true"/> -->
+        </referenceContainer>
     </body>
 </page>

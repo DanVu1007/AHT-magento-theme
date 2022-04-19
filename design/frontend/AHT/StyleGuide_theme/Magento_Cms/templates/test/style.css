@@ -2,83 +2,25 @@
     margin: 0;
     padding: 0;
 }
-.style-guide-inputs{
-    width:fit-content;
-    margin: 50px auto;
-    display: flex;
-}
-.style-guide-checkbox{
-    margin-right: 300px;
-}
-.style-guide-checkbox div, .style-guide-radio div{
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-}
-
-/* checkbox */
-.style-guide-checkbox div input[type="checkbox"]{
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border: 1px solid #ddd;
+.wrapper{
+    margin: 500px auto;
     display: flex;
     justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    margin-right: 10px;
 }
-.style-guide-checkbox div input[type="checkbox"]:hover, 
-.style-guide-checkbox div input[type="checkbox"]:disabled{
-    background-color: #f4f4f4;
+input[type='number']{
+    appearance: text;
+    box-sizing: border-box;
+    background-color: red;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    text-align: center;
+    padding:0;
+    position: relative;
 }
-
-.style-guide-checkbox div input[type="checkbox"]::after{
-    font-family: "Font Awesome 6 Free";
-    content: "\f00c";
-    font-weight: 900;
-    font-size: 10px;
-    color: #2e2e30;
-    display: none;
-}
-.style-guide-checkbox div input[type="checkbox"]:checked::after{
-    display: block;
-}
-.style-guide-checkbox div input[type="checkbox"]:disabled::after{
-    color: #cdcdcd;
-}
-
-/* radio */
-.style-guide-radio div input[type="radio"]{
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    margin-right: 10px;
-}
-.style-guide-radio div input[type="radio"]:hover, 
-.style-guide-radio div input[type="radio"]:disabled{
-    background-color: #f4f4f4;
-}
-
-.style-guide-radio div input[type="radio"]::after{
-    font-family: "Font Awesome 6 Free";
-    content: "\f111";
-    font-weight: 900;
-    font-size: 8px;
-    color: #2e2e30;
-    display: none;
-}
-.style-guide-radio div input[type="radio"]:checked::after{
-    display: block;
-}
-.style-guide-radio div input[type="radio"]:disabled::after{
-    color: #cdcdcd;
+input[type='number']::before{
+    content: '+';
+    width: 300px;
+    height: 300px;
+    background-color: blueviolet;
 }

@@ -193,8 +193,6 @@
 }
 
 //====================================================form=====================================================//
-//  Form elements inputs default variables
-// @form-element-input__width: 320px;
 @focus__box-shadow: none;
 
 //  ---------------------------------------------
@@ -236,22 +234,6 @@
 @form-element-validation__border-error: @color-main-red;
 @form-validation-note__color-error: @color-main-red;
 
-// input[type='checkbox'],
-// input[type='radio'] {
-//     visibility: hidden;
-// }
-// label {
-//     cursor: pointer;
-//     position: relative;
-// }
-// input[type='checkbox']::before
-// input[type='radio']::before {
-//     content: '';
-//     display: block;
-//     width: 20px;
-//     height: 20px;
-//     background-color: red;
-// }
 // //checkbox xxxxxxxxxxxxxxx
 input[type="checkbox"] {
     appearance: none;
@@ -330,3 +312,29 @@ input[type="radio"] {
         }
     }
 }
+// input[type="number"].qty{
+//     box-sizing: border-box;
+//     width: 40px;
+//     height: 40px;
+//     padding: 0;
+//     border: 1px solid red;
+//     text-align: center;
+//     &::after{
+//         content: '';
+//         display: inline-block;
+//         border: 1px solid black;
+//         width: 40px;
+//         height: 40px;
+//         background-color: #11ab15;
+//     }
+// }
+
+input[type="number"] {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #333;
+    &::after{
+        content: '123';
+    }
+}
+

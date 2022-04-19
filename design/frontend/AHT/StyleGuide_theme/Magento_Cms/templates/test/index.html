@@ -11,46 +11,8 @@
 </head>
 
 <body>
-    <div class="style-guide-inputs">
-        <!-- Checbox -->
-        <div class="style-guide-checkbox">
-            <div>
-                <input id="" class="checkbox" checked="checked" name="" type="checkbox">
-                <label class="style-guide-label" for="checkbox">Ticket</label>
-            </div>
-
-            <div>
-                <input id="" class="checkbox" name="" type="checkbox">
-                <label class="style-guide-label" for="checkbox">Not Ticked</label>
-            </div>
-
-            <div>
-                <input id="" class="checkbox" checked="checked" disabled="disabled" name="" type="checkbox">
-                <label class="style-guide-label" for="checkbox">Ticked, Disabled</label>
-            </div>
-
-            <div><input id="" class="checkbox" disabled="disabled" name="" type="checkbox">
-                <label class="style-guide-label" for="checkbox">Disabled</label>
-            </div>
-        </div>
-        <!-- End Checbox -->
-        <!-- Radio -->
-        <div class="style-guide-radio">
-            <div>
-                <input id="" class="radio" checked="checked" name="" type="radio">
-                <label class="style-guide-label" for="radio">Selected</label>
-            </div>
-            <div>
-                <input id="" class="radio" name="" type="radio">
-                <label class="style-guide-label" for="radio">Not Selected</label>
-            </div>
-            <div><input id="" class="radio" checked="checked" disabled="disabled" name="" type="radio">
-                <label class="style-guide-label" for="radio">Selected, Disabled</label>
-            </div>
-            <div><input id="" class="radio" disabled="disabled" name="" type="radio"> <label class="style-guide-label"
-                    for="radio">Disabled</label></div>
-        </div>
-        <!-- End Radio -->
+    <div class="wrapper">
+        <input type="number" name="qty" id="qty" min="0" value="1" title="Qty" class="input-text qty" data-validate="{&quot;required-number&quot;:true,&quot;validate-item-quantity&quot;:{&quot;minAllowed&quot;:1,&quot;maxAllowed&quot;:10000}}">
     </div>
 </body>
 
