@@ -97,48 +97,52 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
             <div class="field qty">
                 <div class="control qty">
                     <label for="cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty">
+                        
                         <span class="label"><?= $block->escapeHtml(__('Qty')) ?></span>
-                        <span class="qty-button minus-qty-button button-minus-cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty" type="button" >
-                            <button type="button" title="<?= __('Reduce the quantity'); ?>">-</button>
-                        </span>
-                        <input id="cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty"
-                               name="cart[<?= $block->escapeHtmlAttr($_item->getId()) ?>][qty]"
-                               data-cart-item-id="<?= $block->escapeHtmlAttr($_item->getSku()) ?>"
-                               value="<?= $block->escapeHtmlAttr($block->getQty()) ?>"
-                               type="number"
-                               size="4"
-                               step="any"
-                               title="<?= $block->escapeHtmlAttr(__('Qty')) ?>"
-                               class="input-text qty"
-                               data-validate="{required:true,'validate-greater-than-zero':true}"
-                               data-role="cart-item-qty"/>
-                        <span class="qty-button add-qty-button button-add-cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty" type="button">
-                                <button type="button" title="<?= __('Increase the quantity'); ?>" />+</button>
-                        </span>
-                        <script type="text/javascript">
-                            // This is the javascript codes help us to increase and decrease qty
-                            require(['jquery'], function($) {
-                                $('.button-minus-cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty').on('click', function() {
+                        <div class ="number-input-form-qty">
+                            <span class="qty-button minus-qty-button button-minus-cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty" type="button" >
+                                <button type="button" title="<?= __('Reduce the quantity'); ?>">-</button>
+                            </span>
+                            <input id="cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty"
+                                name="cart[<?= $block->escapeHtmlAttr($_item->getId()) ?>][qty]"
+                                data-cart-item-id="<?= $block->escapeHtmlAttr($_item->getSku()) ?>"
+                                value="<?= $block->escapeHtmlAttr($block->getQty()) ?>"
+                                type="number"
+                                size="4"
+                                step="any"
+                                title="<?= $block->escapeHtmlAttr(__('Qty')) ?>"
+                                class="input-text qty"
+                                data-validate="{required:true,'validate-greater-than-zero':true}"
+                                data-role="cart-item-qty"/>
+                            <span class="qty-button add-qty-button button-add-cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty" type="button">
+                                    <button type="button" title="<?= __('Increase the quantity'); ?>" />+</button>
+                            </span>
+                            <script type="text/javascript">
+                                // This is the javascript codes help us to increase and decrease qty
+                                require(['jquery'], function($) {
+                                    $('.button-minus-cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty').on('click', function() {
 
-                                    var qty = parseInt($('#cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty').val());
-                                    qty = qty - 1;
-                                    $('#cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty').val(qty).trigger('change');
+                                        var qty = parseInt($('#cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty').val());
+                                        qty = qty - 1;
+                                        $('#cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty').val(qty).trigger('change');
+                                    });
+                                    $('.button-add-cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty').on('click', function() {
+                                        var qty = parseInt($('#cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty').val());
+                                        qty = qty + 1;
+                                        $('#cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty').val(qty).trigger('change');
+                                    });
+                                    $('#cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty').on('change', function() {
+                                        var qty = parseInt($(this).val());
+                                        if (qty > 100) {
+                                            $(this).val('100');
+                                        } else if (qty < 1) {
+                                            $(this).val('1');
+                                        }
+                                    });
                                 });
-                                $('.button-add-cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty').on('click', function() {
-                                    var qty = parseInt($('#cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty').val());
-                                    qty = qty + 1;
-                                    $('#cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty').val(qty).trigger('change');
-                                });
-                                $('#cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty').on('change', function() {
-                                    var qty = parseInt($(this).val());
-                                    if (qty > 100) {
-                                        $(this).val('100');
-                                    } else if (qty < 1) {
-                                        $(this).val('1');
-                                    }
-                                });
-                            });
-                        </script>
+                            </script>
+                        </div>
+                        
                     </label>
                 </div>
             </div>
