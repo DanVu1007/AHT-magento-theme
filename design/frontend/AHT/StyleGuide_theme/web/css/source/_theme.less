@@ -400,11 +400,28 @@
 
 
 //*************************checkbox and radio input forms***************************//
-@checkbox__background-color: @color-white;
-@form-element-input__disabled__opacity: 0;
-@form-element-choice__type: ''; // [radio|checkbox]
-@form-element-choice__vertical-align: false;
-@form-element-choice__margin: 0;
+// @form-element-input__disabled__opacity: 0;
+// @form-element-choice__type: ''; // [radio|checkbox]
+// @form-element-choice__vertical-align: false;
+// @form-element-choice__margin: 0;
+
+//
+//  Radio
+//  ---------------------------------------------
+
+@input-radio__vertical-align: @form-element-choice__vertical-align;
+@input-radio__margin: @form-element-choice__margin;
+
+@input-radio__disabled__opacity: @form-element-choice__disabled__opacity;
+
+//
+//  Checkbox
+//  ---------------------------------------------
+
+@input-checkbox__vertical-align: @form-element-choice__vertical-align;
+@input-checkbox__margin: @form-element-choice__margin;
+
+@input-checkbox__disabled__opacity: @form-element-choice__disabled__opacity;
 
 //*************************end checkbox and radio input forms***************************//
 
