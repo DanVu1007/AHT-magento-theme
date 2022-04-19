@@ -36,7 +36,8 @@
     width: 100px;
 }
 .style-guide-inputs{
-    display: flex;
+    display: inline-flex;
+
 }
 .style-guide-inputs>div{
     margin: 0 10px;
