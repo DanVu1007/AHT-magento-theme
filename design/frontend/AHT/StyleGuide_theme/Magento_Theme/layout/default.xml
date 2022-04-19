@@ -9,15 +9,14 @@
     <update handle="default_head_blocks"/>
     <body>
         <referenceContainer name="page.wrapper"> </referenceContainer>
-            <!-- <referenceBlock name="breadcrumbs" remove="true"/> -->
-            <!-- <referenceBlock name="navigation.sections" remove="true" /> -->
-            <!-- <referenceBlock name="top.search" remove="true"/> -->
-            <!-- <referenceBlock name="header.panel.wrapper" remove="true"/> -->
-            <!-- <referenceBlock name="form.subscribe" remove="true"/> -->
-            <!-- <referenceBlock name="footer_links" remove="true"/> -->
-            <!-- <referenceBlock name="copyright" remove="true"/> -->
-            <!-- <referenceBlock name="report.bugs" remove="true" /> -->
-            <!-- <referenceBlock name="minicart" remove="true"/> -->
+            <!-- Top-panel -->
+            <referenceBlock name="header.panel.wrapper" remove="true"/>
+            <!-- End Top-panel -->
+
+            <!-- Menu -->
+            <referenceBlock name="navigation.sections" remove="true" />
+            <!-- End Menu -->
+            
         <referenceContainer name="main.content">
             <block name="numberformbutton.phtml" class="Magento\Framework\View\Element\Template" template="Magento_Theme::numberformbutton.phtml" />
         </referenceContainer>
