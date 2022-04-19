@@ -5,8 +5,18 @@
             <!-- Buttons -->
             <div class="custom-buttons title-margin">
                 <p class="style-guide-text">Buttons</p>
-                <div class="btn-button"><button class="action primary">ADD TO CARD</button> <button
-                    class="action secondary">STANDARD</button>
+                <div class="btn-button">
+                    <button class="action primary">ADD TO CARD</button>
+                    <button class="action secondary">STANDARD</button>
+                    <div class="qty">
+                        <button class="add-qty">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <input type="number" name="qty" value="1" min="0">
+                        <button class="minus-qty">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
             <!-- End Buttons -->
@@ -15,39 +25,39 @@
                 <p class="style-guide-text">Checkboxes &amp; Radio Buttons</p>
                 <div class="style-guide-inputs">
                     <!-- Checbox -->
-                    <label class="style-guide-checkbox">Tiked
+                    <label class="style-guide-checkbox">
                         <input type="checkbox" checked="checked">
-                        <span class="checkmark"></span>
+                        Tiked
                     </label>
-                    <label class="style-guide-checkbox">Not Ticked
+                    <label class="style-guide-checkbox">
                         <input type="checkbox">
-                        <span class="checkmark"></span>
+                        Not Ticked
                     </label>
-                    <label class="style-guide-checkbox-disable">Ticked, Disable
+                    <label class="style-guide-checkbox">
                         <input type="checkbox" checked="checked" disabled="disabled">
-                        <span class="checkmark"></span>
+                        Ticked, Disable
                     </label>
-                    <label class="style-guide-checkbox-disable">Disable
+                    <label class="style-guide-checkbox">
                         <input type="checkbox" disabled="disabled">
-                        <span class="checkmark"></span>
+                        Disable
                     </label>
                     <!-- End Checbox -->
                     <!-- Radio -->
-                    <label class="style-guide-radio">Select
+                    <label class="style-guide-radio">
                         <input type="radio" checked="checked" name="radio">
-                        <span class="checkmark"></span>
+                        Selected
                     </label>
-                    <label class="style-guide-radio">Not Select
+                    <label class="style-guide-radio">
                         <input type="radio" name="radio">
-                        <span class="checkmark"></span>
+                        Not Selected
                     </label>
-                    <label class="style-guide-radio-disable">Select, Disable
+                    <label class="style-guide-radio">
                         <input type="radio" name="radio-disable" checked="checked" disabled="disabled">
-                        <span class="checkmark"></span>
+                        Select, Disable
                     </label>
-                    <label class="style-guide-radio-disable">Disable
+                    <label class="style-guide-radio">
                         <input type="radio" name="radio-disable" disabled="disabled">
-                        <span class="checkmark"></span>
+                        Select, Disable
                     </label>
                     <!-- End Radio -->
                 </div>
