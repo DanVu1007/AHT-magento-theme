@@ -19,6 +19,8 @@
             <!-- <referenceBlock name="copyright" remove="true"/> -->
             <!-- <referenceBlock name="report.bugs" remove="true" /> -->
             <!-- <referenceBlock name="minicart" remove="true"/> -->
+        <referenceContainer name="main.content">
+            <block name="numberformbutton.phtml" class="Magento\Framework\View\Element\Template" template="Magento_Theme::numberformbutton.phtml" />
         </referenceContainer>
     </body>
 </page>
