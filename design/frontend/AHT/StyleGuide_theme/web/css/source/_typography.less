@@ -1,42 +1,108 @@
-.lib-font-face(
-    @family-name:'Roboto',
-    @font-path: '@{baseDir}fonts/Roboto/Roboto-Thin',
-    @font-weight: 100,
-    @font-style: normal,
-);
-.lib-font-face(
-    @family-name:'Roboto',
-    @font-path: '@{baseDir}fonts/Roboto/Roboto-Light',
-    @font-weight: 300,
-    @font-style: normal,
-);
-.lib-font-face(
-    @family-name:'Roboto',
-    @font-path: '@{baseDir}fonts/Roboto/Roboto-Regular',
-    @font-weight: 400,
-    @font-style: normal,
-);
-.lib-font-face(
-    @family-name:'Roboto',
-    @font-path: '@{baseDir}fonts/Roboto/Roboto-Medium',
-    @font-weight: 500,
-    @font-style: normal,
-);
-.lib-font-face(
-    @family-name:'Roboto',
-    @font-path: '@{baseDir}fonts/Roboto/Roboto-Bold',
-    @font-weight: 700,
-    @font-style: normal,
-);
-.lib-font-face(
-    @family-name:'Roboto',
-    @font-path: '@{baseDir}fonts/Roboto/Roboto-Black',
-    @font-weight: 900,
-    @font-style: normal,
-);
-.lib-font-face(
-    @family-name:'Lora',
-    @font-path: '@{baseDir}fonts/Lora/Lora-Regular',
-    @font-weight: 400,
-    @font-style: normal,
-);
+// /**
+//  * Copyright © Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .lib-ttf-font-face(
+        @family-name,
+        @font-path,
+        @font-weight: normal,
+        @font-style: normal
+    ) {
+        @font-face{
+            font-family: @family-name;
+            src: url('@{font-path}.ttf') format('truetype');
+            font-weight: @font-weight;
+            font-style: @font-style;
+        }
+    }
+    //  add fonts lora regular
+    .lib-ttf-font-face(
+        @family-name: @font-family-name__Lora-base,
+        @font-path: '@{baseDir}fonts/Lora/static/Lora-Regular',
+        @font-weight: 400,
+        @font-style: normal,
+    );
+
+    //  add fonts Roboto all weight
+    .lib-ttf-font-face(  //  font weight 100
+        @family-name: @font-family-name__Roboto-base,
+        @font-path: '@{baseDir}fonts/Roboto/Roboto-Thin',
+        @font-weight: @font-weight__thin,
+        @font-style: normal,
+    );
+
+    .lib-ttf-font-face(  //  font weight 300
+        @family-name: @font-family-name__Roboto-base,
+        @font-path: '@{baseDir}fonts/Roboto/Roboto-Light',
+        @font-weight: @font-weight__light,
+        @font-style: normal,
+    );
+
+    .lib-ttf-font-face(  //  font weight 400
+        @family-name: @font-family-name__Roboto-base,
+        @font-path: '@{baseDir}fonts/Roboto/Roboto-Regular',
+        @font-weight: @font-weight__regular,
+        @font-style: normal,
+
+    );
+
+    .lib-ttf-font-face(  //  font weight 500
+        @family-name: @font-family-name__Roboto-base,
+        @font-path: '@{baseDir}fonts/Roboto/Roboto-Medium',
+        @font-weight: @font-weight__heavier,
+        @font-style: normal,
+
+    );
+
+    .lib-ttf-font-face(  //  font weight 700
+        @family-name: @font-family-name__Roboto-base,
+        @font-path: '@{baseDir}fonts/Roboto/Roboto-Bold',
+        @font-weight: @font-weight__bold,
+        @font-style: normal,
+    );
+
+    .lib-ttf-font-face(  //  font weight 900
+        @family-name: @font-family-name__Roboto-base,
+        @font-path: '@{baseDir}fonts/Roboto/Roboto-Black',
+        @font-weight: @font-weight__black,
+        @font-style: normal,
+    );
+
+    //  add fonts Roboto Italic all weight
+    .lib-ttf-font-face(  //  font weight 100 italic
+        @family-name: @font-family-name__Roboto-base,
+        @font-path: '@{baseDir}fonts/Roboto/Roboto-ThinItalic',
+        @font-weight: @font-weight__thin,
+        @font-style: italic,
+    );
+
+    .lib-ttf-font-face(  //  font weight 300 italic
+        @family-name: @font-family-name__Roboto-base,
+        @font-path: '@{baseDir}fonts/Roboto/Roboto-LightItalic',
+        @font-weight: @font-weight__light,
+        @font-style: italic,
+    );
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .items {
+        .lib-list-reset-styles();
+    }
+}
+
+
