@@ -15,20 +15,18 @@
 @import "slick/slick.less";
 @import "slick/slick-theme.less";
 
-
-
-
 //
 // Extend styles base
 //  ---------------------------------------------
 & when (@media-common = true) {
     //  icon
-    .fab,.fas{
+    .fab,
+    .fas {
         color: @color-icon-dark;
         font-size: 18px;
         line-height: 30px;
 
-        &:hover{ 
+        &:hover {
             color: @color-black;
         }
     }
@@ -39,13 +37,12 @@
         text-align: center;
     }
 
-
     //  block
-    .style-guide-block{
-        height:auto;
+    .style-guide-block {
+        height: auto;
         width: 100%;
 
-        img{
+        img {
             z-index: 0;
             width: 100%;
             min-height: 280px;
@@ -53,7 +50,7 @@
             object-position: center;
         }
 
-        .shop-btn{
+        .shop-btn {
             background-color: @color-dark-button;
             border: 2px solid @color-white;
             margin: auto;
@@ -76,12 +73,11 @@
             line-height: 20px;
             font-weight: 700;
 
-            &:hover{
+            &:hover {
                 background-color: @color-superdarker;
             }
         }
     }
-
 
     // Button secondary
     .lib-button-secondary(
@@ -93,11 +89,7 @@
     .action.secondary {
         .lib-button-secondary();
     }
-
-    
-    
 }
-
 
 // //checkbox xxxxxxxxxxxxxxx
 input[type="checkbox"] {
@@ -106,7 +98,7 @@ input[type="checkbox"] {
     height: 20px;
     background-color: white;
     border: 1px solid #ddd;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -118,7 +110,7 @@ input[type="checkbox"] {
         font-weight: 900;
         font-size: 10px;
         color: #2e2e30;
-        display: none;
+        opacity: 0;
     }
 
     &:hover {
@@ -133,7 +125,7 @@ input[type="checkbox"] {
     }
     &:checked {
         &::after {
-            display: block;
+            opacity: 1;
         }
     }
 }
@@ -146,7 +138,7 @@ input[type="radio"] {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 50%;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -158,7 +150,7 @@ input[type="radio"] {
         font-weight: 900;
         font-size: 8px;
         color: #2e2e30;
-        display: none;
+        opacity: 0;
     }
 
     &:hover {
@@ -173,7 +165,53 @@ input[type="radio"] {
     }
     &:checked {
         &::after {
-            display: block;
+            opacity: 1;
         }
+    }
+}
+._lib-message(
+) {
+    display: flex;
+    justify-content: center;
+}
+
+//  Style form qty
+.number-input-form-qty {
+    display: inline-flex;
+
+    input[type="number"] {
+        box-sizing: border-box;
+        width: 40px;
+        height: 40px;
+        margin: 0;
+        background-color: @color-backgroud__qty;
+        border: 1px solid @color-boder__qty;
+        font-size: 13px;
+        line-height: 30px;
+        color: @color-text__qty;
+        font-weight: 400;
+        font-family: @font-family__base;
+    }
+
+    .qty-button  button {
+        font-size: 12px;
+        color: @color__qty;
+        padding: 11px 15px;
+        border: 1px solid @color-boder__qty;
+        margin-right: -5px;
+
+        &:hover {
+            background: @color-hover__qty;
+        }
+
+        &:focus {
+            background: @color-hover__qty;
+        }
+    }
+
+    .minus-qty-button button {
+        padding: 11px 17px;
+        margin-right: 0px;
+        margin-left: -5px;
     }
 }
