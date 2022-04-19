@@ -8,6 +8,7 @@
 <page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="default_head_blocks"/>
     <body>
+        <block name="dan" class="Magento\Framework\View\Element\Template" template="Magento_Theme::alert.phtml"/>
         <referenceContainer name="page.wrapper">
             <!-- <referenceBlock name="breadcrumbs" remove="true"/> -->
             <!-- <referenceBlock name="navigation.sections" remove="true" /> -->

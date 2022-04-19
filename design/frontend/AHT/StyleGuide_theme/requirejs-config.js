@@ -7,4 +7,5 @@ var config = {
             deps: ['jquery']
         }
     }
+
 };
