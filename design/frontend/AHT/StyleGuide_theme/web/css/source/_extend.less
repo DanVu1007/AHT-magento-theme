@@ -18,7 +18,9 @@
 //
 // Extend styles base
 //  ---------------------------------------------
-& when (@media-common = true) {
+
+
+
     //  icon
     .fab,
     .fas {
@@ -31,12 +33,14 @@
         }
     }
 
+
+
     // message alert
 
     ._lib-message() {
-        text-align: center;
+        display: flex;
+        justify-content: center;
     }
-
     //  block
     .style-guide-block {
         height: auto;
@@ -171,7 +175,7 @@
         }
     }
 
-    // //raidio xxxxxxxxxxxxxxx
+    // //radio xxxxxxxxxxxxxxx
     input[type="radio"] {
         appearance: none;
         width: 20px;
@@ -210,11 +214,7 @@
             }
         }
     }
-    ._lib-message(
-    ) {
-        display: flex;
-        justify-content: center;
-    }
+
 
     //  Style form qty
     .number-input-form-qty {
@@ -276,5 +276,5 @@
             
         }
     }
-}
+
 
