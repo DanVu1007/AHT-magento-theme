@@ -101,7 +101,7 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
                         <span class="label"><?= $block->escapeHtml(__('Qty')) ?></span>
                         <div class ="number-input-form-qty">
                             <span class="qty-button minus-qty-button" type="button" >
-                                <button type="button" title="<?= __('Reduce the quantity'); ?>">-</button>
+                                <button type="button" title="<?= __('Reduce the quantity'); ?>"><i class="fa-solid fa-minus"></i></button>
                             </span>
                             <input id="cart-<?= $block->escapeHtmlAttr($_item->getId()) ?>-qty"
                                 name="cart[<?= $block->escapeHtmlAttr($_item->getId()) ?>][qty]"
@@ -115,7 +115,7 @@ $canApplyMsrp = $helper->isShowBeforeOrderConfirm($product) && $helper->isMinima
                                 data-validate="{required:true,'validate-greater-than-zero':true}"
                                 data-role="cart-item-qty"/>
                             <span class="qty-button add-qty-button" type="button">
-                                    <button type="button" title="<?= __('Increase the quantity'); ?>" />+</button>
+                                <button type="button" title="<?= __('Increase the quantity'); ?>"><i class="fa-solid fa-plus"></i></button>
                             </span>
                         </div>
                         

@@ -18,6 +18,7 @@
             <!-- End Menu -->
             
         <referenceContainer name="main.content">
+            <block name="our.blog" class="Magento\Framework\View\Element\Template" template="Magento_Theme::alert.phtml" />
             <block name="numberformbutton.phtml" class="Magento\Framework\View\Element\Template" template="Magento_Theme::numberformbutton.phtml" />
         </referenceContainer>
     </body>
