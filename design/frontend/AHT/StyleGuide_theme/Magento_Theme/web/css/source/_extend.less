@@ -1,30 +1,83 @@
-.panel.wrapper {
-    background-color: red;
-    height: 36px;
+.transform(@transform) {
+    -webkit-transform: @transform;
+    -moz-transform: @transform;
+    -ms-transform: @transform; /* note that you have @trasnform here */
+    -o-transform: @transform;
+    transform: @transform;
+}
+.customatag{
+    color: white;
+    text-decoration: none;
+    animation: ease .3s;
+    &:hover{
+        color: rgb(151, 151, 151);
+    }
+}
+.page-header {
     border: 0;
-    display: flex;
-    align-items: center;
-    .header-pc {
-        line-height: normal;
-        display: flex;
-        justify-content: space-between;
-        color: white;
-        ul {
-            margin: 0;
+    margin-bottom: 0;
+    .panel.wrapper {
+        background-color: #222;
+        border-bottom: 0;
+        padding: 0;
+        line-height: none;
+        .header-pc {
+            height: 18px;
             display: flex;
-            list-style: none;
-            li {
-                a {
-                    text-decoration: none;
-                }
-                margin: 0;
+            justify-content: space-between;
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            a {
+                .customatag;
             }
-        }
-        .header-contact {
-        }
-        .header-info {
-        }
-        .header-more {
+            ul {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                list-style: none;
+                li {
+                    margin: 0;
+                }
+            }
+            .header-contact {
+
+            }
+            .header-info {
+                ul{
+                    li{
+                        margin-right: 27px;
+                        position: relative;
+                        &::after{
+                            content: '';
+                            width: 4px;
+                            height: 4px;
+                            border-radius: 50%;
+                            background-color: white;
+                            position: absolute;
+                            right: -15px;
+                            top: 50%;
+                            .transform(translateY(-50%));
+                        }
+                        &:last-child{
+                            margin-right: 0;
+                            &::after{
+                                content: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .header-more {
+                ul{
+                    li{
+                        margin-right: 20px;
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
         }
     }
 }
