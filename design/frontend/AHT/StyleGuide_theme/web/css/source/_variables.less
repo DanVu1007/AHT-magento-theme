@@ -15,18 +15,21 @@
 @font-size__base: 13px;
 @font-family__base: @font-family__Roboto-base;
 
+// Fonts open sans
+@font-family-name__sans-serif-base: 'Open Sans';
+@font-family__sans-serif-base: @font-family-name__sans-serif-base;
 
 //  Fonts roboto 
 @font-family-name__Roboto-base: 'Roboto';
-@font-family__Roboto-base: @font-family-name__Roboto-base;
+@font-family__Roboto-base: @font-family-name__Roboto-base, @font-family__sans-serif-base;
 
 //  Fonts lora
 @font-family-name__Lora-base: 'Lora';
-@font-family__Lora-base: @font-family-name__Lora-base, @font-family__Roboto-base;
+@font-family__Lora-base: @font-family-name__Lora-base, @font-family__base;
 
 // Fonts Markey W03
 @font-family-name__Market-W03-base: 'Market-W03';
-@font-family__Market-W03-base: @font-family-name__Market-W03-base, @font-family__Roboto-base;
+@font-family__Market-W03-base: @font-family-name__Market-W03-base, @font-family__base;
 
 //weigth
 @font-weight__thin: 100;
