@@ -18,4 +18,7 @@
     <layout id="3columns">
         <label translate="true">3 columns</label>
     </layout>
+    <layout id="homepage">
+        <label translate="true">home page</label>
+    </layout>
 </page_layouts>
