@@ -21,83 +21,79 @@
 
 
 
-    //  icon
-    .fab,
-    .fas {
-        color: @color-icon-dark;
-        font-size: 18px;
-        line-height: 30px;
+//  icon
+.fab,
+.fas {
+    color: @color-icon-dark;
+    font-size: 18px;
+    line-height: 30px;
+
+    &:hover {
+        color: @color-black;
+    }
+}
+
+// message alert
+
+._lib-message() {
+    display: flex;
+    justify-content: center;
+}
+
+//  block
+.style-guide-block {
+    height: auto;
+    width: 100%;
+
+    img {
+        z-index: 0;
+        width: 100%;
+        min-height: 280px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .shop-btn {
+        background-color: @color-dark-button;
+        border: 2px solid @color-white;
+        margin: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: max-content;
+        height: 50px;
+        color: @color-white;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 12px 25px;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 1;
+        overflow: hidden;
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 700;
 
         &:hover {
-            color: @color-black;
+            background-color: @color-superdarker;
         }
     }
+}
+
+// Button secondary
+.lib-button-secondary() {
+    .lib-button();
+}
+
+.action.secondary {
+    .lib-button-secondary();
+}
 
 
-
-    // message alert
-
-    ._lib-message() {
-        display: flex;
-        justify-content: center;
-    }
-    //  block
-    .style-guide-block {
-        height: auto;
-        width: 100%;
-
-        img {
-            z-index: 0;
-            width: 100%;
-            min-height: 280px;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        .shop-btn {
-            background-color: @color-dark-button;
-            border: 2px solid @color-white;
-            margin: auto;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            top: 0;
-            width: max-content;
-            height: 50px;
-            color: @color-white;
-            box-sizing: border-box;
-            text-align: center;
-            padding: 12px 25px;
-            display: inline-block;
-            cursor: pointer;
-            z-index: 1;
-            overflow: hidden;
-            font-size: 15px;
-            line-height: 20px;
-            font-weight: 700;
-
-            &:hover {
-                background-color: @color-superdarker;
-            }
-        }
-    }
-
-    // Button secondary
-    .lib-button-secondary(
-    ) {
-        .lib-button(
-        );
-    }
-
-    .action.secondary {
-        .lib-button-secondary();
-    }
-
-
-    // Button number
-    .lib-button-number(
-    @_button-font-family: @font-family__base,
+// Button number
+.lib-button-number(@_button-font-family: @font-family__base,
     @_button-font-size: 13,
     @_button-font-weight: 400,
     @_button-line-height: 30,
@@ -113,168 +109,350 @@
     @_button-background-active: @color-hover__qty,
     @_button-border-active: 1px solid @color-boder__qty,
 
-    ) {
-        .lib-button(
-            @_button-font-family: @_button-font-family,
-            @_button-font-size: @_button-font-size,
-            @_button-font-weight: @_button-font-weight,
-            @_button-line-height: @_button-line-height,
-            @_button-width: @_button-width,
-            @_button-padding: @_button-padding,
-            @_button-color: @_button-color,
-            @_button-background: @_button-background,
-            @_button-border: @_button-border,
-            @_button-color-hover: @_button-color-hover,
-            @_button-background-hover: @_button-background-hover,
-            @_button-border-hover: @_button-border-hover,
-            @_button-color-active: @_button-color-active,
-            @_button-background-active: @_button-background-active,
-            @_button-border-active: @_button-border-active,
-        );
+) {
+    .lib-button(@_button-font-family: @_button-font-family,
+        @_button-font-size: @_button-font-size,
+        @_button-font-weight: @_button-font-weight,
+        @_button-line-height: @_button-line-height,
+        @_button-width: @_button-width,
+        @_button-padding: @_button-padding,
+        @_button-color: @_button-color,
+        @_button-background: @_button-background,
+        @_button-border: @_button-border,
+        @_button-color-hover: @_button-color-hover,
+        @_button-background-hover: @_button-background-hover,
+        @_button-border-hover: @_button-border-hover,
+        @_button-color-active: @_button-color-active,
+        @_button-background-active: @_button-background-active,
+        @_button-border-active: @_button-border-active,
+    );
+}
+
+.qty-button button {
+    .lib-button-number();
+    height: 40px;
+}
+
+// //checkbox xxxxxxxxxxxxxxx
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+
+    &::after {
+        font-family: "Font Awesome 6 Free";
+        content: "\f00c";
+        font-weight: 900;
+        font-size: 10px;
+        color: #2e2e30;
+        opacity: 0;
     }
-    .qty-button button {
-        .lib-button-number();
-        height: 40px;
+
+    &:hover {
+        background-color: #f4f4f4;
     }
-    // //checkbox xxxxxxxxxxxxxxx
-    input[type="checkbox"] {
-        appearance: none;
-        width: 20px;
-        height: 20px;
-        background-color: white;
-        border: 1px solid #ddd;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        margin: 0 10px 0 0;
+
+    &:disabled {
+        background-color: #f4f4f4;
 
         &::after {
-            font-family: "Font Awesome 6 Free";
-            content: "\f00c";
-            font-weight: 900;
-            font-size: 10px;
-            color: #2e2e30;
-            opacity: 0;
-        }
-
-        &:hover {
-            background-color: #f4f4f4;
-        }
-
-        &:disabled {
-            background-color: #f4f4f4;
-            &::after {
-                color: #cdcdcd;
-            }
-        }
-        &:checked {
-            &::after {
-                opacity: 1;
-            }
+            color: #cdcdcd;
         }
     }
 
-    // //radio xxxxxxxxxxxxxxx
-    input[type="radio"] {
-        appearance: none;
-        width: 20px;
-        height: 20px;
-        background-color: white;
-        border: 1px solid #ddd;
-        border-radius: 50%;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        margin: 0 10px 0 0;
+    &:checked {
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+// //radio xxxxxxxxxxxxxxx
+input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+
+    &::after {
+        font-family: "Font Awesome 6 Free";
+        content: "\f111";
+        font-weight: 900;
+        font-size: 8px;
+        color: #2e2e30;
+        opacity: 0;
+    }
+
+    &:hover {
+        background-color: #f4f4f4;
+    }
+
+    &:disabled {
+        background-color: #f4f4f4;
 
         &::after {
-            font-family: "Font Awesome 6 Free";
-            content: "\f111";
-            font-weight: 900;
-            font-size: 8px;
-            color: #2e2e30;
-            opacity: 0;
-        }
-
-        &:hover {
-            background-color: #f4f4f4;
-        }
-
-        &:disabled {
-            background-color: #f4f4f4;
-            &::after {
-                color: #cdcdcd;
-            }
-        }
-        &:checked {
-            &::after {
-                opacity: 1;
-            }
+            color: #cdcdcd;
         }
     }
 
+    &:checked {
+        &::after {
+            opacity: 1;
+        }
+    }
+}
 
-    //  Style form qty
-    .number-input-form-qty {
-        display: inline-flex;
-        width: auto;
+
+//  Style form qty
+.number-input-form-qty {
+    display: inline-flex;
+    width: auto;
+    height: 40px;
+    justify-content: space-between;
+
+    input {
+        border: 1px solid @color-boder__qty;
+        width: 38px;
+        height: 38px;
+        text-align: center;
+        padding: 0;
+        color: @color-text__qty;
+    }
+
+    .qty-button {
+        position: relative;
         height: 40px;
-        justify-content: space-between;
-        input{
-            border: 1px solid @color-boder__qty;
-            width: 38px;
-            height: 38px;
-            text-align: center;
-            padding: 0;
-            color: @color-text__qty;
-        }
-        .qty-button{
-            position: relative;
-            height:40px;
-            width:40px;
-
-            i{
-                position: absolute;
-                top:50%;
-                left:50%;
-                transform: translate(-50%,-50%);
-                font-size: 14px;
-            }
-
-        }
-    }
-    .minicart-items {
-        .item-qty {
-            height: 40px;
-            width: 40px;
-        }
-    }
-
-    .abs-input-qty {
         width: 40px;
-        height:40px;
+
+        i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 14px;
+        }
+
     }
-    .cart {
-        &.table-wrapper {            
-            .col {
-                &.qty {
-                    .number-input-form-qty {
-                        margin-top: -7px;
-                    }
-                    .input-text {
-                        height: 40px;
-                        margin-top: 0;
-                        width: 40px;
-                    }
+}
+
+.minicart-items {
+    .item-qty {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+.abs-input-qty {
+    width: 40px;
+    height: 40px;
+}
+
+.cart {
+    &.table-wrapper {
+        .col {
+            &.qty {
+                .number-input-form-qty {
+                    margin-top: -7px;
                 }
 
-                
+                .input-text {
+                    height: 40px;
+                    margin-top: 0;
+                    width: 40px;
+                }
             }
 
-            
+
+        }
+
+
+    }
+}
+
+& when (@media-common =true) {
+    //
+    //  Css use base
+    //  ---------------------------------------------
+
+    //  Row col css base
+    .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -10px;
+        margin-left: -10px;
+    }
+
+    .col {
+        box-sizing: border-box;
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding: 0 10px;
+    }
+
+    //  col 4
+    .col-4 {
+        .col;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+    //  col 6
+    .col-6 {
+        .col;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    // heading base
+    .heading {
+        position: relative;
+        text-align: center;
+        margin-top: -18px;
+        margin-bottom: 36px;
+
+        h1 {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &::after {
+            content: "";
+            display: inline-flex;
+            height: 20px;
+            background: #ffffff;
+        }
+
+    }
+
+    // block base
+    .some-block {
+        margin-bottom: 45px;
+
+        .icon.more {
+            display: inline-block;
+            text-decoration: none;
+
+            &:after {
+                font-family: 'luma-icons';
+                content: '\e608';
+                overflow: hidden;
+                -webkit-font-smoothing: antialiased;
+                display: inline-block;
+                vertical-align: middle;
+                text-align: center;
+                margin: 0 0 0 5px;
+            }
         }
     }
 
+    .some-img {
+        line-height: 0;
+        font-size: 0;
+    }
 
+    //
+    //  Css cms blog
+    //  ---------------------------------------------
+
+    //  Our blog cms
+    .session-our-blog {
+        border-top: 1px solid #dddddd;
+        box-sizing: border-box;
+
+        .heading {
+            &::after {
+                width: 238px;
+            }
+        }
+
+        .our-blog-container {
+            margin-bottom: 27px;
+
+            h3 {
+                margin-top: 16px;
+            }
+
+            .content {
+                margin-bottom: 23px;
+            }
+        }
+    }
+
+    //  Our Burning Log Testimonials
+    .session-testimonials {
+        border-top: 1px solid #dddddd;
+        box-sizing: border-box;
+        margin-bottom: 51px;
+
+        .heading {
+            margin-top: -16px;
+
+            &::after {
+                width: 400px;
+            }
+        }
+
+        .testimonials-container {
+            box-sizing: border-box;
+            border: 1px solid #ededed;
+            margin-bottom: 28px;
+            padding: 30px 38px;
+        }
+
+        .col-6 {
+            &:nth-child(3) {
+                .testimonials-container {
+                    margin-bottom: 22px;
+                }
+            }
+
+            &:nth-child(4) {
+                .testimonials-container {
+                    margin-bottom: 22px;
+                }
+            }
+        }
+
+        .testimonials-renderer {
+            margin-top: 23px;
+
+            h4 {
+                line-height: 17px;
+                font-size: 13px;
+                margin: 0;
+            }
+        }
+
+        .testimonials-review-link {
+            text-align: center;
+
+            .action.secondary {
+                text-transform: uppercase;
+                padding: 8.5px 15.5px;
+            }
+        }
+    }
+
+}

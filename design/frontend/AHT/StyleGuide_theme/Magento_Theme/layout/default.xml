@@ -5,12 +5,12 @@
  * See COPYING.txt for license details.
  */
 -->
-<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page layout="3columns"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="default_head_blocks"/>
     <body>
         <referenceContainer name="main.content">
-            <block name="our.blog" class="Magento\Framework\View\Element\Template" template="Magento_Theme::alert.phtml" />
-            <block name="numberformbutton.phtml" class="Magento\Framework\View\Element\Template" template="Magento_Theme::numberformbutton.phtml" />
+            <block name="custom_js.phtml" class="Magento\Framework\View\Element\Template" template="Magento_Theme::custom_js.phtml" />
         </referenceContainer>
     </body>
 </page>
