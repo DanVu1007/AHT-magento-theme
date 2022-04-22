@@ -21,7 +21,7 @@
 </script>
 
 <!--**************** slick******************* -->
-<!-- homepage slick -->
+<!-- homepage banner slick -->
 
 <script>
     require([
@@ -29,7 +29,7 @@
         'slick',
         'domReady!'
     ], function ($) {
-        $(".style-guide-slider").slick({
+        $(".homepage-slider").slick({
             dots: false,
             infinite: true,
             speed: 300,
@@ -37,8 +37,33 @@
             slidesToScroll: 1,
             arrows: false,
             autoplay: true,
-            autoplaySpeed: 5000,
+            autoplaySpeed: 5000
         });
+        $('.reason-to-buy-block').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: false,
+            infinite: false,
+            speed: 300,
+            arrows: false,
+            autoplay: false,
+            autoplaySpeed: 5000,
+            responsive: [
+                {
+                    breakpoint: 1280,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: false,
+                        infinite: true,
+                        speed: 300,
+                        arrows: false,
+                        autoplay: true,
+                        autoplaySpeed: 5000
+                    }
+                }
+            ]
+            });
     });
 </script>
 
