@@ -90,39 +90,52 @@
             .block-minicart {
                 width: 360px;
                 padding: 20px;
+                top: 110%;
                 .items-total,
-                .subtotal{
+                .subtotal {
+                    .count {
+                        font-weight: 400;
+                    }
                     margin: 0;
+                    .label {
+                        .span:after {
+                            content: "123";
+                        }
+                    }
                 }
-                .block-content{
+                .block-content {
                     .actions {
                         margin-top: 20px;
-                        .primary{
+                        .primary {
                             margin: 0;
-                            // .actions.primary{
-                            //         padding: 0;
-                            //         line-height: 0;
-                                
-                            // }
+                            .action.primary {
+                                padding: 7.5px;
+                            }
                         }
-                        .secondary{
-                            .action.delete{
+                        .secondary {
+                            .action.delete {
                                 margin-left: 15px;
                             }
                             margin-bottom: 10px;
                         }
                     }
                 }
-                .product.actions{
-                        margin: -30px 0 0 ;
+                //button edit delete
+                .product.actions {
+                    margin: -30px 0 0;
+                    .secondary {
+                        .action.deleted {
+                            margin-left: 15px;
+                        }
                     }
-                
-                .minicart-items-wrapper{
+                }
+
+                .minicart-items-wrapper {
                     padding: 0;
                     margin: 0;
                 }
-                .minicart-items{
-                    .product-item{
+                .minicart-items {
+                    .product-item {
                         padding: 20px 0;
                     }
                 }
@@ -173,11 +186,28 @@
         }
     }
 }
-.multicheckout {
-    
-    .actions.primary{
-        padding: 0;
-        line-height: 0;
-    
-}
+//NAV
+// @navigation-level0-item__line-height: normal;
+.navigation {
+    background-color: aqua;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    .level0 {
+        line-height: 14px;
+        &.active{
+            > .level-top{
+                border: none;
+            }
+        }
+        > .level-top {
+            line-height: normal;
+        }
+        &.has-active{
+            > .level-top {
+                line-height: normal;
+                border: none;
+            }
+        }
+    }
 }

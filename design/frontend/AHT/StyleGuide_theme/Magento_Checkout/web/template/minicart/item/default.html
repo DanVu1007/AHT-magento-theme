@@ -1,3 +1,5 @@
+
+  
 <!--
 /**
  * Copyright © Magento, Inc. All rights reserved.
@@ -72,17 +74,25 @@
                 <!-- /ko -->
 
                 <div class="details-qty qty">
-                    <label class="label" data-bind="i18n: 'Qty', attr: {
-                           for: 'cart-item-'+item_id+'-qty'}"></label>
-                    <input data-bind="attr: {
-                           id: 'cart-item-'+item_id+'-qty',
-                           'data-cart-item': item_id,
-                           'data-item-qty': qty,
-                           'data-cart-item-id': product_sku
-                           }, value: qty"
-                           type="number"
-                           size="4"
-                           class="item-qty cart-item-qty">
+                    <!-- <label class="label" data-bind="i18n: 'Qty', attr: {
+                           for: 'cart-item-'+item_id+'-qty'}"></label> -->
+                        <div class ="number-input-form-qty">
+                            <span class="qty-button minus-qty-button" data-bind="attr: {title: $t('Decrease the quantity'),'data-cart-item': item_id, 'data-item-qty': qty}" type="button" >
+                                <button type="button" title="<?= __('Reduce the quantity'); ?>"><i class="fa-solid fa-minus"></i></button>
+                            </span>
+                            <input data-bind="attr: {
+                            id: 'cart-item-'+item_id+'-qty',
+                            'data-cart-item': item_id,
+                            'data-item-qty': qty,
+                            'data-cart-item-id': product_sku
+                            }, value: qty"
+                            type="number"
+                            size="4"
+                            class="item-qty cart-item-qty">
+                            <span class="qty-button add-qty-button" data-bind="attr: {title: $t('Increase the quantity'),'data-cart-item': item_id, 'data-item-qty': qty}" type="button">
+                                <button type="button" title="<?= __('Increase the quantity'); ?>"><i class="fa-solid fa-plus"></i></button>
+                            </span>
+                        </div>
                     <button data-bind="attr: {
                            id: 'update-cart-item-'+item_id,
                            'data-cart-item': item_id,
@@ -98,14 +108,14 @@
             <div class="product actions">
                 <!-- ko if: is_visible_in_site_visibility -->
                 <div class="primary">
-                    <a data-bind="attr: {href: configure_url, title: $t('Edit item')}" class="action">
+                    <a data-bind="attr: {href: configure_url, title: $t('Edit item')}" class="action edited">
                         <span data-bind="i18n: 'Edit'"></span>
                     </a>
                 </div>
                 <!-- /ko -->
                 <div class="secondary">
                     <a href="#" data-bind="attr: {'data-cart-item': item_id, title: $t('Remove item')}"
-                       class="">
+                       class="action deleted">
                         <span data-bind="i18n: 'Remove'"></span>
                     </a>
                 </div>
