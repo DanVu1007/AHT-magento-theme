@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* header */
 
 .page-header {
@@ -11,4 +12,8 @@
 
 .style-guide-icons {
     margin: 0 15px;
+=======
+.page-header{
+    background-color: #9c0513;
+>>>>>>> master
 }

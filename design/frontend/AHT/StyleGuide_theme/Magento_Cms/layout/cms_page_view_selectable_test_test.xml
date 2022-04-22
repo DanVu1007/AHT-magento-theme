@@ -21,8 +21,8 @@
                 </referenceContainer>
             </referenceContainer>
             <!-- test phtml  -->
-            <referenceContainer name="main.content">
-                <block class="Magento\Framework\View\Element\Template" template="Magento_Cms::test.phtml"></block>
+            <referenceContainer name="main">
+                <block class="Magento\Framework\View\Element\Template" template="Magento_Cms::styleguide.phtml"></block>
             </referenceContainer>
             <!-- ***end test phtml*** -->
             <!-- ***remove block*** -->

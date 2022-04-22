@@ -31,7 +31,10 @@
             <referenceBlock name="report.bugs" remove="true" />
             <referenceBlock name="minicart" remove="true"/>
             <referenceContainer name="logo" remove="true" />
+<<<<<<< HEAD
             <!-- ***end remove block*** -->
+=======
+>>>>>>> master
         </referenceContainer>
     </body>
 </page>

@@ -19,110 +19,59 @@
 @icons__font-path: '@{baseDir}fonts/Luma-Icons';
 @icons__font-name: 'luma-icons';
 
-//
-//  Color
-//  ---------------------------------------------
-// @color-superlighter-green: #22b725;
-// @color-superlight-green: #11ab15;
-// @color-superdark: #3b3b3e;
-//  Button color
-@color-main-green: #22b725;
-@color-main-hover-green: #11ab15;
-@color-dark-button: #3b3b3e;
-@color-main-red: #ee1414;
-
-//  Radio & checked color
-@color-radio-checked: #2d2d2f;
-@color-radio-disable: #ccc;
-@color-radio-border: #dedede;
-@color-radio-background: #f4f4f4;
-@color-checkbox-border: #dddddd;
-
-//  form select color
-@color-select-boder: #dddddd;
-
-//  form input color
-@color-input: #333333;
-@form-element-validation__border-error: #ee1414;
-
-//  tabs color
-@color-tab: #a9a9a9;
-@color-active-tabs: #2d2d2d;
-
-//  Alert color
-@message-success__color: #68c524;
-@message__border-color: #67c523;
-@message__background: @color-white;
-@error__border-color: #ee1414;
-
-//  color link
-@color-link-hover: #bababa;
-
-//  color block
-@color-superdark_border: #3b3b3d;
-@color-superdarker: #262628;
-@highlight-color: #dd2f31;
-@color-icon-dark: #424242;
-
-//  color qty
-@color-backgroud__qty: #ffffff;
-@color-boder__qty: #e4e4e4;
-@color__qty: #a9a9a9;
-@color-text__qty: #424242;
-@color-hover__qty: @color-backgroud__qty;
-
-//  Color nesting
-@panel__background-color: @color-gray-light0;
-@border-color__base: @color-gray80;
-
-//  Headings
-@color-heading-base: #222222;
+//  **************************Headings*********************************** //
 @heading__color__base: @color-heading-base;
-@heading__font-family__base: @font-family__Lora;
+@heading__font-family__base: @font-family__Lora-base;
 @heading__font-weight__base: @font-weight__regular;
-@heading__line-height__base: 42px;
+@heading__line-height__base: 24px;
 @heading__margin-top__base: 0px;
-@heading__margin-bottom__base: 18px;
 
-@h1__font-size-desktop: 32px;
-@h1__font-size: 32px;
+@h1__font-size: 32px; // 32px
+@h1__font-color: @color-heading-base;
+@h1__font-family: @font-family__Lora-base;
+@h1__font-weight: 400;
+@h1__margin-bottom: 18px;
 
-@h2__font-size: 24px;
+@h2__font-size: 24px; // 24px
+@h2__font-color: @color-heading-base;
+@h2__font-family: @font-family__Lora-base;
+@h2__font-weight: @heading__font-weight__base;
+@h2__margin-bottom: 13px;
 
-@h4__font-size: 15px;
-@h4__font-family: @font-family__Roboto;
-
-
-//  Links
-@link__color: @color-input;
-@link__text-decoration: none;
-
-@link__visited__color: @color-link-hover;
-@link__visited__text-decoration: none;
-
-@link__hover__color: @color-link-hover;
-@link__hover__text-decoration: underline;
-
-@link__active__color: @color-link-hover;
-@link__active__text-decoration: underline;
+@h3__font-size: 18px; // 18px
+@h3__font-color: @color-heading-base;
+@h3__font-family: @font-family__Lora-base;
+@h3__font-weight: @heading__font-weight__base;
+@h3__margin-bottom: 11px;
 
 
-//  Focus
-@focus__color: @color-blue3;
-@focus__box-shadow: none;
-//
-//  Tables
-//  ---------------------------------------------
+@h4__font-size: 15px; // 15px
+@h4__font-color: @color-heading-base;
+@h4__font-family: @font-family__base;
+@h4__font-weight: @font-weight__bold;
+@h4__margin-bottom: 11px;
+//*********************end heading**************************//
 
+
+
+//********************Tables************************//
 @table-cell__padding-vertical: 11px;
 @table-cell-stripped__background-color: @table-cell__hover__background-color;
 @table-responsive-th__background-color: @table-cell-stripped__background-color;
 @table-responsive-cell__padding: @indent__xs @indent__s;
+<<<<<<< HEAD
 
 //
 //  Layout grid
 //  ---------------------------------------------
 
+=======
+//***************************end table********************************//
+
+
+
+//*****************************Layout grid****************************//
+>>>>>>> master
 @total-columns: 24;
 
 //  Variables for layout columns
@@ -130,11 +79,19 @@
 
 //  Checkout columns width
 @layout-column-checkout__width-left: 6;
+<<<<<<< HEAD
 
 //
 //  Navigation
 //  ---------------------------------------------
 
+=======
+//******************************end Layouy grid*******************************//
+
+
+
+// ******************************Navigation********************************//
+>>>>>>> master
 @navigation__background: @color-gray94;
 @navigation-level0-item__active__color: @primary__color;
 
@@ -146,7 +103,11 @@
 @submenu-desktop-item__active__color: @navigation-level0-item__active__color;
 
 //  Tabs
+<<<<<<< HEAD
 @tab-control__font-family: @font-family__Roboto;
+=======
+@tab-control__font-family: @font-family__base;
+>>>>>>> master
 @tab-control__active__color: @color-active-tabs;
 @tab-control__color: @color-tab;
 @tab-control__font-weight: @font-weight__bold;
@@ -159,11 +120,19 @@
 //  Tabs content
 @tab-content__padding-top: 35px;
 @tab-content__padding-right: @tab-control__padding-right;
+<<<<<<< HEAD
 
 //
 //  Accordion
 //  ---------------------------------------------
 
+=======
+//***************************end Navigation**************************************//
+
+
+
+//  *********************Accordion********************************//
+>>>>>>> master
 @accordion-control__font-family: false;
 @accordion-control__font-size: @font-size__base;
 @accordion-control__font-style: false;
@@ -183,6 +152,7 @@
 @accordion-content__border: false;
 @accordion-content__margin: 0;
 @accordion-content__padding: @indent__s @indent__s @indent__l;
+<<<<<<< HEAD
 
 //
 //  Buttons
@@ -190,17 +160,32 @@
 
 //  Fonts family button
 @button__font-family: @font-family__Roboto-base;
+=======
+//*********************end Accordion*******************************//
+
+
+
+//********************************************Buttons**************************************//
+
+//  Fonts family button
+@button__font-family: @font-family__base;
+>>>>>>> master
 
 //  Fonts weight button
 @button__font-weight: @font-weight__bold;
 
 //  Default = secondary button
+<<<<<<< HEAD
 @button__padding: 10px 39px;
+=======
+@button__padding: 10.5px 34.5px;
+>>>>>>> master
 @button__border-radius: 0px;
 @button__color: @color-dark-button;
 @button__background: @color-white;
 @button__border: 2px solid @color-dark-button;
 
+<<<<<<< HEAD
 //  Hover secondary button
 @button__hover__color: @button__background;
 @button__hover__background: @color-dark-button;
@@ -215,6 +200,22 @@
 @button-primary__font-family: @button__font-family;
 @button-primary__font-weight: @button__font-weight;
 @button-primary__padding: @button__padding;
+=======
+//  Hover default button
+@button__hover__color: @button__background;
+@button__hover__background: @color-dark-button;
+@button__hover__border: 2px solid @color-dark-button;
+
+//  Active default button
+@button__active__color: @button__background;
+@button__active__background: @color-dark-button;
+@button__active__border: 2px solid @color-dark-button;
+
+//  Primary button
+@button-primary__font-family: @button__font-family;
+@button-primary__font-weight: @button__font-weight;
+@button-primary__padding: 10.5px 47.5px;
+>>>>>>> master
 @button-primary__background: @color-main-green;
 @button-primary__border: 2px solid @color-main-green;
 @button-primary__color: @button__background;
@@ -232,10 +233,18 @@
 
 //  Button with icon
 @button-icon__line-height: @icon-font__line-height;
+<<<<<<< HEAD
 
 //
 //  Icons
 //  ---------------------------------------------
+=======
+//**************************end button********************************//
+
+
+
+//*************************Icons********************************//
+>>>>>>> master
 
 @icon-wishlist-empty: false;
 @icon-comment-reflected: false;
@@ -245,10 +254,18 @@
 @icon-arrow-left-thin: false;
 @icon-arrow-down-thin: false;
 @icon-wishlist-empty: '\e601';
+<<<<<<< HEAD
 
 //
 //  Messages
 //  ---------------------------------------------
+=======
+//*************************end Icons********************************//
+
+
+
+//*********************Messages icon**********************************//
+>>>>>>> master
 
 @message__padding: 12px @indent__base 12px @indent__m;
 @message__line-height: false;
@@ -261,6 +278,7 @@
 @message-error__background: @message__background;
 @message-success__background: @message__background;
 @message-error__border-color: @error__border-color;
+<<<<<<< HEAD
 
 //
 //  Loaders
@@ -281,6 +299,35 @@
 @form-element-input__color: @color-input;
 @form-element-input__font-size: 13px;
 @form-element-input__margin: 12px 0;
+=======
+//*********************end Messages icon**********************************//
+
+
+
+//*******************************Loaders****************************//
+
+@loader-overlay__background-color: rgba(255, 255, 255, .7);
+
+//*******************************end Loaders****************************//
+
+
+
+//*********************************form/input********************************//
+
+//  Focus
+@focus__color: @color-blue3;
+@focus__box-shadow: none;
+
+//  Select
+// @form-element-input__width: 320px;
+@form-element-input__height: 40px;
+@form-element-input__line-height: 30px;
+@form-element-input__font-family: @font-family__base;
+@form-element-input__font-weight: @font-weight__regular;
+@form-element-input__color: @color-input;
+@form-element-input__font-size: 13px;
+// @form-element-input__margin: 12px 0;
+>>>>>>> master
 
 @select__background: @form-element-input__background url('../images/select-bg.svg') no-repeat 100% 45%;
 @select__border: 1px solid @color-select-boder;
@@ -306,6 +353,7 @@
 
 //  Placeholder
 @form-element-input-placeholder__color: @color-gray34;
+<<<<<<< HEAD
 
 //  Checkbox and radio form
 @form-element-input__disabled__opacity: 0;
@@ -316,6 +364,13 @@
 //
 //  Pager
 //  ---------------------------------------------
+=======
+//**************************end form/input****************************//
+
+
+
+//****************************************Pager********************************//
+>>>>>>> master
 
 @pager__font-weight: @font-weight__regular;
 @pager__line-height: @indent__l;
@@ -337,6 +392,7 @@
 
 //  Pager link.action active
 @pager-action__active__color: @text__color__muted;
+<<<<<<< HEAD
 
 //
 //  Rating
@@ -348,6 +404,20 @@
 //
 //  Dropdowns
 //  ---------------------------------------------
+=======
+//***********************************end paper*********************************//
+
+
+
+//********************************Rating************************************//
+@rating-icon__font-size: 16px;
+@rating-icon__letter-spacing: 2px;
+//******************************end rating*********************************//
+
+
+
+//**********************************Dropdowns*****************************//
+>>>>>>> master
 
 @dropdown-toggle-icon__content: @icon-down;
 @dropdown-toggle-icon__active__content: @icon-up;
@@ -361,9 +431,17 @@
 @actions-toolbar-actions__position: left;
 @actions-toolbar-actions-primary__margin: 0 15px 0 0;
 
+<<<<<<< HEAD
 //
 //  Breadcrumbs
 //  ---------------------------------------------
+=======
+//****************************end dropdown*******************************//
+
+
+
+//********************************Breadcrumbs***********************//
+>>>>>>> master
 
 @breadcrumbs__container-margin: 0 0 15px;
 @breadcrumbs-icon__font-size: 10px;
@@ -375,9 +453,17 @@
 @breadcrumbs-link__hover__color: @breadcrumbs-link__color;
 @breadcrumbs-link__active__color: @breadcrumbs-link__color;
 
+<<<<<<< HEAD
 //
 //  Popups
 //  ---------------------------------------------
+=======
+//********************************end Breadcrumbs***********************//
+
+
+
+//*****************************************Popups****************************************//
+>>>>>>> master
 
 @popup__border: 1px solid @color-gray68;
 @popup-title-headings__level: h2;
@@ -389,6 +475,13 @@
 @popup-icon-font__color-hover: darken(@popup-icon-font__color, 10%);
 @popup-icon-font__color-active: @popup-icon-font__color-hover;
 
+<<<<<<< HEAD
+=======
+//*****************************************end Popups****************************************//
+
+
+
+>>>>>>> master
 //  Window overlay
 @overlay__background: @color-gray55;
 @overlay__opacity: .7;
@@ -413,8 +506,87 @@
 //  Checkout
 @checkout-sidebar__columns: 8;
 
+<<<<<<< HEAD
 //
 //  Footer
 //  ---------------------------------------------
 
 @copyright__background-color: @color-gray-middle4;
+=======
+
+//***********************Footer*******************************//
+
+@copyright__background-color: @color-gray-middle4;
+
+//***********************end Footer*******************************//
+
+
+
+//***********************Links************************************//
+
+@link__color: @color-input;
+@link__text-decoration: underline;
+
+@link__hover__color: @color-link-hover;
+@link__hover__text-decoration: underline;
+
+@link__active__color: @color-link-hover;
+@link__active__text-decoration: underline;
+
+
+// @link__visited__color: @color-link-hover;
+// @link__visited__text-decoration: none;
+
+@link__hover__color: @color-link-hover;
+@link__hover__text-decoration: underline;
+
+// @link__active__color: @color-link-hover;
+// @link__active__text-decoration: underline;
+
+//***********************end Links************************************//
+
+
+
+//*************************checkbox and radio input forms***************************//
+// @form-element-input__disabled__opacity: 0;
+// @form-element-choice__type: ''; // [radio|checkbox]
+// @form-element-choice__vertical-align: false;
+// @form-element-choice__margin: 0;
+
+//
+//  Radio
+//  ---------------------------------------------
+
+@input-radio__vertical-align: @form-element-choice__vertical-align;
+@input-radio__margin: @form-element-choice__margin;
+
+@input-radio__disabled__opacity: @form-element-choice__disabled__opacity;
+
+//
+//  Checkbox
+//  ---------------------------------------------
+
+@input-checkbox__vertical-align: @form-element-choice__vertical-align;
+@input-checkbox__margin: @form-element-choice__margin;
+
+@input-checkbox__disabled__opacity: @form-element-choice__disabled__opacity;
+
+//*************************end checkbox and radio input forms***************************//
+
+
+
+//*****************************************alert***********************************//
+@message__font-size: 15px;
+@message__font-weight: 500;
+@message__border-width: 1px;
+@message__border-style: solid;
+//  Success message
+@message-success__color: @color-main-green;
+@message-success__background: @color-white;
+@message-success__border-color: @color-main-green;
+//  Error message
+@message-error__color: @color-main-red;
+@message-error__background: @color-white;
+@message-error__border-color: @color-main-red;
+//*****************************************end alert***********************************//
+>>>>>>> master

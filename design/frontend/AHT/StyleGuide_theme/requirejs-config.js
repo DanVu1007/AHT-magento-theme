@@ -1,7 +1,7 @@
 var config = {
     map: {
         '*': {
-            'scriptName':'AHT_StyleGuide_theme/js/scriptname'
+            'scriptName': 'AHT_StyleGuide_theme/js/scriptname'
         }
     },
     config: {
@@ -12,11 +12,12 @@ var config = {
         }
     },
     paths: {
-        slick: 'js/slick/slick.min'
+        slick: 'js/slick.min'
     },
     shim: {
         slick: {
             deps: ['jquery']
         }
-      }
+    }
+
 };

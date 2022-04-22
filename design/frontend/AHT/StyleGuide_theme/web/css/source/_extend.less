@@ -15,275 +15,444 @@
 @import "slick/slick.less";
 @import "slick/slick-theme.less";
 
-//  import fontawesome
-// @import 'fontawesome/fontawesome.css';
-
 //
 // Extend styles base
 //  ---------------------------------------------
 
-// icon color
-@color-icon: #2d2d2f;
-@color-border-icon: #dddddd;
-@color-icon-disable: #cccccc;
-@color-backgroud-icon-disable: #f4f4f4;
 
-//  checkbox and radio input forms
-@checkbox__background-color: @color-white;
 
-& when (@media-common =true) {
+//  icon
+.fab,
+.fas {
+    color: @color-icon-dark;
+    font-size: 18px;
+    line-height: 30px;
 
-    //  Style button
-    button:not(.primary) {
-        box-shadow: none;
+    &:hover {
+        color: @color-black;
+    }
+}
+
+// message alert
+
+._lib-message() {
+    display: flex;
+    justify-content: center;
+}
+
+//  block
+.style-guide-block {
+    height: auto;
+    width: 100%;
+
+    img {
+        z-index: 0;
+        width: 100%;
+        min-height: 280px;
+        object-fit: cover;
+        object-position: center;
     }
 
-    //  Style show chechbox
-    .style-guide-checkbox {
-        display: flex;
-        margin-bottom: 20px;
-    }
-
-    //  Style show radio
-    .style-guide-radio {
-        .style-guide-checkbox;
-    }
-
-    //  Style checkbox
-    input[type="checkbox"] {
-        appearance: none;
-        width: 20px;
-        height: 20px;
-        background-color: @checkbox__background-color;
-        border: 1px solid @color-border-icon;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .shop-btn {
+        background-color: @color-dark-button;
+        border: 2px solid @color-white;
+        margin: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: max-content;
+        height: 50px;
+        color: @color-white;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 12px 25px;
+        display: inline-block;
         cursor: pointer;
-        margin: 0 10px 0 0;
-
-        &::after {
-            font-family: "Font Awesome 6 Free";
-            content: "\f00c";
-            font-weight: 900;
-            font-size: 10px;
-            color: @color-icon;
-            display: none;
-        }
-
-        &:hover {
-            background-color: @color-backgroud-icon-disable;
-        }
-
-        &:disabled {
-            opacity: 1;
-            background-color: @color-backgroud-icon-disable;
-
-            &::after {
-                color: @color-icon-disable;
-            }
-        }
-
-        &:checked {
-            &::after {
-                display: block;
-            }
-        }
-    }
-
-    //  Style radio
-    input[type="radio"] {
-        appearance: none;
-        width: 20px;
-        height: 20px;
-        background-color: @checkbox__background-color;
-        border: 1px solid @color-border-icon;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        margin: 0 10px 0 0;
-
-        &::after {
-            font-family: "Font Awesome 6 Free";
-            content: "\f111";
-            font-weight: 900;
-            font-size: 8px;
-            color: @color-icon;
-            display: none;
-        }
-
-        &:hover {
-            background-color: @color-backgroud-icon-disable;
-        }
-
-        &:disabled {
-            opacity: 1;
-            background-color: @color-backgroud-icon-disable;
-
-            &::after {
-                color: @color-icon-disable;
-            }
-        }
-
-        &:checked {
-            &::after {
-                display: block;
-            }
-        }
-    }
-
-    //  Style form qty
-    .qty {
-        display: inline-flex;
-
-        input[name=qty] {
-            width: 40px;
-            height: 40px;
-            margin: 0;
-            background-color: @color-backgroud__qty;
-            border: 1px solid @color-boder__qty;
-            font-size: 13px;
-            line-height: 30px;
-            color: @color-text__qty;
-            font-weight: 400;
-            font-family: @font-family__Roboto;
-        }
-
-        .add-qty {
-            font-size: 12px;
-            color: @color__qty;
-            padding: 11px 14px;
-            border: 1px solid @color-boder__qty;
-            margin-right: -5px;
-
-            &:hover {
-                background: @color-hover__qty;
-            }
-
-            &:focus {
-                background: @color-hover__qty;
-            }
-        }
-
-        .minus-qty {
-            .add-qty;
-            padding: 11px 14px;
-            margin-right: 0px;
-            margin-left: -5px;
-        }
-    }
-
-    //  Stytle message
-    .message.success {
+        z-index: 1;
+        overflow: hidden;
         font-size: 15px;
         line-height: 20px;
-        font-weight: @font-weight__heavier;
-        font-family: @font-family__Roboto;
-        border: 1px solid;
+        font-weight: 700;
+
+        &:hover {
+            background-color: @color-superdarker;
+        }
+    }
+}
+
+// Button secondary
+.lib-button-secondary() {
+    .lib-button();
+}
+
+.action.secondary {
+    .lib-button-secondary();
+}
+
+
+// Button number
+.lib-button-number(@_button-font-family: @font-family__base,
+    @_button-font-size: 13,
+    @_button-font-weight: 400,
+    @_button-line-height: 30,
+    @_button-width: 40px,
+    @_button-padding: 11px 15px,
+    @_button-color: @color__qty,
+    @_button-background: @color-backgroud__qty,
+    @_button-border: 1px solid @color-boder__qty,
+    @_button-color-hover: @color__qty,
+    @_button-background-hover: @color-hover__qty,
+    @_button-border-hover: 1px solid @color-boder__qty,
+    @_button-color-active: @color__qty,
+    @_button-background-active: @color-hover__qty,
+    @_button-border-active: 1px solid @color-boder__qty,
+
+) {
+    .lib-button(@_button-font-family: @_button-font-family,
+        @_button-font-size: @_button-font-size,
+        @_button-font-weight: @_button-font-weight,
+        @_button-line-height: @_button-line-height,
+        @_button-width: @_button-width,
+        @_button-padding: @_button-padding,
+        @_button-color: @_button-color,
+        @_button-background: @_button-background,
+        @_button-border: @_button-border,
+        @_button-color-hover: @_button-color-hover,
+        @_button-background-hover: @_button-background-hover,
+        @_button-border-hover: @_button-border-hover,
+        @_button-color-active: @_button-color-active,
+        @_button-background-active: @_button-background-active,
+        @_button-border-active: @_button-border-active,
+    );
+}
+
+.qty-button button {
+    .lib-button-number();
+    height: 40px;
+}
+
+// //checkbox xxxxxxxxxxxxxxx
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+
+    &::after {
+        font-family: "Font Awesome 6 Free";
+        content: "\f00c";
+        font-weight: 900;
+        font-size: 10px;
+        color: #2e2e30;
+        opacity: 0;
+    }
+
+    &:hover {
+        background-color: #f4f4f4;
+    }
+
+    &:disabled {
+        background-color: #f4f4f4;
+
+        &::after {
+            color: #cdcdcd;
+        }
+    }
+
+    &:checked {
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+// //radio xxxxxxxxxxxxxxx
+input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+
+    &::after {
+        font-family: "Font Awesome 6 Free";
+        content: "\f111";
+        font-weight: 900;
+        font-size: 8px;
+        color: #2e2e30;
+        opacity: 0;
+    }
+
+    &:hover {
+        background-color: #f4f4f4;
+    }
+
+    &:disabled {
+        background-color: #f4f4f4;
+
+        &::after {
+            color: #cdcdcd;
+        }
+    }
+
+    &:checked {
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+
+//  Style form qty
+.number-input-form-qty {
+    display: inline-flex;
+    width: auto;
+    height: 40px;
+    justify-content: space-between;
+
+    input {
+        border: 1px solid @color-boder__qty;
+        width: 38px;
+        height: 38px;
         text-align: center;
+        padding: 0;
+        color: @color-text__qty;
     }
 
-    .message.error {
-        .message.success;
-    }
+    .qty-button {
+        position: relative;
+        height: 40px;
+        width: 40px;
 
-    //  Style paragraph
-    .style-guide-paragraph {
-        font-size: 13px;
-        line-height: 20px;
-        font-weight: @font-weight__regular;
-        font-family: @font-family__Roboto;
-    }
-
-    //  Style href link
-    .web-link {
-        .style-guide-paragraph;
-        font-family: @font-family-name__base;
-        cursor: pointer;
-
-        &:hover {
-            .style-guide-paragraph;
-        }
-
-        &:focus {
-            .style-guide-paragraph;
-        }
-
-        &:active {
-            .style-guide-paragraph;
-        }
-    }
-
-    .sg-link-hover.web-link {
-        .style-guide-paragraph;
-        font-family: @font-family-name__base;
-        color: @color-link-hover;
-    }
-
-    //  Stytle heanding
-    .style-guide-h {
-        margin-top: 47px;
-    }
-
-    //  Style margin sesion icon
-    .style-guide-icons {
-        margin-bottom: 38px;
-    }
-
-    //  Style icon
-    .fab,
-    .fas {
-        color: @color-icon-dark;
-        font-size: 18px;
-        line-height: 30px;
-
-        &:hover {
-            color: @color-black;
-        }
-    }
-
-
-    //  Style block
-    .style-guide-block {
-        height: auto;
-        width: 100%;
-
-        img {
-            z-index: 0;
-            width: 100%;
-            min-height: 372px;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        .shop-btn {
-            background-color: @color-dark-button;
-            border: 2px solid @color-white;
-            margin: auto;
+        i {
             position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            top: 0;
-            width: max-content;
-            height: 50px;
-            color: @color-white;
-            box-sizing: border-box;
-            text-align: center;
-            padding: 12px 25px;
-            display: inline-block;
-            cursor: pointer;
-            z-index: 1;
-            overflow: hidden;
-            font-size: 15px;
-            line-height: 20px;
-            font-weight: 700;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 14px;
+        }
 
-            &:hover {
-                background-color: @color-dark-button;
+    }
+}
+
+.minicart-items {
+    .item-qty {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+.abs-input-qty {
+    width: 40px;
+    height: 40px;
+}
+
+.cart {
+    &.table-wrapper {
+        .col {
+            &.qty {
+                .number-input-form-qty {
+                    margin-top: -7px;
+                }
+
+                .input-text {
+                    height: 40px;
+                    margin-top: 0;
+                    width: 40px;
+                }
+            }
+
+
+        }
+
+
+    }
+}
+
+& when (@media-common =true) {
+    //
+    //  Css use base
+    //  ---------------------------------------------
+
+    //  Row col css base
+    .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -10px;
+        margin-left: -10px;
+    }
+
+    .col {
+        box-sizing: border-box;
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding: 0 10px;
+    }
+
+    //  col 4
+    .col-4 {
+        .col;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+    //  col 6
+    .col-6 {
+        .col;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    // heading base
+    .heading {
+        position: relative;
+        text-align: center;
+        margin-top: -18px;
+        margin-bottom: 36px;
+
+        h1 {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &::after {
+            content: "";
+            display: inline-flex;
+            height: 20px;
+            background: #ffffff;
+        }
+
+    }
+
+    // block base
+    .some-block {
+        margin-bottom: 45px;
+
+        .icon.more {
+            display: inline-block;
+            text-decoration: none;
+
+            &:after {
+                font-family: 'luma-icons';
+                content: '\e608';
+                overflow: hidden;
+                -webkit-font-smoothing: antialiased;
+                display: inline-block;
+                vertical-align: middle;
+                text-align: center;
+                margin: 0 0 0 5px;
             }
         }
     }
+
+    .some-img {
+        line-height: 0;
+        font-size: 0;
+    }
+
+    //
+    //  Css cms blog
+    //  ---------------------------------------------
+
+    //  Our blog cms
+    .session-our-blog {
+        border-top: 1px solid #dddddd;
+        box-sizing: border-box;
+
+        .heading {
+            &::after {
+                width: 238px;
+            }
+        }
+
+        .our-blog-container {
+            margin-bottom: 27px;
+
+            h3 {
+                margin-top: 16px;
+            }
+
+            .content {
+                margin-bottom: 23px;
+            }
+        }
+    }
+
+    //  Our Burning Log Testimonials
+    .session-testimonials {
+        border-top: 1px solid #dddddd;
+        box-sizing: border-box;
+        margin-bottom: 51px;
+
+        .heading {
+            margin-top: -16px;
+
+            &::after {
+                width: 400px;
+            }
+        }
+
+        .testimonials-container {
+            box-sizing: border-box;
+            border: 1px solid #ededed;
+            margin-bottom: 28px;
+            padding: 30px 38px;
+        }
+
+        .col-6 {
+            &:nth-child(3) {
+                .testimonials-container {
+                    margin-bottom: 22px;
+                }
+            }
+
+            &:nth-child(4) {
+                .testimonials-container {
+                    margin-bottom: 22px;
+                }
+            }
+        }
+
+        .testimonials-renderer {
+            margin-top: 23px;
+
+            h4 {
+                line-height: 17px;
+                font-size: 13px;
+                margin: 0;
+            }
+        }
+
+        .testimonials-review-link {
+            text-align: center;
+
+            .action.secondary {
+                text-transform: uppercase;
+                padding: 8.5px 15.5px;
+            }
+        }
+    }
+
 }
