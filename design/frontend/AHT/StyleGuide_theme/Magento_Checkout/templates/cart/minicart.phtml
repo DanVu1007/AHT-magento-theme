@@ -14,6 +14,8 @@
         <span class="counter qty empty"
               data-bind="css: { empty: !!getCartParam('summary_count') == false && !isLoading() }, blockLoader: isLoading">
             <span class="counter-number">Cart (<!-- ko text: getCartParam('summary_count') --><!-- /ko -->)</span>
+            <span class="counter-number-mobile"><!-- ko text: getCartParam('summary_count') --><!-- /ko --></span>
+
             <span class="counter-label">
             <!-- ko if: getCartParam('summary_count') -->
                 <!-- ko text: getCartParam('summary_count') --><!-- /ko -->

@@ -45,7 +45,7 @@
             .header-info {
                 ul {
                     li {
-                        margin-right: 27px;
+                        margin-right: 26px;
                         position: relative;
                         &::after {
                             content: "";
@@ -70,11 +70,28 @@
             .header-more {
                 ul {
                     li {
-                        margin-right: 20px;
+                        margin-right: 15px;
                         &:last-child {
                             margin-right: 0;
                         }
                     }
+                }
+            }
+        }
+        .header-mobile {
+            display: none;
+            justify-content: space-between;
+            color: white;
+            font-size: 13px;
+            font-weight: 400;
+            .item-header {
+                display: flex;
+                align-items: center;
+                height: 36px;
+                a {
+                    margin-left: 8px;
+                    text-decoration: none;
+                    color: white;
                 }
             }
         }
@@ -153,6 +170,16 @@
                     .counter-number {
                         text-shadow: none;
                     }
+                    .counter-number-mobile {
+                        display: none;
+                        justify-content: center;
+                        align-items: center;
+                        width: 18px;
+                        height: 18px;
+                        background-color: #23ad1c;
+                        color: white;
+                        border-radius: 50%;
+                    }
                 }
                 &::before,
                 &.active::before {
@@ -171,6 +198,9 @@
             input {
                 width: 400px;
                 border: 2px solid #bbb;
+                &::placeholder {
+                    color: #999;
+                }
             }
             .block-content {
                 .minisearch {
@@ -190,9 +220,8 @@
 // @navigation-level0-item__line-height: normal;
 .nav-sections-item-content {
     // position: relative;
-    
+
     .navigation {
-        color: red;
         font-size: 12px;
         font-weight: 500;
         text-transform: uppercase;
@@ -202,8 +231,14 @@
             // position: unset;
             height: 23px;
             > .level-top {
+                color: #000;
                 line-height: normal;
                 margin-right: 40px;
+            }
+            &:hover {
+                > .level-top {
+                    color: #d30000;
+                }
             }
             &.parent {
                 > .level-top {
@@ -214,6 +249,7 @@
             }
             &.active {
                 > .level-top {
+                    color: #d30000;
                     border: none;
                 }
             }
@@ -227,6 +263,130 @@
                 left: 0;
                 width: 100%;
                 height: fit-content;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 766px) {
+    //header
+    .page-header {
+        .panel.wrapper {
+            background-color: #3c3b3e;
+            .header-pc {
+                display: none;
+            }
+            .header-mobile {
+                display: flex;
+            }
+        }
+        .header.content {
+            height: 114px;
+            //toggle nav
+            padding-bottom: 0;
+            .nav-toggle {
+                box-sizing: border-box;
+                height: 44px;
+                width: 44px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #ededed;
+                &::before {
+                    font-size: 20px;
+                    color: #757575;
+                }
+            }
+            //logo
+            .logo {
+                left: 50%;
+                height: 45px;
+                .transform(translateX(-50%));
+            }
+            //minicart-wrapper
+            .minicart-wrapper {
+                //icon cart and quantity number
+                .action.showcart {
+                    .counter.qty {
+                        background-color: transparent;
+                        position: absolute;
+                        top: -32%;
+                        left: 15%;
+                        color: #d40000;
+                        font-size: 13px;
+                        font-family: @font-family__base;
+                        padding: 0;
+                        margin-left: 8px;
+                        .counter-number {
+                            text-shadow: none;
+                            display: none;
+                        }
+                        .counter-number-mobile {
+                            display: inline-flex;
+                        }
+                    }
+                    &::before,
+                    &.active::before {
+                        font-size: 22px;
+                        color: #212121;
+                        content: "\f07a";
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                    }
+                }
+            }
+            //search
+            .block-search {
+                width: 100%;
+                .block-content {
+                    .minisearch {
+                        display: flex;
+                        width: 100%;
+                        .field.search {
+                            flex: 1;
+                            position: relative;
+                            .label {
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                right: 15px;
+                                &::before {
+                                    margin: 0;
+                                    font-size: 16px;
+                                    color: #000;
+                                }
+                            }
+                            .control {
+                                // background-color: red;
+                                border: none;
+                                input {
+                                    margin: 5px 0;
+                                    width: 100%;
+                                    position: unset;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //NAV
+    .sections.nav-sections{
+        //total
+        .section-items.nav-sections-items{
+            //menu title
+            .section-item-title.nav-sections-item-title{
+
+            }
+            //menu list
+            .section-item-content.nav-sections-item-content{
+
+            }
+            //account title
+            .section-item-title.nav-sections-item-title{
+                
             }
         }
     }
