@@ -63,7 +63,34 @@
                     }
                 }
             ]
-            });
+        });
+        $('.video-block-slider').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            dots: false,
+            infinite: false,
+            speed: 300,
+            arrows: false,
+            autoplay: false,
+            autoplaySpeed: 5000,
+            centerPadding: '20px',
+            responsive: [
+                {
+                    breakpoint: 1280,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: false,
+                        infinite: true,
+                        speed: 300,
+                        arrows: false,
+                        autoplay: true,
+                        autoplaySpeed: 5000,
+                        centerPadding: '20px'
+                    }
+                }
+            ]
+        });
     });
 </script>
 
