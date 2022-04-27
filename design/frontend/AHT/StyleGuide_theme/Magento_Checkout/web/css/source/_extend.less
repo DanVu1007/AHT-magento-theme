@@ -1,0 +1,59 @@
+.page-title-wrapper{
+    text-align: center;
+    .page-title{
+        margin: 0;
+    }
+}
+.cart-container{
+    display: flex;
+    flex-direction: column;
+    .action.primary.checkout{
+        margin: 15px 10px 20px;
+    }
+    //hoa don
+    .cart-summary{
+        width: 100%;
+        order: 2;
+        top:unset;
+        position: unset;
+    }
+    //danh sach san pham
+    .form.form-cart{
+        width: 100%;
+        order: 0;
+        .cart.item{
+            .item-info{
+                display: flex;
+                flex-direction: column;
+                .col{
+                    &.item{
+
+                    }
+                    &.price{
+                        display: none;
+                    }
+                    &.qty{
+
+                    }
+                    &.subtotal{
+
+                    }
+                }
+            }
+            .item-actions{
+                position: absolute;
+                bottom: 10px;
+                right: 0;
+            }
+        }
+    }
+    //giam gia
+    .cart-discount{
+        width: 100%;
+        order: 1;
+    }
+    //crosssell
+    .block.crosssell{
+        order: 3;
+    }
+}
