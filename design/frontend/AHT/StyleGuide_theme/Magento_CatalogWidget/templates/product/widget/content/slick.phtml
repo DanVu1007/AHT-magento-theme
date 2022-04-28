@@ -40,6 +40,7 @@ use Magento\Framework\App\Action\Action;
                                 <?= $block->getImage($_item, $image)->toHtml() ?>
                             </a>
                             <div class="product-item-details">
+                                <span class="more-available">MORE COLOURS AVAILABLE</span>
                                 <strong class="product-item-name">
                                     <a title="<?= $block->escapeHtmlAttr($_item->getName()) ?>"
                                        href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"

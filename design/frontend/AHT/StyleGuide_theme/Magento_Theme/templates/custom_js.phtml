@@ -1,7 +1,9 @@
 <!-- numberbutton -->
 <script type="text/javascript">
     // This is the javascript codes help us to increase and decrease qty
-    require(['jquery'], function($) {
+    require([
+        'jquery'
+    ], function($) {
         $(document).on('click', '.add-qty-button', function() {
             let abc = $(this).closest('.number-input-form-qty').find('input');
             abc.val(parseInt(abc.val()) + 1);
@@ -37,56 +39,61 @@
             slidesToScroll: 1,
             arrows: false,
             autoplay: true,
-            autoplaySpeed: 5000
+            autoplaySpeed: 5000,
+            mobileFirst: true
         });
         $('.reason-to-buy-block').slick({
-            slidesToShow: 3,
+            slidesToShow: 1,
             slidesToScroll: 1,
             dots: false,
-            infinite: false,
+            infinite: true,
             speed: 300,
             arrows: false,
-            autoplay: false,
+            autoplay: true,
             autoplaySpeed: 5000,
+            
+            mobileFirst: true,
             responsive: [
                 {
                     breakpoint: 1280,
                     settings: {
-                        slidesToShow: 1,
+                        slidesToShow: 3,
                         slidesToScroll: 1,
                         dots: false,
-                        infinite: true,
+                        infinite: false,
                         speed: 300,
                         arrows: false,
-                        autoplay: true,
-                        autoplaySpeed: 5000
+                        autoplay: false,
+                        autoplaySpeed: 5000,
                     }
                 }
             ]
         });
         $('.video-block-slider').slick({
-            slidesToShow: 2,
+            slidesToShow: 1,
             slidesToScroll: 1,
             dots: false,
-            infinite: false,
+            infinite: true,
             speed: 300,
             arrows: false,
-            autoplay: false,
+            autoplay: true,
             autoplaySpeed: 5000,
             centerPadding: '20px',
+            mobileFirst: true,
             responsive: [
                 {
                     breakpoint: 1280,
                     settings: {
-                        slidesToShow: 1,
+                        slidesToShow: 2,
                         slidesToScroll: 1,
                         dots: false,
-                        infinite: true,
+                        infinite: false,
                         speed: 300,
                         arrows: false,
-                        autoplay: true,
+                        autoplay: false,
                         autoplaySpeed: 5000,
-                        centerPadding: '20px'
+                        centerPadding: '20px',
+                        
                     }
                 }
             ]
@@ -94,24 +101,21 @@
         $(".widget-product-slick").slick({
             rows: 1,
             dots: false,
-            infinite: true,
+            infinite: false,
             speed: 300,
             slidesToShow: 4,
             slidesToScroll: 1,
             arrows: true,
-            adaptiveHeight: true,
             responsive: [
                 {
                     breakpoint: 1280,
                     settings: {
-                        rows: 2,
                         dots: false,
-                        infinite: true,
+                        infinite: false,
                         speed: 300,
                         slidesToShow: 2,
                         slidesToScroll: 1,
                         arrows: false,
-                        adaptiveHeight: true
                     }
                 },
             ]
