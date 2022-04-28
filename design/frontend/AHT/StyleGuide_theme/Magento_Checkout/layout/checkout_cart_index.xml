@@ -9,7 +9,6 @@
     <update handle="checkout_cart_item_renderers"/>
     <body>
     <referenceContainer name="checkout.cart.container">
-    
         <block class="Magento\Checkout\Block\Onepage\Link" name="checkout.cart.methods.onepage.bottom.2" template="Magento_Checkout::onepage/link.phtml" />
     </referenceContainer>
 
