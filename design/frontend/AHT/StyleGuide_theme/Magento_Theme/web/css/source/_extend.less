@@ -423,9 +423,33 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {
+
     //
     //  Css style footer mobile
     //  ---------------------------------------------
+    //  col base
+    .col {
+        box-sizing: border-box;
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+    }
+
+    //  col 6 mobile
+    .col-sm-6 {
+        .col;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    //  col 12 mobile
+    .col-sm-12 {
+        .col;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 
     .page-footer {
         margin-top: 0;
@@ -509,6 +533,17 @@
 
     //  footer middle
     .links {
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        .widget {
+            &:nth-child(4) {
+                order: 2;
+                .col-sm-12;
+            }
+        }
+
         .footer-links {
             display: none;
         }
@@ -554,6 +589,10 @@
         }
 
         .footer-links-right {
+            order: 1;
+            .col-sm-12;
+            margin-top: 17px;
+
             .footer-links-newsletter {
                 h3 {
                     text-align: center;
@@ -567,6 +606,7 @@
             .nav-footer-icon {
                 .icon-item {
                     justify-content: center;
+                    margin-bottom: 11px;
                 }
             }
         }
@@ -574,9 +614,22 @@
 
     //  footer bottom
     .footer-bottom {
-        display: block;
+        display: flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        .copyright {
+            order: 2;
+            .col-sm-12;
+            margin-top: 22px;
+        }
 
         .logo-footer {
+            order: 1;
+            .col-sm-12;
             text-align: center;
 
             .img-item {
