@@ -1,0 +1,32 @@
+<script type="text/javascript">
+// This is the javascript codes help us to increase and decrease qty
+require(['jquery'], function($) {
+    $(document).on('click', '.add-qty-button', function() {
+        console.log($(this));
+        let abc = $(this).closest('.number-input-form-qty').find('input');
+        abc.val(parseInt(abc.val()) + 1);
+        if (abc.val() > 100) {
+            abc.val(100);
+        }
+    });
+    $(document).on('click', '.minus-qty-button', function() {
+        console.log($(this));
+        let abc = $(this).closest('.number-input-form-qty').find('input');
+        abc.val(parseInt(abc.val()) - 1);
+        if (abc.val() < 1) {
+            abc.val(1);
+        }
+    });
+});
+
+require(['jquery',
+    'mage/accordion'
+], function($) {
+    $("#accordion").accordion({
+        active: "0",
+        collapsible: true,
+        openedState: "active",
+        multipleCollapsible: true
+    });
+});
+</script>
