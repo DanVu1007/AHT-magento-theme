@@ -5,13 +5,65 @@
  * See COPYING.txt for license details.
  */
 -->
-<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page layout="3columns"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="default_head_blocks"/>
     <body>
         <referenceContainer name="page.wrapper">
             <block name="custom_js.phtml" class="Magento\Framework\View\Element\Template" template="Magento_Theme::custom_js.phtml" />
         </referenceContainer>
+        <!-- <referenceBlock name="header" remove="true"/>
+        <referenceBlock name="register-link" remove="true" />
+        <referenceBlock name="authorization-link" remove="true" />
+        <referenceBlock name="wish-list-link" remove="true" />
+        <referenceBlock name="my-account-link" remove="true" />
+        <referenceBlock name="authorization-link-login" remove="true"/> -->
 
-            
+        <!-- hearer -->
+        <referenceContainer name="header.container">
+
+            <referenceContainer name="header.panel.wrapper">
+                <referenceContainer name= "header.panel">
+                    <container name="header-top" htmlTag="div" htmlClass="header-left" before="-">
+                        <block name="header-top1" class="Magento\Framework\View\Element\Html\Link" template="Magento_Theme::header.phtml" />
+                    </container>
+                    <referenceBlock name="top.links">
+                        <referenceBlock name="register-link" remove="true" />
+                        <!-- <referenceBlock name="authorization-link" remove="true" /> -->
+                        <!-- <referenceBlock name="wish-list-link" remove="true" /> -->
+                        <!-- <referenceBlock name="header" remove="true"/> -->
+                        <!-- <referenceBlock name="my-account-link" remove="true" /> -->
+                        <!-- <referenceBlock name="authorization-link-login" remove="true"/> -->
+                        <!-- <move element="header.links" destination="mycustom4.div" after="top.search" /> -->
+                        <!-- This was missing in the above answer, atleast for me -->
+                    </referenceBlock>
+                    <move element="header-top" destination="top.links" before="-" />
+                </referenceContainer>
+            </referenceContainer>
+
+            <referenceContainer name="header-wrapper">
+            </referenceContainer>
+
+        </referenceContainer>
+
+        <!-- menu -->
+        <referenceContainer name="page.top">
+            <referenceBlock name="navigation.sections">
+                <referenceBlock name="store.settings" remove="true">
+
+                </referenceBlock>
+            </referenceBlock>
+        </referenceContainer>
+        <!-- <referenceBlock name="breadcrumbs" remove="true"/> -->
+        <!-- <referenceBlock name="navigation.sections" remove="true" /> -->
+        <!-- <referenceBlock name="top.search" remove="true"/> -->
+        <!-- <referenceBlock name="header.panel.wrapper" remove="true"/> -->
+        <!-- <referenceBlock name="form.subscribe" remove="true"/> -->
+        <!-- <referenceBlock name="footer_links" remove="true"/> -->
+        <!-- <referenceBlock name="copyright" remove="true"/> -->
+        <!-- <referenceBlock name="report.bugs" remove="true" /> -->
+        <!-- <referenceBlock name="minicart" remove="true"/> -->
+
+
     </body>
 </page>

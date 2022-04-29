@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="checkout_cart_item_renderers"/>
+    <body>
+    <referenceContainer name="checkout.cart.container">
+        <block class="Magento\Checkout\Block\Onepage\Link" name="checkout.cart.methods.onepage.bottom.2" template="Magento_Checkout::onepage/link.phtml" />
+    </referenceContainer>
+
+        <!-- <referenceBlock name="checkout.cart.crosssell" remove="true" /> -->
+        <!-- <referenceBlock name="checkout.cart.item.renderers" remove="true"/> -->
+
+        <!-- <referenceBlock name="checkout.cart.methods" remove="true"/> -->
+
+        <!-- <move element="cart.summary" destination="checkout.cart.container" after="-"/> -->
+
+    </body>
+</page>
