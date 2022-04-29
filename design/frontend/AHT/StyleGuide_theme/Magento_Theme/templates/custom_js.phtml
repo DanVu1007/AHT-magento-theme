@@ -98,28 +98,98 @@
                 }
             ]
         });
+
+
+
+
+        var viewportWidth = $(window).width();
+        if( viewportWidth >= 1280 ){
+            var product_Rows = 1;
+            var product_Slides = 4;
+            var product_Arrows = true;
+            var insta_Rows = 1;
+            var insta_Slides = 5;
+            var insta_Arrows = true;
+            var insta_Dots = false;
+        } else{
+            var product_Rows = 2;
+            var product_Slides = 2;
+            var product_Arrows = false;
+            var insta_Rows = 2;
+            var insta_Slides = 2;
+            var insta_Arrows = false;
+            var insta_Dots = true;
+        }
         $(".widget-product-slick").slick({
-            rows: 1,
+            rows: product_Rows,
             dots: false,
             infinite: false,
             speed: 300,
-            slidesToShow: 4,
+            slidesToShow: product_Slides,
             slidesToScroll: 1,
-            arrows: true,
-            responsive: [
-                {
-                    breakpoint: 1280,
-                    settings: {
-                        dots: false,
-                        infinite: false,
-                        speed: 300,
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        arrows: false,
-                    }
-                },
-            ]
+            arrows: product_Arrows,
         });
+        $(".instagram-block").slick({
+            rows: insta_Rows,
+            dots: insta_Dots,
+            infinite: true,
+            speed: 300,
+            slidesToShow: insta_Slides,
+            slidesToScroll: 1,
+            arrows: insta_Arrows,
+            autoplay: true,
+            autoplaySpeed: 5000,
+        });
+
+
+
+        //responsive
+        $(document).ready(function(){
+            $(window).resize(function(){
+                var viewportWidth = $(window).width();
+                if( viewportWidth >= 1280 ){
+                    var product_Rows = 1;
+                    var product_Slides = 4;
+                    var product_Arrows = true;
+                    var insta_Rows = 1;
+                    var insta_Slides = 5;
+                    var insta_Arrows = true;
+                    var insta_Dots = false;
+                } else{
+                    var product_Rows = 2;
+                    var product_Slides = 2;
+                    var product_Arrows = false;
+                    var insta_Rows = 2;
+                    var insta_Slides = 2;
+                    var insta_Arrows = false;
+                    var insta_Dots = true;
+                }
+                $(".widget-product-slick").slick('unslick');
+                $(".widget-product-slick").slick({
+                    rows: product_Rows,
+                    dots: false,
+                    infinite: false,
+                    speed: 300,
+                    slidesToShow: product_Slides,
+                    slidesToScroll: 1,
+                    arrows: product_Arrows,
+                });
+                $(".instagram-block").slick('unslick');
+                $(".instagram-block").slick({
+                    rows: insta_Rows,
+                    dots: insta_Dots,
+                    infinite: true,
+                    speed: 300,
+                    slidesToShow: insta_Slides,
+                    slidesToScroll: 1,
+                    arrows: insta_Arrows,
+                    autoplay: true,
+                    autoplaySpeed: 5000,
+                });
+            });
+        });
+        
+        
     });
 </script>
 

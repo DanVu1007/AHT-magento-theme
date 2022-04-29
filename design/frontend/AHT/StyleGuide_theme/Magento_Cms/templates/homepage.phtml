@@ -166,12 +166,67 @@
 
 
 <!-- best seller -->
-<div class="content-heading">
-    <h2 class="title">Best Sellers</h2>
+<div class="content-heading some-block">
+    <h1 class="title">Best Sellers</h1>
 </div>
-<p>{{widget 
-    type="Magento\CatalogWidget\Block\Product\ProductsList" 
-    products_per_page="8" 
-    products_count="8" 
-    template="product/widget/content/grid.phtml" 
-}}</p>
+<p class="some-block">
+    {{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="8" template="Magento_CatalogWidget::product/widget/content/slick.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`41`^]^]"}}
+</p>
+
+<!-- new arrivel -->
+<div class="content-heading some-block">
+    <h1 class="title">New Arrivals</h1>
+</div>
+<p class="some-block">
+    {{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="8" template="Magento_CatalogWidget::product/widget/content/slick.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`41`^]^]"}}
+</p>
+
+<!-- instagram -->
+<div class="instagram-block-wrapper">
+    <div class="instagram-block-heading some-block">
+        <div class="content-heading">
+            <h1 class="title title-1">Outdoor inspiration with our instagram</h1>
+            <h1 class="title title-2">Get inspried with instgram</h1>
+        </div>
+        <span class="find-us">
+            Find us at @burninglog, show us your furniture with #buringlog
+        </span>
+    </div>
+    <div class="instagram-block some-block">
+        
+        <div class="instagram-slide some-block">
+            <div class="some-img">
+                <img src="{{media url="wysiwyg/instagram-block/1.png"}}" alt="">
+            </div>
+        </div>
+        <div class="instagram-slide some-block">
+            <div class="some-img">
+                <img src="{{media url="wysiwyg/instagram-block/1.png"}}" alt="">
+            </div>
+        </div>
+        <div class="instagram-slide some-block">
+            <div class="some-img">
+                <img src="{{media url="wysiwyg/instagram-block/1.png"}}" alt="">
+            </div>
+        </div>
+        <div class="instagram-slide some-block">
+            <div class="some-img">
+                <img src="{{media url="wysiwyg/instagram-block/1.png"}}" alt="">
+            </div>
+        </div>
+        <div class="instagram-slide some-block">
+            <div class="some-img">
+                <img src="{{media url="wysiwyg/instagram-block/1.png"}}" alt="">
+            </div>
+        </div>
+        <div class="instagram-slide some-block">
+            <div class="some-img">
+                <img src="{{media url="wysiwyg/instagram-block/1.png"}}" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="link-button some-block"> 
+        <a class="action tocart secondary" href="{{store url=""}}#">VIEW OUR INSTAGRAM</a>
+    </div>
+
+</div>
