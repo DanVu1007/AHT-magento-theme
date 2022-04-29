@@ -5,7 +5,7 @@
             console.log($(this));
             let abc = $(this).closest('.number-input-form-qty').find('input');
             abc.val(parseInt(abc.val()) + 1);
-            if(abc.val()>100){
+            if (abc.val() > 100) {
                 abc.val(100);
             }
         });
@@ -13,10 +13,32 @@
             console.log($(this));
             let abc = $(this).closest('.number-input-form-qty').find('input');
             abc.val(parseInt(abc.val()) - 1);
-            if(abc.val()<1){
+            if (abc.val() < 1) {
                 abc.val(1);
             }
         });
     });
-    
+
+    //Header slick
+    require([
+        'jquery',
+        'slick',
+        'domReady!'
+    ], function($) {
+        $(document).ready(function() {
+            //slider
+            $('.homepage-slider.some-block').slick({});
+
+            //new product
+            $('.product-items').slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4,
+                adaptiveHeight: true,
+                // slidesToScroll: 4
+            });
+
+        });
+    });
 </script>
