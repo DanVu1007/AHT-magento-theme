@@ -9,8 +9,55 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="default_head_blocks"/>
     <body>
+        <!-- remove and move -->
+        <move element="form.subscribe" destination="footer.links.end" before="footer.middle.end" />
+        <move element="copyright" destination="footer" after="-"/>
+        <referenceBlock name="footer_links" remove="true"/>
+        <!-- end remove and move -->
+
+        <!-- main content -->
         <referenceContainer name="main.content">
             <block name="custom_js.phtml" class="Magento\Framework\View\Element\Template" template="Magento_Theme::custom_js.phtml" />
         </referenceContainer>
+        <!-- end main content -->
+
+        <!-- footer -->
+        <referenceContainer name="footer-container">
+            <!-- footer banner -->
+            <block class="Magento\Cms\Block\Block" name="banner.footer" as="banner.footer" before="footer">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-banner</argument>
+                </arguments>
+            </block>
+            <!-- end footer -->
+            <referenceContainer name="footer">
+                <!-- footer top -->
+                <block name="footer.top" class="Magento\Framework\View\Element\Template" template="Magento_Theme::footer/top.phtml" before="-" />
+                <!-- footer middle -->
+                <referenceContainer name="cms_footer_links_container">
+                    <container name="footer.links.end" label="footer.links.end" htmlTag="div" htmlClass="footer-links-left" after="-">
+                        <block class="Magento\Cms\Block\Block" name="footer.links.categories">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">footer-links-categories</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Cms\Block\Block" name="footer.support.links">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">footer-support-links</argument>
+                            </arguments>
+                        </block>
+                    </container>
+                    <container name="footer.links.end" label="footer.links.end" htmlTag="div" htmlClass="footer-links-right" after="-">
+                        <block class="Magento\Cms\Block\Block" name="newsletter">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">newsletter</argument>
+                            </arguments>
+                        </block>
+                        <block name="footer.middle.end" class="Magento\Framework\View\Element\Template" template="Magento_Theme::footer/middle.phtml" after="-" />
+                    </container>
+                </referenceContainer>
+            </referenceContainer>
+        </referenceContainer>
+        <!-- end footer -->
     </body>
 </page>

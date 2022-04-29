@@ -7,7 +7,6 @@
         <referenceContainer name="page.wrapper">
             <referenceContainer name="header.container">
                 <referenceContainer name="header-wrapper">
-                    <!-- ***logo*** -->
                     <container name="logo-wrapper" htmlTag="div" htmlClass="style-guide-logo-wrapper" >
                         <container name="logo-content" htmlTag="div" htmlClass="style-guide-logo" >
                             <block class="Magento\Cms\Block\Block" name="style-guide-logo">
@@ -17,10 +16,8 @@
                             </block>
                         </container>
                     </container>
-                    <!-- ***end logo*** -->
                 </referenceContainer>
             </referenceContainer>
-            <!-- ***remove block*** -->
             <referenceBlock name="breadcrumbs" remove="true"/>
             <referenceBlock name="navigation.sections" remove="true" />
             <referenceBlock name="top.search" remove="true"/>
@@ -31,10 +28,6 @@
             <referenceBlock name="report.bugs" remove="true" />
             <referenceBlock name="minicart" remove="true"/>
             <referenceContainer name="logo" remove="true" />
-<<<<<<< HEAD
-            <!-- ***end remove block*** -->
-=======
->>>>>>> master
         </referenceContainer>
     </body>
 </page>

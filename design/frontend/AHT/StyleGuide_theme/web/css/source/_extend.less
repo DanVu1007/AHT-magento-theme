@@ -40,6 +40,13 @@
     justify-content: center;
 }
 
+//  main column
+.columns {
+    .column.main {
+        padding-bottom: 0px;
+    }
+}
+
 //  block
 .style-guide-block {
     height: auto;
@@ -307,29 +314,11 @@ input[type="radio"] {
         padding: 0 10px;
     }
 
-    //  col 4
-    .col-4 {
-        .col;
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.333333%;
-        flex: 0 0 33.333333%;
-        max-width: 33.333333%;
-    }
-
-    //  col 6
-    .col-6 {
-        .col;
-        -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-
     // heading base
     .heading {
         position: relative;
         text-align: center;
         margin-top: -18px;
-        margin-bottom: 36px;
 
         h1 {
             position: absolute;
@@ -373,19 +362,13 @@ input[type="radio"] {
     }
 
     //
-    //  Css cms blog
+    //  Css cms blog base
     //  ---------------------------------------------
 
     //  Our blog cms
     .session-our-blog {
         border-top: 1px solid #dddddd;
         box-sizing: border-box;
-
-        .heading {
-            &::after {
-                width: 238px;
-            }
-        }
 
         .our-blog-container {
             margin-bottom: 27px;
@@ -404,20 +387,14 @@ input[type="radio"] {
     .session-testimonials {
         border-top: 1px solid #dddddd;
         box-sizing: border-box;
-        margin-bottom: 51px;
 
         .heading {
             margin-top: -16px;
-
-            &::after {
-                width: 400px;
-            }
         }
 
         .testimonials-container {
             box-sizing: border-box;
             border: 1px solid #ededed;
-            margin-bottom: 28px;
             padding: 30px 38px;
         }
 
@@ -451,6 +428,192 @@ input[type="radio"] {
             .action.secondary {
                 text-transform: uppercase;
                 padding: 8.5px 15.5px;
+            }
+        }
+    }
+
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
+    //
+    //  Css use base desktop
+    //  ---------------------------------------------
+
+    //  col base
+    .col {
+        box-sizing: border-box;
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding: 0 10px;
+    }
+
+    // heading base
+    .heading {
+        margin-bottom: 36px;
+    }
+
+    //  col 3
+    .col-3 {
+        .col;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    //  col 4
+    .col-4 {
+        .col;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+    //  col 6
+    .col-6 {
+        .col;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    //  col 12
+    .col-12 {
+        .col;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    //
+    //  Css cms blog desktop
+    //  ---------------------------------------------
+
+    //  Our blog cms
+    .session-our-blog {
+
+        .heading {
+            &::after {
+                width: 238px;
+            }
+        }
+    }
+
+    //  Our Burning Log Testimonials
+    .session-testimonials {
+        margin-bottom: 51px;
+
+        .heading {
+            &::after {
+                width: 400px;
+            }
+        }
+
+        .testimonials-container {
+            margin-bottom: 28px;
+        }
+
+        .col-6 {
+            &:nth-child(3) {
+                .testimonials-container {
+                    margin-bottom: 22px;
+                }
+            }
+
+            &:nth-child(4) {
+                .testimonials-container {
+                    margin-bottom: 22px;
+                }
+            }
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {
+    //
+    //  Css use base mobile
+    //  ---------------------------------------------
+
+    //  col base
+    .col {
+        box-sizing: border-box;
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding: 0 10px;
+    }
+
+    //  col 6 mobile
+    .col-sm-6 {
+        .col;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    //  col 12 mobile
+    .col-sm-12 {
+        .col;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    // heading base
+    .heading {
+        margin-bottom: 20px;
+
+        h1 {
+            font-size: 22px;
+        }
+
+    }
+
+    //
+    //  Css cms blog mobile
+    //  ---------------------------------------------
+
+    //  Our blog cms
+    .session-our-blog {
+        .heading {
+            &::after {
+                width: 162px;
+            }
+        }
+    }
+
+    //  Our Burning Log Testimonials
+    .session-testimonials {
+        margin-bottom: 20px;
+
+        .heading {
+            h1 {
+                width: 100%;
+            }
+
+            &::after {
+                width: 300px;
+            }
+        }
+
+        .testimonials-container {
+            margin-bottom: 20px;
+        }
+
+        .testimonials-review-link {
+
+            .action.secondary {
+                width: 100%;
             }
         }
     }
