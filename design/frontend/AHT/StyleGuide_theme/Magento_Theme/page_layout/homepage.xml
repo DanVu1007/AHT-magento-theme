@@ -8,6 +8,7 @@
 <layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
     <update handle="empty"/>
     <referenceContainer name="page.wrapper">
+
         <container name="home.page.slider" htmlTag="div" htmlClass="home-page-slider" before="main.content">
             <block class="Magento\Cms\Block\Block" name="home-page-slider">
                 <arguments>

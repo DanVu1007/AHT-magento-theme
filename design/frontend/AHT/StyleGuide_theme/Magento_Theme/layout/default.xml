@@ -19,7 +19,7 @@
         <referenceBlock name="my-account-link" remove="true" />
         <referenceBlock name="authorization-link-login" remove="true"/> -->
 
-        <!-- hearer -->
+        <!-- header -->
         <referenceContainer name="header.container">
 
             <referenceContainer name="header.panel.wrapper">
