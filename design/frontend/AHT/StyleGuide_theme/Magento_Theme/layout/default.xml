@@ -13,8 +13,8 @@
             <block name="custom_js.phtml" class="Magento\Framework\View\Element\Template" template="Magento_Theme::custom_js.phtml" />
         </referenceContainer>
 
-        <!-- hearer -->
-        <!-- <referenceContainer name="header.container">
+        <!-- header -->
+        <referenceContainer name="header.container">
 
             <referenceContainer name="header.panel.wrapper">
                 <referenceContainer name= "header.panel">
