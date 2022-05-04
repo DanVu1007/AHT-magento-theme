@@ -233,10 +233,12 @@ echo $block->getLayout()
 <!-- Showrom -->
 <div class="session-showrom">
     <div class="row">
-        <div class="col-4 col-sm-12">
-            <div class="showrom-img some-img"><img src="{{media url="wysiwyg/image_showroom_footer/outdoor_Elegance.png"}}" alt="Outdoor Elegance Logo"></div>
+        <div class="col-mb-4">
+            <div class="showrom-img some-img"><img
+                    src="{{media url="wysiwyg/image_showroom_footer/outdoor_Elegance.png"}}"
+                    alt="Outdoor Elegance Logo"></div>
         </div>
-        <div class="col-4 col-sm-12">
+        <div class="col-mb-4">
             <div class="showrom-Canberra"><a class="canberra-link action secondary" href="#">Canberra Showroom</a>
                 <div class="style-guide-paragraph">
                     <p>Maryborough St &amp; Wollongong Street, Fyshwick ACT 2609 T: 1300 6</p>
@@ -244,12 +246,14 @@ echo $block->getLayout()
                 <a class="web-link links-info" href="#">Text link</a>
             </div>
         </div>
-        <div class="col-4 col-sm-12">
-            <div class="showrom-img some-img"><img src="{{media url="wysiwyg/image_showroom_footer/webstore_logo.png"}}" alt="Web Store Logo"></div>
+        <div class="col-mb-4">
+            <div class="showrom-img some-img"><img src="{{media url="wysiwyg/image_showroom_footer/webstore_logo.png"}}"
+                    alt="Web Store Logo"></div>
         </div>
     </div>
 </div>
 <!-- End showrom -->
+
 <!-- Footer banner-->
 <div class="session-footer-banner">
     <div class="backgroud-color">
@@ -262,26 +266,120 @@ echo $block->getLayout()
                         labore
                         et dolore magna aliqua.
                     </p>
-                    <a class="web-link links-banner" href="#">Learn more</a>
+                    <a class="web-link links-banner" href="#">View more infor</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- End footer banner-->
+
+<!-- footer top -->
+<div class="footer-top">
+    <div class="row">
+        <div class="col-mb-3">
+            <div class="footer-top-item">
+                <div class="icon">
+                    <i class="fa-solid fa-truck">&nbsp;</i>
+                </div>
+                <span class="text">We ship australia wide!</span>
+            </div>
+        </div>
+        <div class="col-mb-3">
+            <div class="footer-top-item">
+                <div class="icon">
+                    <i class="fa-solid fa-location-dot">&nbsp;</i>
+                </div>
+                <span class="text">Find a store</span>
+            </div>
+        </div>
+        <div class="col-mb-3">
+            <div class="footer-top-item">
+                <div class="icon">
+                    <i class="fa-solid fa-dollar-sign">&nbsp;</i>
+                </div>
+                <span class="text">Money back guarantee</span>
+            </div>
+        </div>
+        <div class="col-mb-3">
+            <div class="footer-top-item">
+                <div class="icon">
+                    <i class="fa-solid fa-envelope">&nbsp;</i>
+                </div>
+                <span class="text">Contact us</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end footer top -->
+
 <!-- Footer links desktop-->
-<div class="footer-links">
-    <h3>Category</h3>
-    <ul class="nav-link">
-        <li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Lounges" title="Outdoor Lounges" template="category/widget/link/link_block.phtml" id_path="category/20"}}
-        </li>
-        <li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Dining" title="Outdoor Dining" template="category/widget/link/link_block.phtml" id_path="category/11"}}
-        </li>
-        <li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Umbrellas &amp; Accessories " title="Outdoor Umbrellas &amp; Accessories " template="category/widget/link/link_block.phtml" id_path="category/11"}}
-        </li>
-    </ul>
+<div class="footer-links-desktop">
+    <div class="row">
+        <div class="col-mb-4">
+            <div class="footer-links">
+                <h3>Category</h3>
+                <ul class="nav-link">
+                    <li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Lounges" title="Outdoor Lounges" template="category/widget/link/link_block.phtml" id_path="category/20"}}
+                    </li>
+                    <li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Dining" title="Outdoor Dining" template="category/widget/link/link_block.phtml" id_path="category/11"}}
+                    </li>
+                    <li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Umbrellas &amp; Accessories " title="Outdoor Umbrellas &amp; Accessories " template="category/widget/link/link_block.phtml" id_path="category/11"}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-mb-4">
+            <div class="footer-links">
+                <h3>Why Burning Log?</h3>
+                <ul class="nav-link">
+                    <li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Lounges" title="Outdoor Lounges" template="category/widget/link/link_block.phtml" id_path="category/20"}}
+                    </li>
+                    <li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Dining" title="Outdoor Dining" template="category/widget/link/link_block.phtml" id_path="category/11"}}
+                    </li>
+                    <li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Umbrellas &amp; Accessories " title="Outdoor Umbrellas &amp; Accessories " template="category/widget/link/link_block.phtml" id_path="category/11"}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-mb-4">
+            <div class="footer-links">
+                <h3>Out Policies</h3>
+                <ul class="nav-link">
+                    <li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Lounges" title="Outdoor Lounges" template="category/widget/link/link_block.phtml" id_path="category/20"}}
+                    </li>
+                    <li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Dining" title="Outdoor Dining" template="category/widget/link/link_block.phtml" id_path="category/11"}}
+                    </li>
+                    <li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Umbrellas &amp; Accessories " title="Outdoor Umbrellas &amp; Accessories " template="category/widget/link/link_block.phtml" id_path="category/11"}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- end Footer links desktop-->
+
+<!-- Newletter-->
+<div class="footer-links-newsletter">
+    <h3>Newsletter</h3>
+    <ul>
+        <li><a>Subscribe to our newsletter for the latest news and updates</a></li>
+    </ul>
+</div>
+<!-- End Newletter-->
+
+<!-- nav icon -->
+<div class="nav-footer-icon">
+    <div class="icon-item">
+        <div class="social-icon"><a href="#"><i class="fab fa-facebook-f">&nbsp;</i></a></div>
+        <div class="social-icon"><a href="#"><i class="fab fa-instagram">&nbsp;</i></a></div>
+        <div class="social-icon"><a href="#"><i class="fab fa-twitter">&nbsp;</i></a></div>
+        <div class="social-icon"><a href="#"><i class="fab fa-brands fa-youtube">&nbsp;</i></a></div>
+        <div class="social-icon"><a href="#"><i class="fab fa-brands fa-pinterest">&nbsp;</i></a></div>
+    </div>
+</div>
+<!-- end nav icon -->
+
 <!-- Footer links mobile-->
 <div class="footer-links-mobile" id="accordion" data-mage-init='{
         "accordion":{
@@ -291,8 +389,8 @@ echo $block->getLayout()
             "multipleCollapsible": true
         }}'>
     <div data-role="collapsible">
-        <div data-role="trigger">
-            <h3>Category <span class="minus">×</span><span class="plus">+</span></h3>
+        <div data-role="trigger"> <span class="minus"><i class="fa-solid fa-xmark">&nbsp;</i></span><span
+                class="plus"><i class="fa-solid fa-plus">&nbsp;</i></span></h3>
         </div>
     </div>
     <div data-role="content">
@@ -307,8 +405,8 @@ echo $block->getLayout()
     </div>
 
     <div data-role="collapsible">
-        <div data-role="trigger">
-            <h3>Why Burning Log? <span class="minus">×</span><span class="plus">+</span></h3>
+        <div data-role="trigger">ning Log? <span class="minus"><i class="fa-solid fa-xmark">&nbsp;</i></span><span
+                class="plus"><i class="fa-solid fa-plus">&nbsp;</i></span></h3>
         </div>
     </div>
     <div data-role="content">
@@ -322,8 +420,8 @@ echo $block->getLayout()
         </ul>
     </div>
     <div data-role="collapsible">
-        <div data-role="trigger">
-            <h3>Our Policies <span class="minus">×</span><span class="plus">+</span></h3>
+        <div data-role="trigger">icies <span class="minus"><i class="fa-solid fa-xmark">&nbsp;</i></span><span
+                class="plus"><i class="fa-solid fa-plus">&nbsp;</i></span></h3>
         </div>
     </div>
     <div data-role="content">
@@ -333,6 +431,7 @@ echo $block->getLayout()
     </div>
 </div>
 <!-- End Footer links mobile-->
+
 <!-- img logo footer -->
 <div class="logo-footer">
     <div class="img-item"><img src="{{media url="wysiwyg/image_logo_footer/Layer_572.png"}}" alt=""></div>

@@ -44,7 +44,7 @@
 
 
         <!-- remove and move -->
-        <move element="form.subscribe" destination="footer.links.end" before="footer.middle.end" />
+        <move element="form.subscribe" destination="footer.links.end" before="footer.icon.links" />
         <move element="copyright" destination="footer" after="-"/>
         <referenceBlock name="footer_links" remove="true"/>
         <!-- end remove and move -->
@@ -64,25 +64,17 @@
                 <block name="footer.top" class="Magento\Framework\View\Element\Template" template="Magento_Theme::footer/top.phtml" before="-" />
                 <!-- footer middle -->
                 <referenceContainer name="cms_footer_links_container">
-                    <container name="footer.links.end" label="footer.links.end" htmlTag="div" htmlClass="footer-links-left" after="-">
-                        <block class="Magento\Cms\Block\Block" name="footer.links.categories">
-                            <arguments>
-                                <argument name="block_id" xsi:type="string">footer-links-categories</argument>
-                            </arguments>
-                        </block>
-                        <block class="Magento\Cms\Block\Block" name="footer.support.links">
-                            <arguments>
-                                <argument name="block_id" xsi:type="string">footer-support-links</argument>
-                            </arguments>
-                        </block>
-                    </container>
                     <container name="footer.links.end" label="footer.links.end" htmlTag="div" htmlClass="footer-links-right" after="-">
                         <block class="Magento\Cms\Block\Block" name="newsletter">
                             <arguments>
                                 <argument name="block_id" xsi:type="string">newsletter</argument>
                             </arguments>
                         </block>
-                        <block name="footer.middle.end" class="Magento\Framework\View\Element\Template" template="Magento_Theme::footer/middle.phtml" after="-" />
+                        <block class="Magento\Cms\Block\Block" name="footer.icon.links" after="-">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">footer-icon-links</argument>
+                            </arguments>
+                        </block>
                     </container>
                 </referenceContainer>
             </referenceContainer>
