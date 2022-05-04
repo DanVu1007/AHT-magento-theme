@@ -61,7 +61,7 @@
             <!-- end footer -->
             <referenceContainer name="footer">
                 <!-- footer top -->
-                <block class="Magento\Cms\Block\Block" name="footer.icon" before="-">
+                <block class="Magento\Cms\Block\Block" name="footer.top" before="-">
                     <arguments>
                         <argument name="block_id" xsi:type="string">footer-top</argument>
                     </arguments>
@@ -76,7 +76,7 @@
                         </block>
                         <block class="Magento\Cms\Block\Block" name="footer.icon.links" after="-">
                             <arguments>
-                                <argument name="block_id" xsi:type="string">footer-icon-links</argument>
+                                <argument name="block_id" xsi:type="string">nav-icon</argument>
                             </arguments>
                         </block>
                     </container>
