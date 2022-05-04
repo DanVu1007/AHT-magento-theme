@@ -12,15 +12,9 @@
         <referenceContainer name="page.wrapper">
             <block name="custom_js.phtml" class="Magento\Framework\View\Element\Template" template="Magento_Theme::custom_js.phtml" />
         </referenceContainer>
-        <!-- <referenceBlock name="header" remove="true"/>
-        <referenceBlock name="register-link" remove="true" />
-        <referenceBlock name="authorization-link" remove="true" />
-        <referenceBlock name="wish-list-link" remove="true" />
-        <referenceBlock name="my-account-link" remove="true" />
-        <referenceBlock name="authorization-link-login" remove="true"/> -->
 
         <!-- hearer -->
-        <referenceContainer name="header.container">
+        <!-- <referenceContainer name="header.container">
 
             <referenceContainer name="header.panel.wrapper">
                 <referenceContainer name= "header.panel">
@@ -29,13 +23,6 @@
                     </container>
                     <referenceBlock name="top.links">
                         <referenceBlock name="register-link" remove="true" />
-                        <!-- <referenceBlock name="authorization-link" remove="true" /> -->
-                        <!-- <referenceBlock name="wish-list-link" remove="true" /> -->
-                        <!-- <referenceBlock name="header" remove="true"/> -->
-                        <!-- <referenceBlock name="my-account-link" remove="true" /> -->
-                        <!-- <referenceBlock name="authorization-link-login" remove="true"/> -->
-                        <!-- <move element="header.links" destination="mycustom4.div" after="top.search" /> -->
-                        <!-- This was missing in the above answer, atleast for me -->
                     </referenceBlock>
                     <move element="header-top" destination="top.links" before="-" />
                 </referenceContainer>
@@ -44,26 +31,62 @@
             <referenceContainer name="header-wrapper">
             </referenceContainer>
 
-        </referenceContainer>
+        </referenceContainer> -->
 
         <!-- menu -->
-        <referenceContainer name="page.top">
+        <!-- <referenceContainer name="page.top">
             <referenceBlock name="navigation.sections">
                 <referenceBlock name="store.settings" remove="true">
 
                 </referenceBlock>
             </referenceBlock>
+        </referenceContainer> -->
+
+
+        <!-- remove and move -->
+        <move element="form.subscribe" destination="footer.links.end" before="footer.middle.end" />
+        <move element="copyright" destination="footer" after="-"/>
+        <referenceBlock name="footer_links" remove="true"/>
+        <!-- end remove and move -->
+
+
+        <!-- footer -->
+        <referenceContainer name="footer-container">
+            <!-- footer banner -->
+            <block class="Magento\Cms\Block\Block" name="banner.footer" as="banner.footer" before="footer">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-banner</argument>
+                </arguments>
+            </block>
+            <!-- end footer -->
+            <referenceContainer name="footer">
+                <!-- footer top -->
+                <block name="footer.top" class="Magento\Framework\View\Element\Template" template="Magento_Theme::footer/top.phtml" before="-" />
+                <!-- footer middle -->
+                <referenceContainer name="cms_footer_links_container">
+                    <container name="footer.links.end" label="footer.links.end" htmlTag="div" htmlClass="footer-links-left" after="-">
+                        <block class="Magento\Cms\Block\Block" name="footer.links.categories">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">footer-links-categories</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Cms\Block\Block" name="footer.support.links">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">footer-support-links</argument>
+                            </arguments>
+                        </block>
+                    </container>
+                    <container name="footer.links.end" label="footer.links.end" htmlTag="div" htmlClass="footer-links-right" after="-">
+                        <block class="Magento\Cms\Block\Block" name="newsletter">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">newsletter</argument>
+                            </arguments>
+                        </block>
+                        <block name="footer.middle.end" class="Magento\Framework\View\Element\Template" template="Magento_Theme::footer/middle.phtml" after="-" />
+                    </container>
+                </referenceContainer>
+            </referenceContainer>
         </referenceContainer>
-        <!-- <referenceBlock name="breadcrumbs" remove="true"/> -->
-        <!-- <referenceBlock name="navigation.sections" remove="true" /> -->
-        <!-- <referenceBlock name="top.search" remove="true"/> -->
-        <!-- <referenceBlock name="header.panel.wrapper" remove="true"/> -->
-        <!-- <referenceBlock name="form.subscribe" remove="true"/> -->
-        <!-- <referenceBlock name="footer_links" remove="true"/> -->
-        <!-- <referenceBlock name="copyright" remove="true"/> -->
-        <!-- <referenceBlock name="report.bugs" remove="true" /> -->
-        <!-- <referenceBlock name="minicart" remove="true"/> -->
-
-
+        <!-- end footer -->
     </body>
 </page>

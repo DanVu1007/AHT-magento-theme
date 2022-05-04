@@ -44,39 +44,45 @@
         @family-name,
         @font-path,
         @font-weight: normal,
-        @font-style: normal
-    ) {
-        @font-face{
+        @font-style: normal) {
+        @font-face {
             font-family: @family-name;
             src: url('@{font-path}.ttf') format('truetype');
             font-weight: @font-weight;
             font-style: @font-style;
         }
     }
+
     //  add fonts lora regular
-    .lib-ttf-font-face(
-        @family-name: @font-family-name__Lora-base,
+    .lib-ttf-font-face(@family-name: @font-family-name__Lora-base,
         @font-path: '@{baseDir}fonts/Lora/static/Lora-Regular',
         @font-weight: 400,
         @font-style: normal,
     );
 
+    //  fonts lora bold
+    .lib-ttf-font-face(@family-name: @font-family-name__Lora-base,
+        @font-path: '@{baseDir}fonts/Lora/static/Lora-Bold',
+        @font-weight: 700,
+        @font-style: normal,
+    );
+
     //  add fonts Roboto all weight
-    .lib-ttf-font-face(  //  font weight 100
+    .lib-ttf-font-face( //  font weight 100
         @family-name: @font-family-name__Roboto-base,
         @font-path: '@{baseDir}fonts/Roboto/Roboto-Thin',
         @font-weight: @font-weight__thin,
         @font-style: normal,
     );
 
-    .lib-ttf-font-face(  //  font weight 300
+    .lib-ttf-font-face( //  font weight 300
         @family-name: @font-family-name__Roboto-base,
         @font-path: '@{baseDir}fonts/Roboto/Roboto-Light',
         @font-weight: @font-weight__light,
         @font-style: normal,
     );
 
-    .lib-ttf-font-face(  //  font weight 400
+    .lib-ttf-font-face( //  font weight 400
         @family-name: @font-family-name__Roboto-base,
         @font-path: '@{baseDir}fonts/Roboto/Roboto-Regular',
         @font-weight: @font-weight__regular,
@@ -84,7 +90,7 @@
 
     );
 
-    .lib-ttf-font-face(  //  font weight 500
+    .lib-ttf-font-face( //  font weight 500
         @family-name: @font-family-name__Roboto-base,
         @font-path: '@{baseDir}fonts/Roboto/Roboto-Medium',
         @font-weight: @font-weight__heavier,
@@ -92,14 +98,14 @@
 
     );
 
-    .lib-ttf-font-face(  //  font weight 700
+    .lib-ttf-font-face( //  font weight 700
         @family-name: @font-family-name__Roboto-base,
         @font-path: '@{baseDir}fonts/Roboto/Roboto-Bold',
         @font-weight: @font-weight__bold,
         @font-style: normal,
     );
 
-    .lib-ttf-font-face(  //  font weight 900
+    .lib-ttf-font-face( //  font weight 900
         @family-name: @font-family-name__Roboto-base,
         @font-path: '@{baseDir}fonts/Roboto/Roboto-Black',
         @font-weight: @font-weight__black,
@@ -107,14 +113,14 @@
     );
 
     //  add fonts Roboto Italic all weight
-    .lib-ttf-font-face(  //  font weight 100 italic
+    .lib-ttf-font-face( //  font weight 100 italic
         @family-name: @font-family-name__Roboto-base,
         @font-path: '@{baseDir}fonts/Roboto/Roboto-ThinItalic',
         @font-weight: @font-weight__thin,
         @font-style: italic,
     );
 
-    .lib-ttf-font-face(  //  font weight 300 italic
+    .lib-ttf-font-face( //  font weight 300 italic
         @family-name: @font-family-name__Roboto-base,
         @font-path: '@{baseDir}fonts/Roboto/Roboto-LightItalic',
         @font-weight: @font-weight__light,
@@ -122,12 +128,13 @@
     );
 
     // add fonts Market W03 bold
-    .lib-ttf-font-face(  //  font weight 700
+    .lib-ttf-font-face( //  font weight 700
         @family-name: @font-family-name__Market-W03-base,
         @font-path: '@{baseDir}fonts/Market-W03/Market-W03-Bold/Market-W03-Bold',
         @font-weight: @font-weight__bold,
         @font-style: normal,
     );
+
 }
 
 //
@@ -139,10 +146,8 @@
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
+& when (@media-common =true) {
     .items {
         .lib-list-reset-styles();
     }
 }
-
-
