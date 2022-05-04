@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.wrapper">
+            <container name="home.page.slider" htmlTag="div" htmlClass="home-page-slider" before="main.content">
+                <block class="Magento\Cms\Block\Block" name="home-page-slider">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">home-page-slider</argument>
+                    </arguments>
+                </block>
+            </container>
+            <referenceContainer name="content">
+                <block class="Magento\Cms\Block\Block" name="home-page-up-block">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">home-page-up-block</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="best-sellers">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">best-sellers</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="new-arrivals">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">new-arrivals</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Cms\Block\Block" name="home-page-down-block">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">home-page-down-block</argument>
+                    </arguments>
+                </block>
+            </referenceContainer>
+        </referenceContainer>
+    </body>
+</page>

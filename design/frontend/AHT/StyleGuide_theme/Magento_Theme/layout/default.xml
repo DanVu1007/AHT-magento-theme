@@ -61,7 +61,11 @@
             <!-- end footer -->
             <referenceContainer name="footer">
                 <!-- footer top -->
-                <block name="footer.top" class="Magento\Framework\View\Element\Template" template="Magento_Theme::footer/top.phtml" before="-" />
+                <block class="Magento\Cms\Block\Block" name="footer.top" before="-">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">footer-top</argument>
+                            </arguments>
+                        </block>
                 <!-- footer middle -->
                 <referenceContainer name="cms_footer_links_container">
                     <container name="footer.links.end" label="footer.links.end" htmlTag="div" htmlClass="footer-links-right" after="-">
@@ -72,7 +76,7 @@
                         </block>
                         <block class="Magento\Cms\Block\Block" name="footer.icon.links" after="-">
                             <arguments>
-                                <argument name="block_id" xsi:type="string">footer-icon-links</argument>
+                                <argument name="block_id" xsi:type="string">nav-icon</argument>
                             </arguments>
                         </block>
                     </container>
