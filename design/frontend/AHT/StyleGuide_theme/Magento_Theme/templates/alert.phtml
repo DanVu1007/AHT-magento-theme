@@ -1,16 +1,4 @@
-<!-- Session test Burning Log Testimonials -->
-<?php
-echo $block->getLayout()
-
-    ->createBlock('Magento\Cms\Block\Block')
-
-    ->setBlockId('burning-log-testimonials')
-
-    ->toHtml();
-?>
-<!-- End test Session Burning Log Testimonials -->
-
-<!-- footer -->
+ <!-- footer -->
 
 <!-- Showrom -->
 <div class="session-showrom">
@@ -163,52 +151,41 @@ echo $block->getLayout()
 <!-- end nav icon -->
 
 <!-- Footer links mobile-->
-<div id="accordion" class="footer-links-mobile" data-mage-init="{
-        " accordion":{ "active" : [0], "collapsible" : true, "openedState" : "active" , "multipleCollapsible" : true
-    }}">
-    <div data-role="collapsible">
-        <div data-role="trigger">
-            <h3>Category <span class="minus"><em class="fa-solid fa-xmark">&nbsp;</em></span><span class="plus"><em
-                        class="fa-solid fa-plus">&nbsp;</em></span></h3>
-        </div>
-    </div>
-    <div data-role="content">
-        <ul class="nav-link">
-            <li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Lounges" title="Outdoor Lounges" template="category/widget/link/link_block.phtml" id_path="category/20"}}
-            </li>
-            <li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Dining" title="Outdoor Dining" template="category/widget/link/link_block.phtml" id_path="category/11"}}
-            </li>
-            <li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Umbrellas &amp; Accessories " title="Outdoor Umbrellas &amp; Accessories " template="category/widget/link/link_block.phtml" id_path="category/11"}}
-            </li>
-        </ul>
-    </div>
-    <div data-role="collapsible">
-        <div data-role="trigger">
-            <h3>Why Burning Log? <span class="minus"><em class="fa-solid fa-xmark">&nbsp;</em></span><span
-                    class="plus"><em class="fa-solid fa-plus">&nbsp;</em></span></h3>
-        </div>
-    </div>
-    <div data-role="content">
-        <ul class="nav-link">
-            <li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Lounges" title="Outdoor Lounges" template="category/widget/link/link_block.phtml" id_path="category/20"}}
-            </li>
-            <li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Dining" title="Outdoor Dining" template="category/widget/link/link_block.phtml" id_path="category/11"}}
-            </li>
-            <li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Umbrellas &amp; Accessories " title="Outdoor Umbrellas &amp; Accessories " template="category/widget/link/link_block.phtml" id_path="category/11"}}
-            </li>
-        </ul>
-    </div>
-    <div data-role="collapsible">
-        <div data-role="trigger">
-            <h3>Our Policies <span class="minus"><em class="fa-solid fa-xmark">&nbsp;</em></span><span class="plus"><em
-                        class="fa-solid fa-plus">&nbsp;</em></span></h3>
-        </div>
-    </div>
-    <div data-role="content">
-        <ul class="nav-link">
-            <li><a>Subscribe to our newsletter for the latest news and updates</a></li>
-        </ul>
-    </div>
+<div id="accordion" class="footer-links-mobile">
+<div data-role="collapsible">
+<div data-role="trigger">
+<h3>Category <span class="minus"><em class="fa-solid fa-xmark">&nbsp;</em></span><span class="plus"><em class="fa-solid fa-plus">&nbsp;</em></span></h3>
+</div>
+</div>
+<div data-role="content">
+<ul class="nav-link">
+<li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Lounges" title="Outdoor Lounges" template="category/widget/link/link_block.phtml" id_path="category/20"}}</li>
+<li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Dining" title="Outdoor Dining" template="category/widget/link/link_block.phtml" id_path="category/11"}}</li>
+<li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Umbrellas &amp; Accessories " title="Outdoor Umbrellas &amp; Accessories " template="category/widget/link/link_block.phtml" id_path="category/11"}}</li>
+</ul>
+</div>
+<div data-role="collapsible">
+<div data-role="trigger">
+<h3>Why Burning Log? <span class="minus"><em class="fa-solid fa-xmark">&nbsp;</em></span><span class="plus"><em class="fa-solid fa-plus">&nbsp;</em></span></h3>
+</div>
+</div>
+<div data-role="content">
+<ul class="nav-link">
+<li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Lounges" title="Outdoor Lounges" template="category/widget/link/link_block.phtml" id_path="category/20"}}</li>
+<li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Dining" title="Outdoor Dining" template="category/widget/link/link_block.phtml" id_path="category/11"}}</li>
+<li>{{widget type="Magento\Catalog\Block\Category\Widget\Link" anchor_text="Outdoor Umbrellas &amp; Accessories " title="Outdoor Umbrellas &amp; Accessories " template="category/widget/link/link_block.phtml" id_path="category/11"}}</li>
+</ul>
+</div>
+<div data-role="collapsible">
+<div data-role="trigger">
+<h3>Our Policies <span class="minus"><em class="fa-solid fa-xmark">&nbsp;</em></span><span class="plus"><em class="fa-solid fa-plus">&nbsp;</em></span></h3>
+</div>
+</div>
+<div data-role="content">
+<ul class="nav-link">
+<li><a>Subscribe to our newsletter for the latest news and updates</a></li>
+</ul>
+</div>
 </div>
 <!-- End Footer links mobile-->
 <!-- End Footer links mobile-->

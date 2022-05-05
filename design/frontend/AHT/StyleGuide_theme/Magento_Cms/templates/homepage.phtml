@@ -166,21 +166,23 @@
 
 
 <!-- best seller -->
-<div class="my-content-heading some-block">
-    <h2 class="title">Best Sellers</h2>
+<div class="product-list-wrapper">
+    <div class="my-content-heading some-block">
+        <h2 class="title">Best sellers</h2>
+    </div>
+    <div class="some-block">
+        {{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="8" template="Magento_CatalogWidget::product/widget/content/slick.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`46`^]^]"}}
+    </div>
 </div>
-<p class="some-block">
-    {{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="8" template="Magento_CatalogWidget::product/widget/content/slick.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`44`^]^]"}}
-</p>
-
 <!-- new arrivel -->
-<div class="my-content-heading some-block">
-    <h2 class="title">New Arrivals</h2>
+<div class="product-list-wrapper">
+    <div class="my-content-heading some-block">
+        <h2 class="title">New arrivals</h2>
+    </div>
+    <div class="some-block">
+        {{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="8" template="Magento_CatalogWidget::product/widget/content/slick.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`46`^]^]"}}
+    </div>
 </div>
-<p class="some-block">
-    {{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="8" template="Magento_CatalogWidget::product/widget/content/slick.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`44`^]^]"}}
-</p>
-
 <!-- instagram -->
 <div class="instagram-block-wrapper">
     <div class="instagram-block-heading some-block">
@@ -192,7 +194,7 @@
             Find us at @burninglog, show us your furniture with #buringlog
         </span>
     </div>
-    <div class="instagram-block some-block">
+    <div class="instagram-block">
         
         <div class="instagram-slide some-block">
             <div class="some-img">

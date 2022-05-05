@@ -62,10 +62,10 @@
             <referenceContainer name="footer">
                 <!-- footer top -->
                 <block class="Magento\Cms\Block\Block" name="footer.top" before="-">
-                    <arguments>
-                        <argument name="block_id" xsi:type="string">footer-top</argument>
-                    </arguments>
-                </block>
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">footer-top</argument>
+                            </arguments>
+                        </block>
                 <!-- footer middle -->
                 <referenceContainer name="cms_footer_links_container">
                     <container name="footer.links.end" label="footer.links.end" htmlTag="div" htmlClass="footer-links-right" after="-">
