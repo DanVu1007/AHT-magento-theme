@@ -25,7 +25,10 @@
             <referenceContainer name="header.panel.wrapper">
                 <referenceContainer name= "header.panel">
                     <container name="header-top" htmlTag="div" htmlClass="header-left" before="-">
+
+                        <!-- PHTML -->
                         <block name="header-top1" class="Magento\Framework\View\Element\Html\Link" template="Magento_Theme::header.phtml" />
+
                     </container>
                     <referenceBlock name="top.links">
                         <referenceBlock name="register-link" remove="true" />
