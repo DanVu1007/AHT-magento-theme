@@ -6,6 +6,7 @@
     transform: @transform;
 }
 .page-title-wrapper {
+    margin-top: 6px;
     text-align: center;
     .page-title {
         margin: 0;
@@ -20,6 +21,7 @@
 //item in cart
 .cart.table-wrapper {
     margin-bottom: 0;
+    overflow: unset;
     .towishlist {
         display: none;
     }
@@ -38,7 +40,7 @@
     .col {
         &.subtotal,
         &.qty {
-            padding: 10px 0 10px 90px;
+            padding: 10px 0 8px 131px;
             width: fit-content;
             &[data-th]::before {
                 content: "";
@@ -67,7 +69,7 @@
         text-decoration: underline;
         color: #151515;
         font-weight: 400;
-        padding: 20px 0;
+        padding: 16px 0;
     }
 }
 
@@ -75,7 +77,8 @@
     display: flex;
     flex-direction: column;
     .action.primary.checkout {
-        margin: 15px 10px 20px;
+        margin: 9px 10px 20px;
+        text-transform: uppercase;
     }
     //hoa don
     .cart-summary {
@@ -96,21 +99,26 @@
         .cart-totals {
             border: none;
             padding-top: 0;
+            padding: 0 25px;
+            tbody tr:last-child td{
+                padding-bottom: 16px;
+            }
             .table-wrapper {
                 border-top: 1px solid #ccc;
-                padding-top: 20px;
+                padding-top: 15px;
             }
             .data.table.totals {
+                font-size: 15px;
                 .totals-tax {
                     .mark,
                     .amount {
-                        padding-bottom: 20px;
+                        padding-bottom: 18px;
                     }
                 }
                 .grand.totals {
                     .mark,
                     .amount {
-                        padding-top: 20px;
+                        padding-top: 14px;
                     }
                 }
             }
@@ -118,6 +126,7 @@
         //Check out
         .checkout-methods-items {
             margin: 0;
+            padding: 0 24px;
             .action.primary.checkout {
                 margin: 0;
                 font-size: 13px;
@@ -139,10 +148,12 @@
                 padding: 10px 0;
                 .col {
                     &.item {
+                        padding: 8px 15px 13px 132px;
                         .product-item-name {
                             color: #2d2d2d;
                             font-size: 15px;
                             font-weight: 700;
+                            line-height: 18px;
                         }
                     }
                     &.price {
@@ -162,7 +173,10 @@
             .item-actions {
                 position: absolute;
                 bottom: 0;
-                right: 0;
+                right: -5px;
+                .cart.table-wrapper .action {
+                        margin-right: 12px;
+                }
             }
         }
     }
@@ -226,16 +240,16 @@
     margin: 0 10px;
     .title {
         margin: 0;
-        padding: 20px 0;
-        font-size: 13px;
+        padding: 21.5px 0;
         color: #3b3b3e;
         text-transform: uppercase;
         position: relative;
         line-height: initial;
         background-color: #f7f7f7;
         strong {
+            font-size: 13px;
             font-weight: 700;
-            margin-left: 35px;
+            margin-left: 24px;
             line-height: 0;
         }
         &::after {
@@ -245,7 +259,7 @@
             font-weight: 900;
             color: #a9a9a9;
             font-size: 15px;
-            right: 30px;
+            right: 29px;
             top: 50%;
             .transform(translateY(-50%));
             position: absolute;
