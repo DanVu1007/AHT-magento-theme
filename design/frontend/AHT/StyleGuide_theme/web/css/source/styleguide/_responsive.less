@@ -1,0 +1,129 @@
+
+
+
+// ************************************************************************************RESPONSIVE**********************************
+
+@media all and (min-width: @layout__max-width){
+    //col
+    .col-mb-6{
+        .col-6;
+    }
+    .col-mb-4{
+        .col-4
+    }
+
+    //base
+    .some-block{
+        margin-bottom: 20px;
+    }
+    
+    .cart {
+        &.table-wrapper {            
+            .col {
+                &.qty {
+                    .input-text {
+                        height: 40px;
+                        margin-top: 0;
+                        width: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    // slider
+    .homepage-slider{
+        height: 680px;
+        .homepage-slide {
+            .block-content{
+                
+                .block-title{
+                    font-weight: 700;
+                    font-size: 200px;
+                    line-height:42px;
+                    margin-bottom: 80px;
+                } 
+                .block-info{
+                    font-size: 32px;
+                    line-height: 34px;
+                    font-weight: 400;
+                }
+            }
+            
+        }
+    }
+    //style guide block
+    .block-shop-now{
+        .block-content{
+            .block-title{
+                font-size: 42px;
+            } 
+            .block-info{
+                display: block;
+                font-size: 32px;
+                line-height: 34px;
+                font-weight: 400;
+            }
+            .center();
+            width: max-content;
+            max-width:100%;
+            height: max-content;
+            .shop-btn{
+                .shop-button(); 
+            }
+        }
+    }
+
+    //video block
+    .video-block{
+        .block-content{
+
+            .block-title{
+                font-size: 52px;
+            } 
+        }
+    
+    }
+    // PRODUCT CATALOG
+    .product-item{
+        &::after{
+            position: absolute;
+            content: "";
+            width: 1px;
+            display: inline-block;
+            top: 0;
+            right: 0;
+            height: 100%;
+            background:linear-gradient(#ffffff 0%, #ebebeb 25%, #ffffff 85%);
+        }
+    }
+
+
+    //content-heading 
+    .my-content-heading {
+        .title{
+            font-size: 32px;
+            color: #222222;
+        }
+        &::before {
+            top:50%;
+            z-index:1;
+        }
+    }
+
+    .instagram-block-wrapper{
+        .my-content-heading {
+            .title-1{
+                display: block;
+            }
+            .title-2{
+                display: none;
+            }
+        }
+        .find-us{
+            max-width: max-content;
+        }
+    }
+}
+    
