@@ -10,11 +10,11 @@
                     <button type="submit" class="action secondary" id="product-addtocart-button">STANDARD</button>
                     <div class="number-input-form-qty">
                         <span class="qty-button minus-qty-button" type="button">
-                            <button type="button" title="<?= __('Reduce the quantity'); ?>"><i class="fa-solid fa-minus"></i></button>
+                            <button type="button" title="<?= ('Reduce the quantity'); ?>"><i class="fa-solid fa-minus"></i></button>
                         </span>
                         <input value='1' , maxlength="12" , class="input-text qty">
                         <span class="qty-button add-qty-button" type="button">
-                            <button type="button" title="<?= __('Increase the quantity'); ?>"><i class="fa-solid fa-plus"></i></button>
+                            <button type="button" title="<?= ('Increase the quantity'); ?>"><i class="fa-solid fa-plus"></i></button>
                         </span>
                     </div>
                 </div>
@@ -176,6 +176,14 @@
                 <div class="block-promo">{{widget type="Magento\Cms\Block\Widget\Block"
                             template="widget/static_block/default.phtml" block_id="20"}}</div>
             </div>
+            <div class="style-guide-promo">
+                <div class="block-promo">{{widget type="Magento\Cms\Block\Widget\Block"
+                            template="widget/static_block/default.phtml" block_id="24"}}</div>
+            </div>
+            <div class="style-guide-promo">
+                <div class="block-promo">{{widget type="Magento\Cms\Block\Widget\Block"
+                            template="widget/static_block/default.phtml" block_id="25"}}</div>
+            </div>
             <!-- End CMS block -->
         </div>
         <!-- End Col right -->
@@ -184,9 +192,50 @@
 
 
 <!-- ******************block********************** -->
-<div class="blocks-promo">
-    <div class="block-promo style-guide-block">
-        <img src="{{media url="wysiwyg/gear/gear-equipment.jpg"}}" alt="">
-        <a class="action shop-btn more icon">Shop Performance</a>
+    <div class="block-shop-now some-block"> 
+        <div class="some-img">
+            <img src="{{media url="wysiwyg/gear/gear-equipment.jpg"}}" alt="">
+        </div>
+        <span class="block-content">
+            <a class="action shop-btn more icon">SHOP NOW</a>
+        </span> 
+    </div> 
+
+
+    <div class="block-shop-now some-block"> 
+        <div class="some-img">
+            <img src="{{media url="wysiwyg/gear/gear-equipment.jpg"}}" alt="">
+        </div>
+        <span class="block-content">
+            <strong class="block-title">
+                Outdoor Dining
+            </strong>
+            <a class="action shop-btn more icon">SHOP NOW</a>
+        </span> 
+    </div> 
+
+    
+    <div class="block-banner some-block"> 
+        <div class="some-img">
+            <img src="{{media url="wysiwyg/gear/gear-equipment.jpg"}}" alt="">
+        </div>
+        <div class="block-content-expansion">
+            <span class="block-content">
+                <strong class="block-title">
+                    Vogue Collection
+                </strong>
+                <span class ="block-info">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+                </span>
+                <a class="action shop-btn more icon">SHOP NOW</a>
+            </span> 
+        </div>
     </div>
-</div>
+
+
+    <div class="video-block some-block"> 
+        <div class="some-video">
+            <iframe width="420" height="315" src="http://www.youtube.com/embed/oHg5SJYRHA0?autoplay=1" frameborder="0" allowfullscreen>
+            </iframe>
+        </div>
+    </div> 

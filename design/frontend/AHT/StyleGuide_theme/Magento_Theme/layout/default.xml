@@ -9,6 +9,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="default_head_blocks"/>
     <body>
+        <referenceContainer name="page.wrapper">
+            <block name="custom_js.phtml" class="Magento\Framework\View\Element\Template" template="Magento_Theme::custom_js.phtml" />
+        </referenceContainer>
         <!-- <referenceBlock name="header" remove="true"/>
         <referenceBlock name="register-link" remove="true" />
         <referenceBlock name="authorization-link" remove="true" />
@@ -16,13 +19,16 @@
         <referenceBlock name="my-account-link" remove="true" />
         <referenceBlock name="authorization-link-login" remove="true"/> -->
 
-        <!-- hearer -->
+        <!-- header -->
         <referenceContainer name="header.container">
 
             <referenceContainer name="header.panel.wrapper">
                 <referenceContainer name= "header.panel">
-                    <container name="header-top" htmlTag="div" htmlClass="header-left"  before="-">
+                    <container name="header-top" htmlTag="div" htmlClass="header-left" before="-">
+
+                        <!-- PHTML -->
                         <block name="header-top1" class="Magento\Framework\View\Element\Html\Link" template="Magento_Theme::header.phtml" />
+
                     </container>
                     <referenceBlock name="top.links">
                         <referenceBlock name="register-link" remove="true" />
@@ -60,8 +66,7 @@
         <!-- <referenceBlock name="copyright" remove="true"/> -->
         <!-- <referenceBlock name="report.bugs" remove="true" /> -->
         <!-- <referenceBlock name="minicart" remove="true"/> -->
-        <referenceContainer name="main.content">
-            <block name="numberformbutton.phtml" class="Magento\Framework\View\Element\Template" template="Magento_Theme::numberformbutton.phtml" />
-        </referenceContainer>
+
+
     </body>
 </page>
