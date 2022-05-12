@@ -58,14 +58,15 @@
                     <argument name="block_id" xsi:type="string">footer-banner</argument>
                 </arguments>
             </block>
-            <!-- end footer -->
+            <!-- end footer banner-->
+            <!-- footer top -->
+            <block class="Magento\Cms\Block\Block" name="footer.top" after="banner.footer">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-top</argument>
+                </arguments>
+            </block>
+            <!-- end footer top-->
             <referenceContainer name="footer">
-                <!-- footer top -->
-                <block class="Magento\Cms\Block\Block" name="footer.top" before="-">
-                            <arguments>
-                                <argument name="block_id" xsi:type="string">footer-top</argument>
-                            </arguments>
-                        </block>
                 <!-- footer middle -->
                 <referenceContainer name="cms_footer_links_container">
                     <container name="footer.links.end" label="footer.links.end" htmlTag="div" htmlClass="footer-links-right" after="-">
@@ -81,6 +82,7 @@
                         </block>
                     </container>
                 </referenceContainer>
+                <!-- footer middle -->
             </referenceContainer>
         </referenceContainer>
         <!-- end footer -->

@@ -13,6 +13,8 @@
 
     //  Newsletter subscription
     .block.newsletter {
+        margin-bottom: 23px;
+
         .form.subscribe {
             .control-label {
                 position: relative;
@@ -20,7 +22,8 @@
         }
 
         input {
-            padding: 0px 43px 0 35px;
+            padding: 0px 57px 0 15px;
+            margin-left: 5px;
         }
 
         .field {
@@ -65,9 +68,3 @@
         }
     }
 }
-
-//
-//  Mobile
-//  _____________________________________________
-
-.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {}

@@ -119,7 +119,7 @@ switch ($type = $block->getType()) {
             $class = $type;
 
             $image = 'cart_cross_sell_products';
-            $title = __('You may also like:');
+            $title = __('You may also like');
             $items = $block->getItems();
 
             $showAddTo = true;
@@ -243,7 +243,7 @@ $_item = null;
                                                     <div class="actions-primary">
                                                     <?php if (!$_item->getTypeInstance()->isPossibleBuyFromList($_item)):?>
                                                         <button
-                                                            class="action tocart primary"
+                                                            class="action tocart"
                                                             data-mage-init='{"redirectUrl": {"url": "<?= $block->escapeUrl($block->getAddToCartUrl($_item)) ?>"}}' type="button" title="<?= $block->escapeHtmlAttr(__('Add to Cart')) ?>">
                                                         <span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
                                                         </button>
@@ -269,7 +269,7 @@ $_item = null;
                                                 <?= $block->getBlockHtml('formkey') ?>
                                                 <button type="submit"
                                                     title="<?= $block->escapeHtmlAttr(__('Add to Cart')) ?>"
-                                                    class="action tocart primary">
+                                                    class="action tocart">
                                                 <span><?= $block->escapeHtml(__('Add to Cart')) ?></span>
                                                 </button>
                                                 </form>
