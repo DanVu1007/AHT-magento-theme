@@ -1,0 +1,255 @@
+.transform(@transform) {
+    -webkit-transform: @transform;
+    -moz-transform: @transform;
+    -ms-transform: @transform; /* note that you have @trasnform here */
+    -o-transform: @transform;
+    transform: @transform;
+}
+.page-title-wrapper {
+    text-align: center;
+    .page-title {
+        margin: 0;
+    }
+}
+//item in cart
+.cart.table-wrapper {
+    margin-bottom: 0;
+    .towishlist {
+        display: none;
+    }
+    .product-item-name {
+        margin: 0;
+    }
+    .product-item-photo {
+        left: 10px;
+    }
+    .item {
+        .col.item {
+            min-height: unset;
+            padding: 10px 15px 10px 90px;
+        }
+    }
+    .col {
+        &.subtotal,
+        &.qty {
+            padding: 10px 0 10px 90px;
+            width: fit-content;
+            &[data-th]::before {
+                content: "";
+                display: none;
+            }
+        }
+    }
+    .action{
+        margin-right: 10px;
+    }
+}
+//button update in cart
+.cart.main.actions {
+    button {
+        &:hover,
+        &:active {
+            background-color: unset;
+            border: unset;
+            color: unset;
+        }
+    }
+    .action.update {
+        border: unset;
+        font-size: 13px;
+        line-height: 20px;
+        text-decoration: underline;
+        color: #151515;
+        font-weight: 400;
+        padding: 20px 0;
+    }
+}
+.cart-container{
+    display: flex;
+    flex-direction: column;
+    .action.primary.checkout {
+        margin: 15px 10px 20px;
+    }
+    //hoa don
+    .cart-summary{
+        margin: 0 10px;
+        width: ~"calc(100% - 20px)";
+        order: 2;
+        top:unset;  
+        position: unset;
+        .block.shipping {
+            margin: 0;
+        }
+        //button checkout
+        .action.primary.checkout {
+            margin: 0;
+        }
+
+        //Cart total
+        .cart-totals {
+            border: none;
+            padding-top: 0;
+            .table-wrapper {
+                border-top: 1px solid #ccc;
+                padding-top: 20px;
+            }
+            .data.table.totals {
+                .totals-tax {
+                    .mark,
+                    .amount {
+                        padding-bottom: 20px;
+                    }
+                }
+                .grand.totals {
+                    .mark,
+                    .amount {
+                        padding-top: 20px;
+                    }
+                }
+            }
+        }
+        //Check out
+        .checkout-methods-items {
+            margin: 0;
+            .action.primary.checkout {
+                margin: 0;
+                font-size: 13px;
+                box-sizing: border-box;
+                padding: 7.5px 47.5px;
+            }
+        }
+    }
+    //danh sach san pham
+    .form.form-cart{
+        width: 100%;
+        order: 0;
+        .cart.item{
+            .item-info{
+                display: flex;
+                flex-direction: column;
+                padding: 10px 0;
+                .col {
+                    &.item {
+                        .product-item-name {
+                            color: #2d2d2d;
+                            font-size: 15px;
+                            font-weight: 700;
+                        }
+                    }
+                    &.price{
+                        display: none;
+                    }
+                    &.qty{
+
+                    }
+                    &.subtotal{
+
+                    }
+                }
+            }
+            .item-actions{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+    //giam gia
+    .cart-discount{
+        margin: 0 10px;
+        width: ~"calc(100% - 20px)";
+        order: 1;
+        .block.discount{
+            margin: 0;
+        }
+    }
+    //crosssell
+    .block.crosssell{
+        order: 3;
+        padding: 0 10px;
+        margin-top: 0px;
+        .block-title {
+            text-align: center;
+            position: relative;
+            strong {
+                font-size: 22px;
+                // line-height: 24px;
+                color: #2d2d2d;
+                font-weight: 400;
+                font-family: @font-family__Lora-base;
+                padding: 0 17px;
+                background-color: #fff;
+            }
+            &::before{
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: #ccc;
+                top: 50%;
+                position: absolute;
+                z-index: -1;
+            }
+        }
+        .product-item{
+            .product-item-details{
+                .product-reviews-summary.short{
+                    display: none;
+                }
+                .product-item-actions{
+                    .secondary-addto-links.actions-secondary{
+                        display: none;
+                    }
+                }
+                .price-box.price-final_price{
+                    .price-label{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//block
+.block.shipping,
+.block.discount {
+    margin: 0 10px;
+    .title {
+        margin: 0;
+        padding: 20px 0;
+        font-size: 13px;
+        color: #3b3b3e;
+        text-transform: uppercase;
+        position: relative;
+        line-height: initial;
+        background-color: #f7f7f7;
+        strong {
+            font-weight: 700;
+            margin-left: 35px;
+            line-height: 0;
+        }
+        &::after {
+            content: "\2b";
+            display: inline-block;
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #a9a9a9;
+            font-size: 15px;
+            right: 30px;
+            top: 50%;
+            .transform(translateY(-50%));
+            position: absolute;
+        }
+    }
+}
+.block.discount.active{
+    .title {
+        &::after {
+            content: "\f068";
+        }
+    }
+}
+.cart-summary .block.active > .title:after{
+    content: "\f068";
+}
